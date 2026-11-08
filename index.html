@@ -1,0 +1,1123 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Đối chiếu mặt bằng nhà đất và căn hộ theo Bát Trạch trong sách Kim Oanh Ký: tính cung phi, chấm cửa, bếp, phòng ngủ, bàn thờ, WC và xuất báo cáo PDF.">
+<meta property="og:title" content="Bát Trạch cho chủ nhà">
+<meta property="og:description" content="Kiểm tra mặt bằng nhà theo Bát Trạch, gợi ý bố trí lại và xuất PDF.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpolygon points='20,2 32.7,7.3 38,20 32.7,32.7 20,38 7.3,32.7 2,20 7.3,7.3' fill='none' stroke='%239c2a21' stroke-width='3'/%3E%3Cpolygon points='20,10 27.1,12.9 30,20 27.1,27.1 20,30 12.9,27.1 10,20 12.9,12.9' fill='%239c2a21'/%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Bát Trạch cho chủ nhà</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700&display=swap">
+<style>
+/* Layout: dải tiêu đề + thanh 5 bước; vùng làm việc 3 cột (công cụ · mặt bằng · thuộc tính), gập 1 cột trên điện thoại.
+   Chất liệu: giấy kem, mực đen, đỏ son như dấu triện; xanh ngọc cho kiết, đỏ cho hung. */
+:root{
+  --paper:#f5f0e5; --paper-2:#ece4d3; --card:#fffcf6; --ink:#1f1a15; --ink-2:#4b4239; --muted:#7b7064;
+  --line:#ddd1bc; --line-strong:#b7a88f;
+  --son:#9c2a21; --son-ink:#fffaf3; --son-soft:#f2ddd6; --gold:#94742f;
+  --kiet:#24704f; --kiet-soft:#d9ecdf; --hung:#b1261d; --hung-soft:#f6dbd6; --warn:#b5651b; --warn-soft:#f5e3cd;
+  --info:#45607a; --info-soft:#dfe7ee;
+  --m-door:#9c2a21; --m-fire:#c4661c; --m-altar:#8a6a22; --m-sleep:#3c628a; --m-water:#2c7c86; --m-misc:#6d6257;
+  --f-display:"Noto Serif", "Times New Roman", Georgia, serif;
+  --f-body:"Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --r:10px;
+  /* Trang báo cáo in: cố định một tông giấy sáng ở mọi chế độ */
+  --rp-paper:#fbf8f1; --rp-ink:#1f1a15; --rp-muted:#6f655a; --rp-line:#dccfb9; --rp-son:#9c2a21; --rp-kiet:#24704f; --rp-hung:#b1261d; --rp-warn:#b5651b; --rp-soft:#f1e9da;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#15120f; --paper-2:#1d1915; --card:#201b17; --ink:#efe6d7; --ink-2:#d2c5b2; --muted:#9d907f;
+  --line:#3a322a; --line-strong:#5c5044;
+  --son:#e2715f; --son-ink:#1b0e0b; --son-soft:#3b1e19; --gold:#d3b067;
+  --kiet:#62c391; --kiet-soft:#173226; --hung:#f07b6f; --hung-soft:#3b1a16; --warn:#e8a35c; --warn-soft:#35261a;
+  --info:#9cb7d1; --info-soft:#1d2833;
+  --m-door:#e2715f; --m-fire:#e8a35c; --m-altar:#d3b067; --m-sleep:#86aed6; --m-water:#6cc3cc; --m-misc:#b3a594;
+  color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#15120f; --paper-2:#1d1915; --card:#201b17; --ink:#efe6d7; --ink-2:#d2c5b2; --muted:#9d907f;
+  --line:#3a322a; --line-strong:#5c5044;
+  --son:#e2715f; --son-ink:#1b0e0b; --son-soft:#3b1e19; --gold:#d3b067;
+  --kiet:#62c391; --kiet-soft:#173226; --hung:#f07b6f; --hung-soft:#3b1a16; --warn:#e8a35c; --warn-soft:#35261a;
+  --info:#9cb7d1; --info-soft:#1d2833;
+  --m-door:#e2715f; --m-fire:#e8a35c; --m-altar:#d3b067; --m-sleep:#86aed6; --m-water:#6cc3cc; --m-misc:#b3a594;
+  color-scheme:dark }
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper);color:var(--ink);font:15px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;line-height:1.25;text-wrap:balance;margin:0}
+h2{font-size:1.45rem} h3{font-size:1.08rem}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1480px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.muted{color:var(--muted)} .small{font-size:.86rem} .tiny{font-size:.78rem}
+.num{font-variant-numeric:tabular-nums}
+
+/* Header */
+.top{border-bottom:1px solid var(--line);background:var(--paper)}
+.top .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0;flex:1 1 280px}
+.brand svg{flex:none}
+.brand b{font-family:var(--f-display);font-size:1.32rem;font-weight:700;letter-spacing:.01em;display:block;line-height:1.15}
+.brand small{color:var(--muted);font-size:.82rem}
+.proj{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.proj select{max-width:260px}
+.demo-flag{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;background:var(--son-soft);color:var(--son);padding:3px 8px;border-radius:99px;font-weight:600}
+
+/* Steps */
+.steps{border-bottom:1px solid var(--line);background:var(--paper-2)}
+.steps .wrap{display:flex;gap:4px;overflow-x:auto;padding-block:0}
+.steps button{border:0;background:none;padding:12px 14px;display:flex;align-items:center;gap:9px;cursor:pointer;white-space:nowrap;color:var(--ink-2);border-bottom:2px solid transparent;font-weight:500}
+.steps button .n{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:.78rem;border:1px solid var(--line-strong);font-weight:600}
+.steps button[aria-current="step"]{color:var(--ink);border-bottom-color:var(--son)}
+.steps button[aria-current="step"] .n{background:var(--son);border-color:var(--son);color:var(--son-ink)}
+.steps button.done .n{border-color:var(--kiet);color:var(--kiet)}
+main{padding-block:20px 48px}
+
+/* Controls */
+.btn{border:1px solid var(--line-strong);background:var(--card);border-radius:8px;padding:7px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-weight:500;font-size:.92rem;line-height:1.2}
+.btn:hover{border-color:var(--ink-2)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.primary{background:var(--son);border-color:var(--son);color:var(--son-ink)}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn.ghost{background:transparent;border-color:transparent}
+.btn.ghost:hover{border-color:var(--line-strong)}
+.btn.sm{padding:4px 9px;font-size:.84rem}
+.btn.danger{color:var(--hung);border-color:var(--hung)}
+:focus-visible{outline:2px solid var(--son);outline-offset:2px}
+input[type=text],input[type=date],input[type=time],input[type=number],select,textarea{background:var(--card);border:1px solid var(--line-strong);border-radius:7px;padding:7px 9px;min-width:0;width:100%}
+label.f{display:grid;gap:4px;font-size:.84rem;color:var(--ink-2);font-weight:500}
+.seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:8px;overflow:hidden;flex-wrap:wrap}
+.seg button{border:0;background:var(--card);padding:6px 10px;cursor:pointer;font-size:.86rem;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@media (max-width:640px){.grid2,.grid3{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.panel + .panel{margin-top:12px}
+.panel h3{margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.eyebrow{font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.cite{display:inline-block;font-size:.74rem;color:var(--gold);border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);border-radius:99px;padding:0 7px;white-space:nowrap;font-weight:500}
+.chip{display:inline-flex;align-items:center;gap:5px;border-radius:99px;padding:2px 9px;font-size:.78rem;font-weight:600;white-space:nowrap}
+.lv-dh{background:var(--hung);color:var(--son-ink)} .lv-th{background:var(--hung-soft);color:var(--hung)} .lv-ly{background:var(--warn-soft);color:var(--warn)}
+.lv-in{background:var(--info-soft);color:var(--info)} .lv-t{background:var(--kiet-soft);color:var(--kiet)} .lv-rt{background:var(--kiet);color:var(--son-ink)}
+.k{color:var(--kiet);font-weight:600} .h{color:var(--hung);font-weight:600}
+table.t{width:100%;border-collapse:collapse;font-size:.88rem}
+table.t th{text-align:left;font-weight:600;color:var(--muted);font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--line-strong);padding:6px 8px}
+table.t td{border-bottom:1px solid var(--line);padding:7px 8px;vertical-align:top}
+.tbl{overflow-x:auto}
+
+/* Step 1 */
+.s1{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:980px){.s1{grid-template-columns:minmax(0,1fr)}}
+.cung-hero{display:flex;gap:16px;align-items:center;padding:14px;border:1px solid var(--line);border-radius:var(--r);background:var(--paper)}
+.cung-hero .tg{color:var(--son)}
+.cung-hero .big{font-family:var(--f-display);font-size:2rem;font-weight:700;line-height:1}
+.mem-row{display:grid;grid-template-columns:1.4fr 1fr 1.1fr .9fr auto;gap:8px;align-items:end;padding:10px 0;border-bottom:1px solid var(--line)}
+@media (max-width:640px){.mem-row{grid-template-columns:1fr 1fr}}
+.mem-cung{font-size:.84rem;padding-bottom:7px}
+
+/* Step 2 editor */
+.ed{display:grid;grid-template-columns:62px minmax(0,1fr) 330px;gap:12px;align-items:start}
+@media (max-width:1100px){.ed{grid-template-columns:minmax(0,1fr)} .tools{flex-direction:row!important;overflow-x:auto} .tools hr{display:none}}
+.tools{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:6px}
+.tools hr{border:0;border-top:1px solid var(--line);margin:4px 2px;width:100%}
+.tool{border:1px solid transparent;background:none;border-radius:8px;padding:5px 2px;cursor:pointer;display:grid;justify-items:center;gap:2px;font-size:.62rem;line-height:1.1;color:var(--ink-2);min-width:52px}
+.tool:hover{border-color:var(--line-strong)}
+.tool[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.tool .g{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.72rem;color:#fff}
+.tool svg{width:22px;height:22px}
+.stage{min-width:0}
+.canvas{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;position:relative;touch-action:none;user-select:none;-webkit-user-select:none}
+.canvas svg{display:block;width:100%;height:auto;max-height:74vh}
+.canvas.tool-add{cursor:crosshair}
+.hint{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:8px 2px;font-size:.86rem;color:var(--ink-2)}
+.floors{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.floors .btn[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.drop{border:2px dashed var(--line-strong);border-radius:var(--r);padding:48px 20px;text-align:center;display:grid;gap:10px;justify-items:center;background:var(--card)}
+.drop.over{border-color:var(--son);background:var(--son-soft)}
+.side .panel{padding:14px}
+.dirs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+.dirs button{font-size:.78rem;padding:5px 2px}
+.dirs button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.row > *{min-width:0}
+.stack{display:grid;gap:10px}
+.dial{display:flex;gap:12px;align-items:center}
+
+/* Step 3 */
+.checks{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+.check{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;cursor:pointer}
+.check input{margin-top:4px;width:18px;height:18px;accent-color:var(--son);flex:none}
+.check.on{border-color:var(--son);background:var(--son-soft)}
+.check.good.on{border-color:var(--kiet);background:var(--kiet-soft)}
+.check b{display:block;font-weight:600}
+
+/* Step 4 */
+.res{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:16px;align-items:start}
+@media (max-width:1150px){.res{grid-template-columns:minmax(0,1fr)}}
+.score{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.score .ring{flex:none}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:14px}
+.fact{border-left:3px solid var(--line-strong);padding:2px 0 2px 10px}
+.fact .v{font-weight:600}
+.fact.good{border-color:var(--kiet)} .fact.bad{border-color:var(--hung)}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:12px;overflow-x:auto}
+.tabs button{border:0;background:none;padding:9px 12px;cursor:pointer;border-bottom:2px solid transparent;font-weight:500;color:var(--ink-2);white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--son)}
+.flist{display:grid;gap:8px}
+.fi{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;padding:10px 12px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);cursor:pointer;text-align:left}
+.fi:hover,.fi.hl{border-color:var(--ink-2)}
+.fi .pin{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:.76rem;font-weight:700;color:#fff}
+.fi .tt{font-weight:600;line-height:1.35}
+.fi .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:4px 0}
+.fi .dt{font-size:.88rem;color:var(--ink-2)}
+.fi .fx{font-size:.86rem;margin-top:6px;padding:6px 9px;border-radius:7px;background:var(--kiet-soft);color:var(--ink)}
+.grp{margin:14px 0 6px;display:flex;align-items:center;gap:8px}
+.note{font-size:.84rem;color:var(--ink-2);background:var(--paper-2);border-radius:8px;padding:10px 12px}
+.yr td.g{color:var(--kiet)} .yr td.b{color:var(--hung)}
+
+/* Step 5 */
+.rp-preview{display:flex;flex-wrap:wrap;gap:16px}
+.rp-thumb{width:calc(794px * .36);height:calc(1123px * .36);overflow:hidden;border:1px solid var(--line-strong);box-shadow:0 2px 10px color-mix(in srgb,var(--ink) 12%,transparent);background:var(--rp-paper);flex:none}
+.rp-thumb > .rp{transform:scale(.36);transform-origin:0 0}
+@media (max-width:640px){.rp-thumb{width:calc(794px * .42);height:calc(1123px * .42)} .rp-thumb > .rp{transform:scale(.42)}}
+#reportStage{position:absolute;left:-20000px;top:0}
+
+/* Report page (A4 @96dpi) */
+.rp{width:794px;height:1123px;background:var(--rp-paper);color:var(--rp-ink);font:12.5px/1.5 var(--f-body);display:flex;flex-direction:column;padding:44px 52px 36px;position:relative;overflow:hidden}
+.rp *{color:inherit}
+.rp-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--rp-line);padding-bottom:8px;margin-bottom:16px;font-size:10.5px;color:var(--rp-muted);letter-spacing:.06em;text-transform:uppercase}
+.rp-head b{color:var(--rp-son);font-family:var(--f-display);font-size:12px;letter-spacing:.02em;text-transform:none}
+.rp-body{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:12px}
+.rp-foot{display:flex;justify-content:space-between;border-top:1px solid var(--rp-line);padding-top:7px;margin-top:10px;font-size:10px;color:var(--rp-muted)}
+.rp h2{font-size:20px;color:var(--rp-ink)} .rp h3{font-size:14.5px;color:var(--rp-son)}
+.rp table{width:100%;border-collapse:collapse;font-size:11.5px}
+.rp th{text-align:left;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--rp-muted);border-bottom:1px solid var(--rp-ink);padding:4px 6px}
+.rp td{border-bottom:1px solid var(--rp-line);padding:5px 6px;vertical-align:top}
+.rp .rk{color:var(--rp-kiet);font-weight:600} .rp .rh{color:var(--rp-hung);font-weight:600} .rp .rw{color:var(--rp-warn);font-weight:600}
+.rp .item{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;padding:7px 0;border-bottom:1px solid var(--rp-line)}
+.rp .item .pn{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:10px}
+.rp .item .tt{font-weight:600}
+.rp .item .dt{color:#3f372f}
+.rp .item .fx{margin-top:3px;color:var(--rp-kiet)}
+.rp .tag{display:inline-block;font-size:9.5px;font-weight:700;border-radius:99px;padding:0 6px;margin-right:4px}
+.rp .plan{width:100%;border:1px solid var(--rp-line)}
+.rp .box{background:var(--rp-soft);border-radius:6px;padding:10px 12px}
+.cover{padding:0;background:var(--rp-paper)}
+.cover .band{background:var(--rp-son);color:#fbf3e8;padding:48px 52px 36px}
+.cover .band *{color:#fbf3e8}
+.cover .inner{padding:30px 52px;display:flex;flex-direction:column;gap:18px;flex:1}
+
+/* Misc */
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:9px;font-size:.9rem;max-width:min(560px,calc(100vw - 32px));z-index:50;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.modal-bg{position:fixed;inset:0;background:rgba(20,15,10,.45);display:grid;place-items:center;z-index:40;padding:16px}
+.modal{background:var(--card);border-radius:12px;max-width:520px;width:100%;padding:20px;display:grid;gap:14px;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:90vh;overflow:auto}
+.menu{position:absolute;right:0;top:calc(100% + 6px);background:var(--card);border:1px solid var(--line-strong);border-radius:10px;padding:6px;display:grid;min-width:220px;z-index:30;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.menu button{text-align:left;border:0;background:none;padding:8px 10px;border-radius:7px;cursor:pointer}
+.menu button:hover{background:var(--paper-2)}
+footer.foot{border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+footer.foot .wrap{padding-block:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+
+<header class="top"><div class="wrap">
+  <div class="brand">
+    <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><polygon points="20,2 32.7,7.3 38,20 32.7,32.7 20,38 7.3,32.7 2,20 7.3,7.3" fill="none" stroke="var(--son)" stroke-width="2.2"/><polygon points="20,10 27.1,12.9 30,20 27.1,27.1 20,30 12.9,27.1 10,20 12.9,12.9" fill="var(--son)"/><circle cx="20" cy="20" r="3.2" fill="var(--paper)"/></svg>
+    <div><b>Bát Trạch cho chủ nhà</b><small>Đối chiếu mặt bằng nhà theo sách Kim Oanh Ký</small></div>
+  </div>
+  <div class="proj" style="position:relative">
+    <span id="demoFlag" class="demo-flag" hidden>Hồ sơ giả định</span>
+    <label for="projSel" class="sr">Dự án</label>
+    <select id="projSel"></select>
+    <button class="btn" data-act="new-project">+ Dự án mới</button>
+    <button class="btn ghost" data-act="menu" aria-label="Thao tác dự án" aria-haspopup="true">⋯</button>
+    <div id="menu" class="menu" hidden>
+      <button data-act="rename">Đổi tên dự án</button>
+      <button data-act="duplicate">Nhân bản dự án</button>
+      <button data-act="restore-demos">Khôi phục dự án mẫu</button>
+      <button data-act="delete-project" class="h">Xoá dự án này</button>
+    </div>
+  </div>
+</div></header>
+<nav class="steps" aria-label="Các bước"><div class="wrap" id="stepNav"></div></nav>
+<main><div class="wrap" id="view"></div></main>
+<footer class="foot"><div class="wrap"><span>Bát Trạch cho chủ nhà · by Nguyễn Mạnh Hùng · Bản xem trước</span><span>Dữ liệu chỉ lưu trên trình duyệt của bạn. Kết quả mang tính tham khảo theo sách cổ, không thay thế tư vấn kiến trúc – kết cấu.</span></div></footer>
+<div id="toast" hidden></div>
+<div id="modalRoot"></div>
+<div id="reportStage" aria-hidden="true"></div>
+<input type="file" id="fileIn" accept="image/*,application/pdf" hidden>
+
+<script>
+'use strict';
+/* ================= Tiện ích ================= */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid=()=>Math.random().toString(36).slice(2,9);
+const mod=(a,n)=>((a%n)+n)%n, clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), R2D=180/Math.PI;
+const fmt=(n,d=1)=>Number(n).toLocaleString('vi-VN',{maximumFractionDigits:d,minimumFractionDigits:0});
+const imgAng=(dx,dy)=>mod(Math.atan2(dx,-dy)*R2D,360);
+const dirVec=a=>[Math.sin(a/R2D),-Math.cos(a/R2D)];
+const dist=(a,b)=>Math.hypot(a[0]-b[0],a[1]-b[1]);
+const angDiff=(a,b)=>Math.abs(mod(a-b+180,360)-180);
+function toast(msg,ms=3200){const t=$('#toast');t.textContent=msg;t.hidden=false;clearTimeout(toast._t);toast._t=setTimeout(()=>t.hidden=true,ms);}
+
+/* ================= Dữ liệu sách Kim Oanh Ký ================= */
+const QUAI={
+  kan:{vi:'Khảm',dir:'Bắc',ab:'B',deg:0,num:1,group:'Đông',hanh:'Thủy',nguoi:'con trai giữa'},
+  gen:{vi:'Cấn',dir:'Đông Bắc',ab:'ĐB',deg:45,num:8,group:'Tây',hanh:'Thổ',nguoi:'con trai út'},
+  zhen:{vi:'Chấn',dir:'Đông',ab:'Đ',deg:90,num:3,group:'Đông',hanh:'Mộc',nguoi:'con trai trưởng'},
+  xun:{vi:'Tốn',dir:'Đông Nam',ab:'ĐN',deg:135,num:4,group:'Đông',hanh:'Mộc',nguoi:'con gái trưởng'},
+  li:{vi:'Ly',dir:'Nam',ab:'N',deg:180,num:9,group:'Đông',hanh:'Hỏa',nguoi:'con gái giữa'},
+  kun:{vi:'Khôn',dir:'Tây Nam',ab:'TN',deg:225,num:2,group:'Tây',hanh:'Thổ',nguoi:'mẹ, bà chủ nhà'},
+  dui:{vi:'Đoài',dir:'Tây',ab:'T',deg:270,num:7,group:'Tây',hanh:'Kim',nguoi:'con gái út'},
+  qian:{vi:'Càn',dir:'Tây Bắc',ab:'TB',deg:315,num:6,group:'Tây',hanh:'Kim',nguoi:'cha, ông chủ nhà'},
+};
+const SO=['kan','gen','zhen','xun','li','kun','dui','qian'];
+const NUM2Q={1:'kan',2:'kun',3:'zhen',4:'xun',6:'qian',7:'dui',8:'gen',9:'li'};
+const TRI={qian:[1,1,1],dui:[1,1,0],li:[1,0,1],zhen:[1,0,0],xun:[0,1,1],kan:[0,1,0],gen:[0,0,1],kun:[0,0,0]};
+// Bảng "Kết hôn tu tạo phương hướng kiết hung" – tr. 94 (đã đối chiếu ảnh gốc)
+const COLS=['sinh','nguquy','dien','lucsat','hoahai','thieny','tuyet','phuc'];
+const TABLE={
+  qian:['dui','zhen','kun','kan','xun','gen','li','qian'],
+  kan:['xun','gen','li','qian','dui','zhen','kun','kan'],
+  gen:['kun','kan','dui','zhen','li','qian','xun','gen'],
+  zhen:['li','qian','xun','gen','kun','kan','dui','zhen'],
+  xun:['kan','kun','zhen','dui','qian','li','gen','xun'],
+  li:['zhen','dui','kan','kun','gen','xun','qian','li'],
+  kun:['gen','xun','qian','li','zhen','dui','kan','kun'],
+  dui:['qian','li','gen','xun','kan','kun','zhen','dui'],
+};
+const rel=(o,q)=>COLS[TABLE[o].indexOf(q)];
+const qOfStar=(o,s)=>TABLE[o][COLS.indexOf(s)];
+// Cửu tinh – tr. 98–100
+const STARS={
+  sinh:{key:'sinh',vi:'Sanh Khí',tinh:'Tham Lang',hanh:'Mộc',good:true,lv:'Thượng kiết',rank:1,q:1,ung:['Hợi','Mão','Mùi'],y:'phát đạt, đông con (sách nói 5 con), thăng tiến, nhiều tài lộc'},
+  thieny:{key:'thieny',vi:'Thiên Y',tinh:'Cự Môn',hanh:'Thổ',good:true,lv:'Thượng kiết',rank:1,q:1,ung:['Thìn','Tuất','Sửu','Mùi'],y:'ít bệnh tật, nhà yên, giàu có (sách nói 3 con)'},
+  dien:{key:'dien',vi:'Diên Niên',alias:'Phước Đức',tinh:'Võ Khúc',hanh:'Kim',good:true,lv:'Thứ kiết',rank:2,q:.9,ung:['Tị','Dậu','Sửu'],y:'sống thọ, vợ chồng hòa hợp, khá giả (sách nói 4 con)'},
+  phuc:{key:'phuc',vi:'Phục Vì',alias:'Qui Hồn',tinh:'Tả Phù',hanh:'Thủy',good:true,lv:'Thứ kiết',rank:3,q:.75,ung:['Hợi','Mão','Mùi'],y:'tiểu phú, trung thọ, yên ổn'},
+  tuyet:{key:'tuyet',vi:'Tuyệt Mạng',tinh:'Phá Quân',hanh:'Kim',good:false,lv:'Đại hung',rank:4,q:0,ung:['Tị','Dậu','Sửu'],y:'hiếm muộn, bệnh tật, hao tài, dễ bị người hại'},
+  nguquy:{key:'nguquy',vi:'Ngũ Quỷ',alias:'Giao Chiến',tinh:'Liêm Trinh',hanh:'Hỏa',good:false,lv:'Đại hung',rank:4,q:.05,ung:['Dần','Ngọ','Tuất'],y:'trộm cắp, hỏa hoạn, khẩu thiệt, người dưới phản, hao tài'},
+  lucsat:{key:'lucsat',vi:'Lục Sát',alias:'Du Hồn',tinh:'Văn Khúc',hanh:'Thủy',good:false,lv:'Thứ hung',rank:3,q:.25,ung:['Thân','Tý','Thìn'],y:'thất tài, cãi vã, hao người'},
+  hoahai:{key:'hoahai',vi:'Họa Hại',alias:'Tuyệt Thể',tinh:'Lộc Tồn',hanh:'Thổ',good:false,lv:'Thứ hung',rank:3,q:.3,ung:['Thìn','Tuất','Sửu','Mùi'],y:'kiện tụng, thị phi, bệnh tật, bại tài'},
+};
+const STAR_ORDER=['sinh','thieny','dien','phuc','hoahai','lucsat','nguquy','tuyet'];
+const QINV={tuyet:1,nguquy:1,lucsat:.9,hoahai:.9,phuc:.35,dien:.2,thieny:.1,sinh:.1};
+const SON24=['Tý','Quý','Sửu','Cấn','Dần','Giáp','Mão','Ất','Thìn','Tốn','Tị','Bính','Ngọ','Đinh','Mùi','Khôn','Thân','Canh','Dậu','Tân','Tuất','Càn','Hợi','Nhâm'];
+const sonIdx=b=>Math.floor(mod(b+7.5,360)/15), secIdx=b=>Math.floor(mod(b+22.5,360)/45);
+const CAN=['Giáp','Ất','Bính','Đinh','Mậu','Kỷ','Canh','Tân','Nhâm','Quý'], CHI=['Tý','Sửu','Dần','Mão','Thìn','Tị','Ngọ','Mùi','Thân','Dậu','Tuất','Hợi'];
+const canChi=y=>CAN[mod(y+6,10)]+' '+CHI[mod(y+8,12)], chiOf=y=>CHI[mod(y+8,12)];
+// Môn Lầu Ngọc Bối Kinh – tr. 108–118 (khởi Phước Đức theo tọa sơn, đếm thuận 24 sơn)
+const ML_START={qian:'Tị',kan:'Thân',dui:'Tị',kun:'Giáp',li:'Dần',xun:'Thân',gen:'Hợi',zhen:'Hợi'};
+const ML=['Phước Đức','Ôn Hoàng','Tấn Tài','Trường Bệnh','Tố Tụng','Quan Tước','Quan Quý','Tự Ải','Vượng Trang','Hưng Phước','Pháp Trường','Điên Cuồng','Khẩu Thiệt','Vượng Tàm','Tấn Điền','Khốc Khấp','Cô Quả','Vinh Phú','Thiếu Vong','Xương Dâm','Thân Hôn','Hoan Lạc','Tuyệt Bại','Vượng Tài'];
+const ML_GOOD=[1,0,1,0,0,1,1,0,1,1,0,0,0,1,1,0,0,1,0,0,1,1,0,1];
+const monLau=(toaQ,son)=>{const i=mod(SON24.indexOf(son)-SON24.indexOf(ML_START[toaQ]),24);return{name:ML[i],good:!!ML_GOOD[i],n:i+1};};
+// Vị trí đặt bếp theo 24 sơn – tr. 102 (Mão theo cảnh báo tr. 103)
+const TAO_SON={'Nhâm':0,'Tý':0,'Quý':0,'Sửu':0,'Cấn':0,'Dần':1,'Giáp':1,'Mão':0,'Ất':0,'Thìn':1,'Tốn':1,'Tị':1,'Bính':1,'Ngọ':1,'Đinh':0,'Mùi':1,'Khôn':0,'Thân':1,'Canh':1,'Dậu':0,'Tân':0,'Tuất':1,'Càn':0,'Hợi':0};
+const TAO_TOA={tuyet:'đè lên Tuyệt Mạng: sách nói sống lâu, ít bệnh, của nhiều, con đông',nguquy:'đè Ngũ Quỷ: không lo trộm cướp, người giúp việc siêng năng, nhà thịnh',lucsat:'đè Lục Sát: thêm người, phát tài, nhà yên',hoahai:'đè Họa Hại: khỏi lo thoái tài, ít bệnh, tránh thị phi',thieny:'đè Thiên Y: bệnh hoạn kéo dài, thuốc thang khó hiệu nghiệm',sinh:'đè Sanh Khí: khó đường con cái, khó đắc tài',phuc:'đè Phục Vì: khó có của, cả đời túng thiếu',dien:'đè Diên Niên: giảm thọ, hôn nhân khó thành, hao tài'};
+const TAO_HUONG={sinh:'hợp cầu con',thieny:'trừ bệnh, giải tai',dien:'tăng thọ, hợp cầu tài (sách: trong tháng có tài nhỏ, một năm phát tài lớn)',phuc:'cầu gì được nấy',hoahai:'sinh tranh đấu, thù oán',lucsat:'hao tán, bị lừa gạt',nguquy:'kiện tụng, khẩu thiệt',tuyet:'bệnh tật, tổn hại người'};
+const CHE_PHUC={nguquy:'sinh',tuyet:'thieny',lucsat:'dien'};
+const GOALS={tai:{vi:'Cầu tài',star:'dien'},con:{vi:'Cầu con',star:'sinh'},suckhoe:{vi:'Sức khỏe',star:'thieny'},hoathuan:{vi:'Gia đạo hòa thuận',star:'dien'}};
+// Khanh (hầm, bể phốt) – tr. 138–139
+const KHANH={gen:'không phát đạt đường học hành, văn tài',kun:'mẹ và con gái nhỏ dễ mang bệnh',dui:'mẹ và con gái nhỏ dễ mang bệnh, của cải sa sút',kan:'dễ sinh bệnh về mắt, hại con cháu',li:'dễ sinh bệnh về mắt, tổn người',qian:'ông chủ nhà gặp tai, bệnh mắt'};
+// Giếng – tr. 119
+const GIENG={'Giáp':1,'Canh':1,'Nhâm':1,'Bính':1,'Sửu':-1,'Dần':-1,'Mão':-1,'Thìn':-1,'Tị':-1,'Ngọ':-1,'Tuất':-1,'Mùi':-2,'Hợi':-2,'Thân':0,'Dậu':0};
+// Kim Lâu – Hoang Ốc – Tam Tai – tr. 405–406
+const KL_RING=['kun','dui','qian','kan','gen','zhen','xun','li'], KL_DEC={1:0,2:1,3:2,4:3,6:4,7:5,8:6,9:7};
+const KL_BAD={kun:'kỵ bản thân chủ nhà',qian:'kỵ vợ',gen:'kỵ con cái',xun:'kỵ vật nuôi'};
+const HO=['Nhất Kiết','Nhì Nghi','Tam Địa Sát','Tứ Tấn Tài','Ngũ Thọ Tử','Lục Hoang Ốc'], HO_GOOD=[1,1,0,1,0,0];
+const KL_EXEMPT=['Tân Mùi','Nhâm Thân','Kỷ Sửu','Canh Dần','Tân Sửu','Nhâm Dần','Kỷ Mùi','Canh Thân'];
+const TAM_TAI={'Thân':['Dần','Mão','Thìn'],'Tý':['Dần','Mão','Thìn'],'Thìn':['Dần','Mão','Thìn'],'Dần':['Thân','Dậu','Tuất'],'Ngọ':['Thân','Dậu','Tuất'],'Tuất':['Thân','Dậu','Tuất'],'Hợi':['Tị','Ngọ','Mùi'],'Mão':['Tị','Ngọ','Mùi'],'Mùi':['Tị','Ngọ','Mùi'],'Tị':['Hợi','Tý','Sửu'],'Dậu':['Hợi','Tý','Sửu'],'Sửu':['Hợi','Tý','Sửu']};
+function kimLau(age){ if(age<10) return null; const d=Math.floor(age/10), u=age%10; let q;
+  if(d===5){ if(u===0) return {q:null,txt:'Trung cung',good:null}; q=KL_RING[mod(4+u-1,8)]; } else if(KL_DEC[d]==null) return null; else q=KL_RING[mod(KL_DEC[d]+u,8)];
+  return {q,good:!KL_BAD[q],txt:QUAI[q].vi+(KL_BAD[q]?' – '+KL_BAD[q]:'')}; }
+function hoangOc(age){ if(age<10) return null; const d=Math.floor(age/10),u=age%10; const i=mod(d-1+u,6); return {name:HO[i],good:!!HO_GOOD[i]}; }
+const HANH_KHAC={Kim:'Mộc',Mộc:'Thổ',Thổ:'Thủy',Thủy:'Hỏa',Hỏa:'Kim'};
+
+/* ================= Lập Xuân & cung phi (tr. 69–75) ================= */
+function jdOf(y,m,d,h=0){if(m<=2){y-=1;m+=12}const A=Math.floor(y/100),B=2-A+Math.floor(A/4);return Math.floor(365.25*(y+4716))+Math.floor(30.6001*(m+1))+d+h/24+B-1524.5}
+function sunLong(jd){const T=(jd-2451545)/36525,r=Math.PI/180;const L0=280.46646+36000.76983*T+.0003032*T*T,M=357.52911+35999.05029*T-.0001537*T*T;const C=(1.914602-.004817*T-.000014*T*T)*Math.sin(M*r)+(.019993-.000101*T)*Math.sin(2*M*r)+.000289*Math.sin(3*M*r);const om=125.04-1934.136*T;return mod(L0+C-.00569-.00478*Math.sin(om*r),360)}
+function jdToDate(jd){const Z=Math.floor(jd+.5),F=jd+.5-Z;const al=Math.floor((Z-1867216.25)/36524.25);const A=Z+1+al-Math.floor(al/4),B=A+1524,C=Math.floor((B-122.1)/365.25),D=Math.floor(365.25*C),E=Math.floor((B-D)/30.6001);const day=B-D-Math.floor(30.6001*E)+F;const m=E<14?E-1:E-13,y=m>2?C-4716:C-4715,d=Math.floor(day),hr=(day-d)*24;return{y,m,d,h:Math.floor(hr),mi:Math.floor((hr%1)*60)}}
+const _lx={};
+function lapXuan(y){ if(_lx[y]) return _lx[y]; let a=jdOf(y,1,25),b=jdOf(y,2,15); for(let i=0;i<60;i++){const m=(a+b)/2;const d=mod(sunLong(m)-315+180,360)-180; if(d<0)a=m; else b=m;} return _lx[y]=jdToDate((a+b)/2+7/24); }
+function cungPhi(dob,gender,tob){
+  if(!dob||!/^\d{4}-\d{2}-\d{2}$/.test(dob)) return null;
+  const [Y,M,D]=dob.split('-').map(Number); const lx=lapXuan(Y); let y=Y,onDay=false;
+  const cmp=(M*100+D)-(lx.m*100+lx.d);
+  if(cmp<0) y=Y-1; else if(cmp===0){ if(tob&&/^\d{1,2}:\d{2}/.test(tob)){const[h,mi]=tob.split(':').map(Number); if(h*60+mi<lx.h*60+lx.mi) y=Y-1;} else onDay=true; }
+  const r=mod(y,9); let n=gender==='nu'?mod(r+4,9):mod(11-r,9); if(n===0)n=9;
+  const center=n===5; const q=center?(gender==='nu'?'gen':'kun'):NUM2Q[n];
+  return {Y,y,lx,n,q,center,onDay,shifted:y!==Y,gender};
+}
+const lxText=lx=>`${String(lx.d).padStart(2,'0')}/${String(lx.m).padStart(2,'0')}/${lx.y} lúc ${String(lx.h).padStart(2,'0')}:${String(lx.mi).padStart(2,'0')}`;
+
+/* ================= Loại đánh dấu ================= */
+const TYPES={
+  cua_chinh:{vi:'Cửa chính',g:'C',c:'--m-door',cat:'door'},
+  cong:{vi:'Cổng',g:'Cg',c:'--m-door',cat:'door'},
+  cua_sau:{vi:'Cửa sau',g:'Cs',c:'--m-door',cat:'door'},
+  ban_cong:{vi:'Ban công, lô gia',g:'BC',c:'--m-misc',cat:'door'},
+  bep:{vi:'Bếp',g:'B',c:'--m-fire',dir:true},
+  ban_tho:{vi:'Bàn thờ',g:'T',c:'--m-altar',dir:true,optDir:true},
+  phong_ngu:{vi:'Phòng ngủ',g:'N',c:'--m-sleep',occ:true},
+  wc:{vi:'WC',g:'W',c:'--m-water'},
+  kho:{vi:'Kho',g:'K',c:'--m-misc'},
+  giat:{vi:'Chỗ giặt',g:'G',c:'--m-water'},
+  cau_thang:{vi:'Cầu thang',g:'≡',c:'--m-misc'},
+  be_phot:{vi:'Bể phốt, hầm',g:'H',c:'--m-misc'},
+  gieng:{vi:'Giếng, bể nước',g:'Gi',c:'--m-water'},
+};
+const LIT={'--m-door':'#9c2a21','--m-fire':'#c4661c','--m-altar':'#8a6a22','--m-sleep':'#3c628a','--m-water':'#2c7c86','--m-misc':'#6d6257'};
+const LV={'dai-hung':{vi:'Đại hung',c:'lv-dh',col:'#b1261d',o:0},'thu-hung':{vi:'Thứ hung',c:'lv-th',col:'#d0563d',o:1},'luu-y':{vi:'Lưu ý',c:'lv-ly',col:'#b5651b',o:2},'info':{vi:'Thông tin',c:'lv-in',col:'#45607a',o:3},'tot':{vi:'Tốt',c:'lv-t',col:'#3f8a64',o:4},'rat-tot':{vi:'Rất tốt',c:'lv-rt',col:'#24704f',o:5}};
+const lvOfStar=s=>s.good?(s.rank===1?'rat-tot':'tot'):(s.lv==='Đại hung'?'dai-hung':'thu-hung');
+const lvInv=s=>s.good?(s.rank===1?'dai-hung':'thu-hung'):(s.lv==='Đại hung'?'rat-tot':'tot');
+const FRONT_ANG={top:0,right:90,bottom:180,left:270};
+const isCH=p=>p.kind==='canho', DN=p=>isCH(p)?'Cửa căn hộ':'Cửa chính';
+const typeName=(p,t)=>t==='cua_chinh'&&isCH(p)?'Cửa căn hộ':TYPES[t].vi;
+const FRONT_VI={top:'trên',right:'phải',bottom:'dưới',left:'trái'};
+const RELS=['Vợ/chồng','Con trai','Con gái','Cha','Mẹ','Ông','Bà','Anh/chị/em','Khác'];
+const SURR=[
+  {k:'duong_dam',t:'Đường đâm thẳng vào cửa',d:'Con đường hoặc lối xe chạy thẳng vào cửa ngõ ("xuyên tâm sát"): gia trưởng gặp họa.',c:'tr. 144'},
+  {k:'nga_tu',t:'Ngã tư chữ thập trước nhà',d:'Trước mặt nhà có đường cắt nhau hình chữ thập: sách ghi "bất nghi".',c:'tr. 143'},
+  {k:'chua_mieu',t:'Chùa, miếu sát trước hoặc sau nhà',d:'Nhà kề đền, chùa, miếu phía trước hay phía sau: không nên.',c:'tr. 143'},
+  {k:'ao_truoc',t:'Ao, hồ đào ngay trước cửa',d:'Trước cửa không nên đào ao; nếu ở xa và có hình bán nguyệt thì được.',c:'tr. 144'},
+  {k:'ao_trong',t:'Ao, hồ nước trong khuôn viên nhà',d:'Trong nhà không nên đào ao: hao tài, hiếm người.',c:'tr. 144'},
+  {k:'truoc_cao',t:'Phía trước cao, phía sau thấp',d:'Nền hoặc nhà phía trước cao hơn phía sau: bất lợi.',c:'tr. 143'},
+  {k:'goc_nha',t:'Góc nhà khác, mái nhọn chĩa vào nhà',d:'Góc nhà hoặc đầu hồi nhà khác đâm thẳng tới: sinh người câm điếc, bệnh tật.',c:'tr. 145'},
+  {k:'nha_sau_cao',t:'Nhà phía sau cao vượt, chắn thẳng',d:'Sau lưng có nhà cao chắn thẳng ("trực xạ sát").',c:'tr. 143'},
+  {k:'hai_cua_doi',t:'Hai cửa đối diện nhau',d:'Hai cửa (nhà mình và nhà đối diện, hoặc hai cửa trong nhà) nhìn thẳng nhau: gia đình bất hòa ("tương mạ môn").',c:'tr. 143'},
+  {k:'ba_cua',t:'Ba cửa liền một dãy',d:'Một nhà mở ba cửa liền nhau như chữ phẩm: nhiều khẩu thiệt.',c:'tr. 143'},
+  {k:'da_truoc',t:'Đá lớn hoặc đá đỏ, đen trước cửa',d:'Tảng đá cao 2–3 thước, hoặc đá màu đỏ đen trước cửa: tiếng dữ, dễ hỏa hoạn.',c:'tr. 144'},
+  {k:'sau_toi',t:'Phía sau nhà bị che kín, tối hẳn',d:'Sau nhà mất hết ánh sáng: hại nhân đinh.',c:'tr. 144'},
+  {k:'nha_dinh',t:'Nhà xây hình chữ Đinh (丁)',d:'Nhà hình chữ Đinh: không yên đường vợ con.',c:'tr. 145'},
+  {k:'rong_it_nguoi',t:'Nhà rộng mà ít người ở',d:'Sách: nhà nhỏ người đông thì người thắng nhà (tốt); nhà rộng người ít thì nhà thắng người (xấu).',c:'tr. 142'},
+  {k:'truoc_thap',t:'Trước thấp, sau cao',d:'Thế nhà trước thấp sau cao: phát tài hưng vượng.',c:'tr. 145',good:true},
+];
+
+const SURR_CH=[
+  {k:'ch_cua_doi',t:'Cửa căn hộ đối diện cửa căn khác hoặc cửa thang máy',d:'Hai cửa nhìn thẳng nhau: gia đình dễ bất hòa ("tương mạ môn").',c:'tr. 143'},
+  {k:'ch_hanh_lang',t:'Hành lang dài đâm thẳng vào cửa căn hộ',d:'Lối đi chạy thẳng vào cửa giống thế "xuyên tâm sát" của đường đâm: gia trưởng gặp họa.',c:'tr. 144'},
+  {k:'goc_nha',t:'Góc tòa nhà khác, cạnh nhọn chĩa vào căn hộ',d:'Góc nhà hoặc đầu hồi nhà khác đâm thẳng tới: sinh bệnh tật.',c:'tr. 145'},
+  {k:'chua_mieu',t:'Chùa, miếu sát tòa nhà',d:'Nhà kề đền, chùa, miếu phía trước hay phía sau: không nên.',c:'tr. 143'},
+  {k:'ba_cua',t:'Ba cửa liền một dãy trong căn hộ',d:'Ba cửa liền nhau như chữ phẩm: nhiều khẩu thiệt.',c:'tr. 143'},
+  {k:'sau_toi',t:'Căn hộ bị che kín, thiếu sáng',d:'Phía sau mất hết ánh sáng: hại nhân đinh. Sách cũng dặn phòng nên sáng, không nên tối.',c:'tr. 137, 144'},
+  {k:'rong_it_nguoi',t:'Căn hộ rộng mà ít người ở',d:'Nhà nhỏ người đông thì người thắng nhà (tốt); nhà rộng người ít thì nhà thắng người (xấu).',c:'tr. 142'},
+];
+const surrList=p=>isCH(p)?SURR_CH:SURR;
+/* ================= Lưu trữ ================= */
+const KEY='btcn.v1';
+let store={projects:[],cur:null,step:4,demoVer:2};
+function loadStore(){ try{const s=JSON.parse(localStorage.getItem(KEY)||'null'); if(s&&Array.isArray(s.projects)&&s.projects.length) store=s;}catch(e){} if(!store.projects.length){store.projects=demoProjects();store.cur=store.projects[0].id;store.step=4;} if((store.demoVer||1)<2){store.projects=store.projects.concat(demoProjects().filter(x=>x.kind==='canho'));store.demoVer=2;} if(!store.projects.find(p=>p.id===store.cur)) store.cur=store.projects[0].id; }
+let _saveT; function save(){clearTimeout(_saveT);_saveT=setTimeout(()=>{try{localStorage.setItem(KEY,JSON.stringify(store));}catch(e){toast('Bộ nhớ trình duyệt đã đầy hoặc bị chặn. Hãy xoá bớt dự án có ảnh lớn.');}},300);}
+const P=()=>store.projects.find(p=>p.id===store.cur);
+const ui={floor:0,tool:'select',sel:null,drag:null,poly:null,showSec:true,resTab:'danh-gia',resFloor:0,hl:null,menu:false};
+
+/* ================= Hình học ================= */
+function polyArea(pts){let a=0;for(let i=0;i<pts.length;i++){const p=pts[i],q=pts[(i+1)%pts.length];a+=p[0]*q[1]-q[0]*p[1];}return a/2;}
+function centroid(pts){const A=polyArea(pts);if(Math.abs(A)<1e-6){const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]);return[(Math.min(...xs)+Math.max(...xs))/2,(Math.min(...ys)+Math.max(...ys))/2];}let cx=0,cy=0;for(let i=0;i<pts.length;i++){const p=pts[i],q=pts[(i+1)%pts.length],f=p[0]*q[1]-q[0]*p[1];cx+=(p[0]+q[0])*f;cy+=(p[1]+q[1])*f;}return[cx/(6*A),cy/(6*A)];}
+function inPoly(pt,pts){let c=false;for(let i=0,j=pts.length-1;i<pts.length;j=i++){const[xi,yi]=pts[i],[xj,yj]=pts[j];if(((yi>pt[1])!==(yj>pt[1]))&&(pt[0]<(xj-xi)*(pt[1]-yi)/(yj-yi)+xi))c=!c;}return c;}
+function geo(p,f){
+  if(!f||!f.outline||f.outline.length<3) return null;
+  const pts=f.outline, xs=pts.map(a=>a[0]), ys=pts.map(a=>a[1]);
+  const bb={x0:Math.min(...xs),y0:Math.min(...ys),x1:Math.max(...xs),y1:Math.max(...ys)}; bb.w=bb.x1-bb.x0; bb.h=bb.y1-bb.y0;
+  if(bb.w<2||bb.h<2) return null;
+  const c=f.center||centroid(pts), front=f.front||p.orient.front, fa=FRONT_ANG[front], F=+p.orient.facing||0;
+  const mw=+f.meters?.w, mh=+f.meters?.h, ppm=(mw>0&&mh>0)?(bb.w/mw+bb.h/mh)/2:Math.max(bb.w,bb.h)/15;
+  const grid=p.orient.division==='grid';
+  const bearing=pt=>mod(imgAng(pt[0]-c[0],pt[1]-c[1])-fa+F,360);
+  const imgOfB=b=>mod(b-F+fa,360), bOfImg=a=>mod(a-fa+F,360);
+  const cell=pt=>[clamp(Math.floor((pt[0]-bb.x0)/bb.w*3),0,2),clamp(Math.floor((pt[1]-bb.y0)/bb.h*3),0,2)];
+  const inCenter=pt=>{const[a,b]=cell(pt);return a===1&&b===1;};
+  const sectorAt=pt=>{ if(grid){const[a,b]=cell(pt); if(a===1&&b===1) return null; return SO[secIdx(bOfImg(imgAng(a-1,b-1)))];} return SO[secIdx(bearing(pt))]; };
+  const N=46, st={}; SO.concat('center').forEach(k=>st[k]={tot:0,in:0,sx:0,sy:0});
+  const inside=[];
+  for(let i=0;i<N;i++)for(let j=0;j<N;j++){const pt=[bb.x0+(i+.5)*bb.w/N,bb.y0+(j+.5)*bb.h/N];const k=sectorAt(pt)||'center';st[k].tot++;if(inPoly(pt,pts)){st[k].in++;st[k].sx+=pt[0];st[k].sy+=pt[1];inside.push(pt);}}
+  const khuyet=SO.filter(k=>st[k].tot>=N*N*.03&&(1-st[k].in/st[k].tot)>=.25);
+  const lab={}; SO.forEach(k=>{if(st[k].in>N*N*.006) lab[k]=[st[k].sx/st[k].in,st[k].sy/st[k].in];});
+  return {pts,bb,c,fa,F,ppm,grid,front,bearing,imgOfB,bOfImg,sectorAt,inCenter,cell,st,khuyet,lab,inside,sonAt:pt=>SON24[sonIdx(bearing(pt))],m:px=>px/ppm};
+}
+function nearestIn(g,from,okFn,avoidCenter=true){let best=null,bd=1e18;for(const pt of g.inside){if(avoidCenter&&g.inCenter(pt))continue;const q=g.sectorAt(pt);if(!q)continue;const pen=okFn(q);if(pen==null||pen===false)continue;const d=dist(pt,from)+(typeof pen==='number'?pen*g.ppm:0);if(d<bd){bd=d;best=pt;}}return best;}
+function edgeSlide(g,pt,okFn){ // dịch điểm (cửa) dọc theo cạnh đường bao gần nhất
+  let be=null,bd=1e18; const P=g.pts;
+  for(let i=0;i<P.length;i++){const a=P[i],b=P[(i+1)%P.length];const t=clamp(((pt[0]-a[0])*(b[0]-a[0])+(pt[1]-a[1])*(b[1]-a[1]))/((b[0]-a[0])**2+(b[1]-a[1])**2||1),0,1);const q=[a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])];const d=dist(q,pt);if(d<bd){bd=d;be=[a,b];}}
+  if(!be||bd>g.ppm*1.5) return null;
+  const [a,b]=be, L=dist(a,b), step=g.ppm*.2; let best=null,bdist=1e18;
+  for(let s=g.ppm*.4;s<=L-g.ppm*.4;s+=step){const q=[a[0]+(b[0]-a[0])*s/L,a[1]+(b[1]-a[1])*s/L];if(okFn(q)){const d=dist(q,pt);if(d<bdist){bdist=d;best=q;}}}
+  return best?{pt:best,m:g.m(bdist)}:null;
+}
+function rayFrame(c,a,fr){const[dx,dy]=dirVec(a);let t=1e9;if(dx>1e-9)t=Math.min(t,(fr.x1-c[0])/dx);if(dx<-1e-9)t=Math.min(t,(fr.x0-c[0])/dx);if(dy>1e-9)t=Math.min(t,(fr.y1-c[1])/dy);if(dy<-1e-9)t=Math.min(t,(fr.y0-c[1])/dy);return[c[0]+dx*t,c[1]+dy*t];}
+const imgDirWord=a=>['lên trên','chéo lên phải','sang phải','chéo xuống phải','xuống dưới','chéo xuống trái','sang trái','chéo lên trái'][Math.floor(mod(a+22.5,360)/45)];
+
+/* ================= Đánh giá theo sách ================= */
+const roleVi=r=>({giatruong:'Gia trưởng',truongtu:'Trưởng tử (thay gia trưởng)',me:'Mẹ làm chủ nhà'}[r]||'Gia trưởng');
+function trachOf(p){const F=+p.orient.facing||0;return SO[secIdx(p.orient.trach==='cua'?F:mod(F+180,360))];}
+function markerName(p,fi,m){ if(m.label) return m.label; const f=p.floors[fi]; const same=(f.markers||[]).filter(x=>x.type===m.type); const i=same.indexOf(m); return typeName(p,m.type)+(same.length>1?' '+(i+1):'')+(p.floors.length>1?' · '+(f.name||'Tầng '+(fi+1)):''); }
+function evaluate(p){
+  const R={F:[],score:[],fixes:[],folk:[],years:[],kl:[],assign:[],people:[]};
+  const oc=cungPhi(p.owner.dob,p.owner.gender,p.owner.tob); R.oc=oc;
+  if(!oc){R.error='Chưa có ngày sinh của gia trưởng. Hãy nhập ở bước 1.';return R;}
+  const O=oc.q; R.O=O; const DNm=DN(p), CH=isCH(p);
+  R.people=[{id:'owner',name:p.owner.name||'Gia trưởng',rel:roleVi(p.owner.role),c:oc,gender:p.owner.gender}].concat((p.members||[]).map(m=>({id:m.id,name:m.name||'(chưa đặt tên)',rel:m.rel,c:cungPhi(m.dob,m.gender,m.tob),gender:m.gender})));
+  const person=id=>R.people.find(x=>x.id===(id||'owner'))||R.people[0];
+  const add=o=>{o.cat=o.cat||'sach';R.F.push(o);return o;}, sc=(label,w,q)=>R.score.push({label,w,q});
+  const G=p.floors.map(f=>geo(p,f)); R.G=G;
+  if(!G.some(Boolean)){R.error='Chưa khoanh đường bao mặt bằng. Vào bước 2 để vẽ đường bao hoặc bấm AI nhận diện.';R.errStep=2;return R;}
+  const all=[]; p.floors.forEach((f,fi)=>(f.markers||[]).forEach(m=>{if(G[fi]) all.push({m,fi,g:G[fi],pt:[m.x,m.y]});}));
+  const of=t=>all.filter(x=>x.m.type===t);
+  // 1. Mạng – trạch
+  const tq=trachOf(p), toaQ=SO[secIdx(mod((+p.orient.facing||0)+180,360))]; R.tq=tq; R.toaQ=toaQ;
+  const ts=STARS[rel(O,tq)], same=QUAI[O].group===QUAI[tq].group; R.ts=ts;
+  add({level:lvOfStar(ts),area:CH?'Căn hộ':'Nhà',title:`${CH?'Căn hộ':'Nhà'} ${QUAI[tq].vi} trạch, chủ nhà cung ${QUAI[O].vi}: được ${ts.vi}`,detail:`Trạch tính theo ${p.orient.trach==='cua'?'hướng cửa (mặt tiền nhìn về '+QUAI[tq].dir+')':'tọa sơn (lưng nhà quay về '+QUAI[tq].dir+')'}. Chủ nhà thuộc ${QUAI[O].group} tứ mạng, nhà thuộc ${QUAI[tq].group} tứ trạch: ${same?'cùng nhóm nên hợp':'khác nhóm, sách nói người Đông tứ mạng ở Tây tứ trạch (hoặc ngược lại) dễ hao tài, sinh bệnh, khẩu thiệt'}. Sao ${ts.vi} (${ts.tinh}, ${ts.lv}): ${ts.y}.${CH?' Sách không bàn riêng về chung cư; app coi cửa căn hộ là đại môn và phía đối diện cửa là tọa.':''}`,cite:'tr. 92, 121, 140'});
+  sc('Mạng chủ nhà – trạch',10,ts.q);
+  // 2. Cửa chính
+  const doors=of('cua_chinh'); let door=null, dstar=null;
+  if(!doors.length) add({level:'info',area:DNm,title:'Chưa đánh dấu '+DNm.toLowerCase(),detail:DNm+' (đại môn) là yếu tố được chấm nặng nhất. Hãy đánh dấu ở bước 2.',cite:'tr. 139'});
+  else{
+    door=doors.sort((a,b)=>a.fi-b.fi)[0]; const g=door.g, q=g.sectorAt(door.pt), son=g.sonAt(door.pt);
+    if(!q){ add({level:'luu-y',area:DNm,title:DNm+' rơi vào ô trung cung',detail:'Với cách chia lưới 3×3, ô giữa không thuộc phương nào. Hãy kiểm tra lại vị trí cửa.',fi:door.fi,pt:door.pt}); }
+    else{
+      dstar=STARS[rel(O,q)]; R.dstar=dstar; R.doorQ=q; const ml=monLau(toaQ,son);
+      const f1=add({level:lvOfStar(dstar),area:DNm,title:`${DNm} ở phương ${QUAI[q].dir} (${QUAI[q].vi}): ${dstar.vi}`,detail:`Cửa nằm ở sơn ${son}, thuộc cung ${QUAI[q].vi}. Với chủ nhà cung ${QUAI[O].vi} đây là ${dstar.vi} (${dstar.tinh}, ${dstar.lv}): ${dstar.y}. Sách đặt đại môn lên đầu: cửa phải ở phương kiết của bổn mạng.`,cite:'tr. 94–101, 139',fi:door.fi,pt:door.pt,mid:door.m.id});
+      sc(DNm,25,dstar.q);
+      add({level:ml.good?'tot':'luu-y',area:DNm,title:`Vòng Môn Lầu: cửa gặp sao ${ml.name} (${ml.good?'kiết':'hung'})`,detail:`Nhà tọa ${QUAI[toaQ].vi} khởi Phước Đức tại sơn ${ML_START[toaQ]}, đếm thuận 24 sơn; cửa ở sơn ${son} là sao thứ ${ml.n}: ${ml.name}.`,cite:'tr. 108–118',fi:door.fi,pt:door.pt,mid:door.m.id});
+      sc('Cửa chính – 24 sơn',5,ml.good?1:.3);
+      if(CH&&!dstar.good){const cpS=CHE_PHUC[dstar.key];f1.fix=`Cửa căn hộ không dời được. Dùng phép chế phục: ${cpS?'quay lưng người nấu về phương '+STARS[cpS].vi+' ('+QUAI[qOfStar(O,cpS)].dir+')':'đặt bếp, phòng ngủ, bàn thờ đúng phương kiết để bù'}; có thể dùng vách ngăn, bình phong để đổi lối vào từ cửa sang phương kiết.`;}
+      else if(!dstar.good||!ml.good){
+        const sl=edgeSlide(g,door.pt,pt=>{const qq=g.sectorAt(pt);return qq&&STARS[rel(O,qq)].good&&monLau(toaQ,g.sonAt(pt)).good;});
+        if(sl&&sl.m<=6){const qq=g.sectorAt(sl.pt);const tx=`Dịch cửa khoảng ${fmt(sl.m)} m ${imgDirWord(imgAng(sl.pt[0]-door.pt[0],sl.pt[1]-door.pt[1]))} (trên bản vẽ) để vào sơn ${g.sonAt(sl.pt)}: cung ${QUAI[qq].vi} được ${STARS[rel(O,qq)].vi}, Môn Lầu gặp ${monLau(toaQ,g.sonAt(sl.pt)).name}.`;f1.fix=tx;R.fixes.push({fi:door.fi,from:door.pt,to:sl.pt,text:tx,type:'cua_chinh'});}
+        else if(!dstar.good) f1.fix='Mặt tiền này không có vị trí cửa nào vừa kiết cung vừa kiết sơn trong phạm vi 6 m. Dùng phép chế phục bằng hướng bếp (xem mục Bếp).';
+      }
+    }
+  }
+  // 3. Cổng
+  of('cong').forEach(x=>{const son=x.g.sonAt(x.pt),q=x.g.sectorAt(x.pt);const ml=monLau(toaQ,son);const s=q?STARS[rel(O,q)]:null;
+    add({level:(ml.good&&(!s||s.good))?'tot':(ml.good||(s&&s.good))?'luu-y':'thu-hung',area:'Cổng',title:`Cổng ở sơn ${son}: Môn Lầu ${ml.name}${s?', cung '+QUAI[q].vi+' '+s.vi:''}`,detail:'Cổng được xét như đường ra vào: chấm phụ theo vòng 24 sơn Môn Lầu và 8 phương của chủ nhà.',cite:'tr. 108–122',fi:x.fi,pt:x.pt,mid:x.m.id});
+    sc('Cổng',4,((ml.good?1:.3)+(s?s.q:.6))/2);});
+  // 4. Bếp
+  const beps=of('bep'); let recStar=null;
+  const cp=dstar&&CHE_PHUC[dstar.key];
+  recStar=cp||GOALS[p.goal||'tai'].star; R.recStar=recStar;
+  if(!beps.length) add({level:'info',area:'Bếp',title:'Chưa đánh dấu bếp',detail:'Bếp là yếu tố quan trọng thứ hai sau cửa chính.',cite:'tr. 101–105'});
+  beps.forEach((x,bi)=>{const g=x.g,q=g.sectorAt(x.pt),son=g.sonAt(x.pt),w=bi===0?1:.4,nm=markerName(p,x.fi,x.m);
+    if(q){const s=STARS[rel(O,q)];
+      const f=add({level:lvInv(s),area:'Bếp',title:`${nm} đặt ở ${QUAI[q].dir} (${QUAI[q].vi}): ${s.good?'đè lên phương tốt '+s.vi:'đè phương xấu '+s.vi+', đúng phép'}`,detail:`Sách dạy bếp phải "ngồi" ở phương hung để trấn, miệng bếp quay về phương kiết. Bếp ${TAO_TOA[s.key]}.`,cite:'tr. 101, 104, 138',fi:x.fi,pt:x.pt,mid:x.m.id});
+      sc('Vị trí bếp',12*w,QINV[s.key]);
+      if(s.good){const t=nearestIn(g,x.pt,qq=>!STARS[rel(O,qq)].good?(STARS[rel(O,qq)].lv==='Đại hung'?0:.5):false);if(t){const qq=g.sectorAt(t);const tx=`Dời bếp sang khu ${QUAI[qq].dir} (${QUAI[qq].vi}, ${STARS[rel(O,qq)].vi}), cách khoảng ${fmt(g.m(dist(t,x.pt)))} m, để bếp đè phương hung.`;f.fix=tx;R.fixes.push({fi:x.fi,from:x.pt,to:t,text:tx,type:'bep'});}}
+      const ts2=TAO_SON[son]; if(ts2!=null) add({level:ts2?'tot':(s.good?'thu-hung':'luu-y'),area:'Bếp',title:`${nm} ở sơn ${son}: ${ts2?'sơn kiết cho bếp':'sơn kỵ đặt bếp'}`,detail:ts2?'Theo bài "Khai táo môn lệ", sơn này đặt bếp được tài lộc.':`Theo bài "Khai táo môn lệ", sơn ${son} kỵ đặt bếp.${s.good?'':' Vì cung đã đúng phép nên chỉ là tiểu hung (luận mạng mà không luận sơn).'}${son==='Mão'?' Sách còn ghi bếp ở phương Mão thì phụ nữ trong nhà yếu.':''}${son==='Cấn'?' Bếp ở bên Cấn thì gia đạo không nghiêm.':''}`,cite:'tr. 102–103, 140',fi:x.fi,pt:x.pt,mid:x.m.id});
+      sc('Bếp – 24 sơn',4*w,ts2?1:(s.good?.2:.6));
+    } else add({level:'luu-y',area:'Bếp',title:`${nm} nằm ở ô trung cung`,detail:'Ô giữa nhà không thuộc phương nào trong cách chia lưới.',fi:x.fi,pt:x.pt});
+    if(x.m.dir!=null){const hb=g.bOfImg(x.m.dir),hq=SO[secIdx(hb)],hs=STARS[rel(O,hq)];
+      const f=add({level:lvOfStar(hs),area:'Bếp',title:`Hướng ${nm.toLowerCase()} (lưng người nấu) về ${QUAI[hq].dir}: ${hs.vi}`,detail:`Hướng bếp tính theo lưng người đứng nấu (tương đương miệng lò củi trong sách), quay về ${fmt(hb,0)}° thuộc cung ${QUAI[hq].vi}. Miệng bếp hướng ${hs.vi}: ${TAO_HUONG[hs.key]}.`,cite:'tr. 103–105, 138',fi:x.fi,pt:x.pt,mid:x.m.id});
+      sc('Hướng bếp',13*w,hs.q);
+      if(hs.key!==recStar){const tq2=qOfStar(O,recStar),tb=QUAI[tq2].deg,ia=g.imgOfB(tb);
+        const opts=[0,90,180,270].map(a=>({a,s:STARS[rel(O,SO[secIdx(g.bOfImg(a))])]})).filter(o=>o.s.good).map(o=>`${imgDirWord(o.a)} (${o.s.vi})`);
+        const why=cp?`chế phục cửa chính phạm ${dstar.vi}: ${dstar.vi==='Ngũ Quỷ'?'Sanh Khí giáng Ngũ Quỷ':dstar.vi==='Tuyệt Mạng'?'Thiên Y chế Tuyệt Mạng':'Diên Niên yểm Lục Sát'}`:`mục tiêu "${GOALS[p.goal||'tai'].vi}"`;
+        const tx=`Nên quay lưng người nấu về ${QUAI[tq2].dir} (${STARS[recStar].vi}) theo ${why}. Trên bản vẽ là hướng ${imgDirWord(ia)}.${opts.length?' Các hướng xoay theo tường đều tốt: '+opts.join('; ')+'.':''}`;
+        if(!hs.good||cp) f.fix=tx; else f.fix=(f.fix?f.fix+' ':'')+tx;
+        R.fixes.push({fi:x.fi,at:x.pt,dir:ia,text:tx,type:'bep-dir'});}
+    } else add({level:'info',area:'Bếp',title:`${nm}: chưa đặt hướng`,detail:'Chọn bếp ở bước 2 rồi đặt hướng lưng người đứng nấu.',fi:x.fi,pt:x.pt});
+    if(door&&door.fi===x.fi){const g2=door.g;const a1=imgAng(g2.c[0]-door.pt[0],g2.c[1]-door.pt[1]),a2=imgAng(x.pt[0]-door.pt[0],x.pt[1]-door.pt[1]);if(angDiff(a1,a2)<14&&g2.m(dist(door.pt,x.pt))<14){add({level:'thu-hung',area:'Bếp',title:DNm+' nhìn thẳng vào bếp',detail:'"Khai môn đối táo, tài súc đa hao": mở cửa thấy bếp thì hao tài. Nếu giữa cửa và bếp đã có tường hoặc vách ngăn thì bỏ qua mục này.',cite:'tr. 103',fi:x.fi,pt:x.pt});sc('Cửa – bếp',4,0);}}
+    of('gieng').filter(y=>y.fi===x.fi&&x.g.m(dist(y.pt,x.pt))<2).forEach(y=>add({level:'thu-hung',area:'Bếp',title:'Giếng, bể nước sát bếp',detail:'"Tỉnh táo tương liên": giếng liền bếp thì mẹ chồng nàng dâu không thuận.',cite:'tr. 103, 119',fi:x.fi,pt:x.pt}));
+    of('be_phot').filter(y=>y.fi===x.fi&&x.g.m(dist(y.pt,x.pt))<3).forEach(y=>add({level:'luu-y',area:'Bếp',title:'Hầm, bể phốt đối diện bếp',detail:'Khanh hầm đối bếp: dễ đau mắt, sinh bệnh.',cite:'tr. 103',fi:x.fi,pt:x.pt}));
+  });
+  // 5. Bàn thờ
+  const alts=of('ban_tho');
+  if(!alts.length) add({level:'info',area:'Bàn thờ',title:'Chưa đánh dấu bàn thờ',detail:'Nơi thờ phải đặt ở phương kiết của chủ nhà. Nếu nhà có bàn thờ, hãy đánh dấu ở bước 2.',cite:'tr. 138'});
+  alts.forEach((x,ai)=>{const g=x.g,q=g.sectorAt(x.pt),nm=markerName(p,x.fi,x.m);if(!q){add({level:'luu-y',area:'Bàn thờ',title:`${nm} ở ô trung cung`,detail:'Ô giữa không thuộc phương nào.',fi:x.fi,pt:x.pt});return;}
+    const s=STARS[rel(O,q)];
+    const f=add({level:lvOfStar(s),area:'Bàn thờ',title:`${nm} ở ${QUAI[q].dir} (${QUAI[q].vi}): ${s.vi}`,detail:`Sách: thờ Thổ địa, Táo quân, tổ tiên đều phải an ở phương kiết của bổn mạng thì được phước; đặt nhầm phương hung thì mắc lỗi. ${s.vi}: ${s.y}.`,cite:'tr. 101, 138',fi:x.fi,pt:x.pt,mid:x.m.id});
+    sc(ai?'Bàn thờ phụ':'Bàn thờ',ai?5:15,s.q);
+    if(!s.good){const t=nearestIn(g,x.pt,qq=>{const ss=STARS[rel(O,qq)];return ss.good?(ss.rank-1)*1.5:false;});if(t){const qq=g.sectorAt(t);const tx=`Dời bàn thờ sang khu ${QUAI[qq].dir} (${QUAI[qq].vi}, ${STARS[rel(O,qq)].vi}) trên cùng tầng, cách khoảng ${fmt(g.m(dist(t,x.pt)))} m.`;f.fix=tx;R.fixes.push({fi:x.fi,from:x.pt,to:t,text:tx,type:'ban_tho'});}}
+    if(x.m.dir!=null){const hq=SO[secIdx(g.bOfImg(x.m.dir))],hs=STARS[rel(O,hq)];add({level:hs.good?'tot':'luu-y',area:'Bàn thờ',title:`${nm} nhìn về ${QUAI[hq].dir}: ${hs.vi}`,detail:'Hướng nhìn của bàn thờ cũng nên về phương kiết của chủ nhà.',cite:'tr. 138',fi:x.fi,pt:x.pt});sc('Hướng bàn thờ',3,hs.q);}
+  });
+  // 6. Phòng ngủ
+  const beds=of('phong_ngu'); let ownerRoomDone=false; R.beds=beds;
+  if(!beds.length) add({level:'info',area:'Phòng ngủ',title:'Chưa đánh dấu phòng ngủ',detail:'Đánh dấu tâm từng phòng ngủ và chọn người ngủ để app xếp phòng.',cite:'tr. 137'});
+  beds.forEach(x=>{const g=x.g,q=g.sectorAt(x.pt),per=person(x.m.occ),nm=markerName(p,x.fi,x.m);
+    if(!per.c){add({level:'info',area:'Phòng ngủ',title:`${nm}: ${per.name} chưa có ngày sinh`,detail:'Nhập ngày sinh ở bước 1.',fi:x.fi,pt:x.pt});return;}
+    if(!q){add({level:'luu-y',area:'Phòng ngủ',title:`${nm} ở ô trung cung`,detail:'Ô giữa không thuộc phương nào.',fi:x.fi,pt:x.pt});return;}
+    const s=STARS[rel(per.c.q,q)]; const isOwner=per.id==='owner';
+    let extra=''; if(isOwner){const sp=R.people.find(z=>z.rel==='Vợ/chồng'&&z.c);if(sp){const s2=STARS[rel(sp.c.q,q)];extra=` Với ${sp.name} (cung ${QUAI[sp.c.q].vi}) phòng này là ${s2.vi}.`;}}
+    const f=add({level:lvOfStar(s),area:'Phòng ngủ',title:`${nm} của ${per.name}: ${QUAI[q].dir}, ${s.vi}`,detail:`Người ngủ cung ${QUAI[per.c.q].vi}; phòng nằm ở cung ${QUAI[q].vi} là ${s.vi} (${s.lv}): ${s.y}.${extra} Sách dạy phân phòng hợp mạng từng người; phòng ở phương Sanh Khí thì sinh con, phát tài.`,cite:'tr. 101, 137',fi:x.fi,pt:x.pt,mid:x.m.id});
+    sc(isOwner&&!ownerRoomDone?'Phòng gia trưởng':'Phòng ngủ khác',isOwner&&!ownerRoomDone?15:5,s.q); if(isOwner) ownerRoomDone=true;
+    if(!s.good){const alt=beds.filter(y=>y!==x&&y.g.sectorAt(y.pt)).map(y=>({y,s:STARS[rel(per.c.q,y.g.sectorAt(y.pt))]})).filter(o=>o.s.good).sort((a,b)=>b.s.q-a.s.q)[0];
+      f.fix=alt?`Đổi sang ${markerName(p,alt.y.fi,alt.y.m)} (${alt.s.vi} với ${per.name}).`:'Không có phòng ngủ nào hợp hơn; có thể đổi công năng phòng này thành kho, chỗ giặt hoặc WC (hợp đặt ở phương hung, tr. 101).';}
+    if(isOwner&&door&&door.fi!=null){const dq=R.doorQ;if(dq){const k=rel(dq,q);const ks=STARS[k];if(!ks.good&&(k==='tuyet'||k==='nguquy')){const hd=QUAI[dq].hanh,hr=QUAI[q].hanh;const hurt=HANH_KHAC[hd]===hr?QUAI[q].nguoi:HANH_KHAC[hr]===hd?QUAI[dq].nguoi:null;add({level:'luu-y',area:'Phòng ngủ',title:`${DNm} (${QUAI[dq].vi}) với phòng gia trưởng (${QUAI[q].vi}) phạm ${ks.vi}`,detail:`Theo "Thông thiên chiếu thủy kính", cửa và phòng chính khắc nhau thì ứng hại người trong nhà${hurt?' (ở đây là '+hurt+')':''}.`,cite:'tr. 106–107',fi:x.fi,pt:x.pt});}}}
+  });
+  // 7. WC
+  const wcs=of('wc'), wW=wcs.length?10/wcs.length:0;
+  wcs.forEach(x=>{const g=x.g,q=g.sectorAt(x.pt),son=g.sonAt(x.pt),nm=markerName(p,x.fi,x.m);
+    if(g.inCenter(x.pt)){add({level:'thu-hung',area:'WC',title:`${nm} nằm giữa nhà`,detail:'Sách dặn chỗ đi vệ sinh không được đặt giữa nhà.',cite:'tr. 139',fi:x.fi,pt:x.pt,mid:x.m.id});sc('WC',wW,0);return;}
+    if(!q) return; const s=STARS[rel(O,q)];
+    const f=add({level:lvInv(s),area:'WC',title:`${nm} ở ${QUAI[q].dir} (${QUAI[q].vi}): ${s.good?'đè lên phương tốt '+s.vi:'ở phương xấu '+s.vi+', đúng phép'}`,detail:`Sách: cầu xí, hầm phân nên đặt ở phương hung của bổn mạng để trấn hung thần; đặt ở phương kiết là làm hỏng cái tốt.`,cite:'tr. 101, 139',fi:x.fi,pt:x.pt,mid:x.m.id});
+    sc('WC',wW,QINV[s.key]);
+    if(s.good){const t=nearestIn(g,x.pt,qq=>!STARS[rel(O,qq)].good?0:false);if(t){const qq=g.sectorAt(t);const tx=`Nếu cải tạo được: chuyển WC sang khu ${QUAI[qq].dir} (${QUAI[qq].vi}, ${STARS[rel(O,qq)].vi}), cách khoảng ${fmt(g.m(dist(t,x.pt)))} m. Vị trí cũ dùng cho phòng ngủ hoặc bàn thờ.`;f.fix=tx;R.fixes.push({fi:x.fi,from:x.pt,to:t,text:tx,type:'wc'});}}
+    if(['Càn','Khôn','Cấn','Tốn'].includes(son)) add({level:'thu-hung',area:'WC',title:`${nm} nằm đúng sơn ${son} (tứ ngung)`,detail:'Bốn góc Càn (cửa trời), Tốn (cửa đất), Khôn (cửa người), Cấn (đường quỷ) đặt nhà xí thì đại hại.',cite:'tr. 139',fi:x.fi,pt:x.pt});
+    else if(['Dần','Thân','Tị','Hợi'].includes(son)) add({level:'luu-y',area:'WC',title:`${nm} ở sơn ${son} (tứ sanh)`,detail:'Sách khuyên đặt chỗ vệ sinh ở các sơn Giáp, Ất, Bính, Đinh, Canh, Tân, Nhâm, Quý, Thìn, Tuất, Sửu, Mùi; tránh tứ sanh Dần, Thân, Tị, Hợi.',cite:'tr. 139',fi:x.fi,pt:x.pt});
+    if(door&&door.fi===x.fi){const a1=imgAng(door.g.c[0]-door.pt[0],door.g.c[1]-door.pt[1]),a2=imgAng(x.pt[0]-door.pt[0],x.pt[1]-door.pt[1]);if(angDiff(a1,a2)<12) add({level:'luu-y',area:'WC',title:`${nm} đối thẳng ${DNm.toLowerCase()}`,detail:'Không đặt nhà xí đối diện cửa trước hoặc cửa sau. Nếu đã có tường che thì bỏ qua.',cite:'tr. 139',fi:x.fi,pt:x.pt});}
+  });
+  // 8. Kho, giặt, bể phốt, giếng
+  of('kho').forEach(x=>{const q=x.g.sectorAt(x.pt);if(!q)return;const s=STARS[rel(O,q)];add({level:s.good?'tot':'luu-y',area:'Kho',title:`${markerName(p,x.fi,x.m)} ở ${QUAI[q].dir}: ${s.vi}`,detail:'Kho vựa nên đặt ở phương kiết.',cite:'tr. 101, 139',fi:x.fi,pt:x.pt,mid:x.m.id});sc('Kho',3,s.q);});
+  of('giat').forEach(x=>{const q=x.g.sectorAt(x.pt);if(!q)return;const s=STARS[rel(O,q)];add({level:s.good?'luu-y':'tot',area:'Chỗ giặt',title:`${markerName(p,x.fi,x.m)} ở ${QUAI[q].dir}: ${s.vi}`,detail:'Chỗ giặt rửa, cối xay, đá mài nên đặt ở phương hung để trấn.',cite:'tr. 101, 140',fi:x.fi,pt:x.pt,mid:x.m.id});sc('Chỗ giặt',2,QINV[s.key]);});
+  of('be_phot').forEach(x=>{const q=x.g.sectorAt(x.pt),son=x.g.sonAt(x.pt);if(!q)return;let msg=KHANH[q]||null;if(son==='Mão'||son==='Dậu')msg='dễ sinh cảnh cô quả (vợ chồng chia lìa)';add({level:msg?'thu-hung':'tot',area:'Bể phốt, hầm',title:`${markerName(p,x.fi,x.m)} ở ${QUAI[q].dir}, sơn ${son}`,detail:msg?`Sách: đào hầm ở phương này thì ${msg}.`:'Phương này sách không nêu điều kỵ cho hầm.',cite:'tr. 138–139',fi:x.fi,pt:x.pt,mid:x.m.id});sc('Bể phốt',4,msg?.2:1);});
+  of('gieng').forEach(x=>{const son=x.g.sonAt(x.pt),v=GIENG[son];const q=x.g.sectorAt(x.pt);const doai=q==='dui';add({level:v===1&&!doai?'tot':v===-2?'thu-hung':(v===-1||doai)?'luu-y':'info',area:'Giếng',title:`${markerName(p,x.fi,x.m)} ở sơn ${son}`,detail:v===1?'Giáp, Canh, Nhâm, Bính là bốn sơn tốt để đào giếng.':v===-2?'Đào giếng ở Mùi, Hợi: đại hung.':v===-1?'Sơn này sách ghi không tốt cho giếng.':v===0?'Thân, Dậu: trước hung sau kiết.':'Sách không nói rõ sơn này.'+(doai?' Giếng ở phương Đoài không nên.':''),cite:'tr. 119',fi:x.fi,pt:x.pt,mid:x.m.id});sc('Giếng',2,v===1?1:v===-2?0:.5);});
+  // 9. Khuyết góc (tầng trệt)
+  const g0=G[0];
+  if(g0){ if(g0.khuyet.length){ g0.khuyet.forEach(k=>{const miss=Math.round((1-g0.st[k].in/g0.st[k].tot)*100);const spec={kan:'xun',gen:'kun',zhen:'qian',xun:'zhen',li:'qian',kun:'gen'}[tq];
+        add({level:'thu-hung',area:'Hình thế',title:`${CH?'Căn hộ':'Nền nhà'} khuyết phía ${QUAI[k].dir} (${QUAI[k].vi}), thiếu khoảng ${miss}%`,detail:`Cung ${QUAI[k].vi} ứng với ${QUAI[k].nguoi}; nền khuyết cung nào thì người ứng cung đó kém.${spec===k?' Sách ghi riêng: nhà '+QUAI[tq].vi+' trạch mà nền khuyết '+QUAI[k].vi+' thì con cái lớn trong nhà gặp hại.':''}`,cite:'tr. 67, 142',fi:0,pt:g0.lab[k]||null});});
+      sc('Nền nhà vuông vức',6,0); }
+    else{ add({level:'tot',area:'Hình thế',title:CH?'Căn hộ không khuyết góc':'Nền nhà tầng trệt không khuyết góc',detail:'Đường bao đầy đủ ở cả 8 cung.',cite:'tr. 142'}); sc('Nền nhà vuông vức',6,1);} }
+  // 10. Xung quanh
+  surrList(p).forEach(it=>{if(p.surr?.[it.k]){add({level:it.good?'tot':'thu-hung',area:'Xung quanh',title:it.t,detail:it.d,cite:it.c});sc('Xung quanh',it.good?3:2,it.good?1:0);}});
+  // 11. Ngoài sách (kinh nghiệm dân gian)
+  const folk=o=>{o.cat='dangian';o.level=o.level||'luu-y';R.folk.push(o);};
+  const backPos=(x)=>{const g=x.g,f=g.front;const bb=g.bb;const along=f==='left'?bb.x1-x.pt[0]:f==='right'?x.pt[0]-bb.x0:f==='top'?bb.y1-x.pt[1]:x.pt[1]-bb.y0;const across=(f==='left'||f==='right')?x.pt[1]-bb.y0:x.pt[0]-bb.x0;return[g.m(along),g.m(across)];};
+  alts.forEach(a=>wcs.filter(w=>w.fi===a.fi+1).forEach(w=>{const A=backPos(a),B=backPos(w);if(Math.hypot(A[0]-B[0],A[1]-B[1])<1.3)folk({area:'Bàn thờ',title:`WC tầng trên nằm ngay trên ${markerName(p,a.fi,a.m).toLowerCase()}`,detail:'Dân gian kiêng WC đè lên bàn thờ. App so vị trí hai tầng theo mép sau nhà, sai số khoảng 1 m.',fi:a.fi,pt:a.pt});}));
+  alts.forEach(a=>wcs.filter(w=>w.fi===a.fi&&a.g.m(dist(a.pt,w.pt))<1.6).forEach(()=>folk({area:'Bàn thờ',title:`${markerName(p,a.fi,a.m)} sát WC`,detail:'Dân gian kiêng bàn thờ chung vách hoặc sát nhà vệ sinh.',fi:a.fi,pt:a.pt})));
+  beps.forEach(b=>wcs.filter(w=>w.fi===b.fi&&b.g.m(dist(b.pt,w.pt))<2.5).forEach(()=>folk({area:'Bếp',title:`${markerName(p,b.fi,b.m)} gần WC`,detail:'Dân gian kiêng bếp đối diện hoặc sát cửa nhà vệ sinh (thủy hỏa xung).',fi:b.fi,pt:b.pt})));
+  beps.forEach(b=>{if(b.g.inCenter(b.pt))folk({area:'Bếp',title:`${markerName(p,b.fi,b.m)} nằm giữa nhà`,detail:'Dân gian kiêng đặt bếp ở trung tâm nhà ("hỏa thiêu tâm").',fi:b.fi,pt:b.pt});});
+  of('cau_thang').forEach(s=>{if(s.g.inCenter(s.pt))folk({area:'Cầu thang',title:`${markerName(p,s.fi,s.m)} nằm giữa nhà`,detail:'Dân gian cho rằng cầu thang ở tâm nhà làm "động" trung cung.',fi:s.fi,pt:s.pt});});
+  if(door) of('cua_sau').concat(of('ban_cong')).filter(b=>b.fi===door.fi).forEach(b=>{const a1=imgAng(door.g.c[0]-door.pt[0],door.g.c[1]-door.pt[1]),a2=imgAng(b.pt[0]-door.pt[0],b.pt[1]-door.pt[1]);if(angDiff(a1,a2)<12)folk({area:'Cửa',title:`${DNm} thẳng hàng ${b.m.type==='ban_cong'?'cửa ban công':'cửa sau'}`,detail:'Dân gian gọi là "xuyên đường" (xuyên tâm): khí vào cửa rồi thoát ra ngay, khó tụ tài. Thường hóa giải bằng bình phong, vách ngăn hoặc tủ.',fi:b.fi,pt:b.pt});});
+  beds.forEach(b=>beps.filter(k=>k.fi===b.fi-1).forEach(k=>{const A=backPos(b),B=backPos(k);if(Math.hypot(A[0]-B[0],A[1]-B[1])<1.5)folk({area:'Phòng ngủ',title:`${markerName(p,b.fi,b.m)} nằm ngay trên bếp`,detail:'Dân gian kiêng giường ngủ đặt trên bếp tầng dưới.',fi:b.fi,pt:b.pt});}));
+  const bc=of('ban_cong')[0]; if(bc){const bq=SO[secIdx(bc.g.bearing(bc.pt))];R.balcony={q:bq,b:bc.g.bearing(bc.pt)};add({level:'info',area:'Ban công',title:`Ban công nằm phía ${QUAI[bq].dir} (${QUAI[bq].vi})`,detail:`Môi giới thường gọi đây là "hướng ban công". Bát Trạch trong sách xét theo ${DNm.toLowerCase()} (đại môn) và tọa sơn, nên hướng ban công chỉ để tham khảo. Với gia trưởng cung ${QUAI[O].vi}, phía này là ${STARS[rel(O,bq)].vi}.`,cite:'tr. 139',fi:bc.fi,pt:bc.pt,mid:bc.m.id});}
+  // Điểm
+  const W=R.score.reduce((a,b)=>a+b.w,0), S=R.score.reduce((a,b)=>a+b.w*b.q,0); R.total=W?Math.round(S/W*100):0;
+  R.grade=R.total>=80?'Rất hợp':R.total>=65?'Khá hợp':R.total>=50?'Trung bình':'Nhiều điểm cần chỉnh';
+  // Sắp xếp + đánh số ghim
+  R.F.sort((a,b)=>LV[a.level].o-LV[b.level].o); let n=0; R.F.forEach(f=>{if(f.pt&&f.fi!=null)f.n=++n;}); R.folk.forEach(f=>{if(f.pt&&f.fi!=null)f.n=++n;});
+  // Năm ứng (tr. 98)
+  const ys=new Date().getFullYear(); const keyS=[['Trạch',ts],[DNm,dstar]];
+  beps.slice(0,1).forEach(b=>{if(b.m.dir!=null){keyS.push(['Hướng bếp',STARS[rel(O,SO[secIdx(b.g.bOfImg(b.m.dir))])]]);}});
+  const ob=beds.find(b=>(b.m.occ||'owner')==='owner'&&b.g.sectorAt(b.pt)); if(ob) keyS.push(['Phòng gia trưởng',STARS[rel(O,ob.g.sectorAt(ob.pt))]]);
+  for(let y=ys;y<ys+12;y++){const ch=chiOf(y);const good=keyS.filter(k=>k[1]&&k[1].good&&k[1].ung.includes(ch)).map(k=>`${k[0]} (${k[1].vi})`),bad=keyS.filter(k=>k[1]&&!k[1].good&&k[1].ung.includes(ch)).map(k=>`${k[0]} (${k[1].vi})`);R.years.push({y,cc:canChi(y),good,bad});}
+  // Kim Lâu, Hoang Ốc, Tam Tai (tr. 405–407)
+  const bcc=canChi(oc.y), bchi=chiOf(oc.y), exempt=KL_EXEMPT.includes(bcc), dong=QUAI[O].group==='Đông';
+  const hapChi=dong?['Tý','Mão','Thìn','Tị','Ngọ']:['Sửu','Dần','Mùi','Thân','Dậu','Tuất','Hợi'];
+  for(let y=ys;y<ys+7;y++){const age=y-oc.y+1,kl=kimLau(age),ho=hoangOc(age),tt=TAM_TAI[bchi].includes(chiOf(y)),hp=hapChi.includes(chiOf(y));
+    const klBad=kl&&kl.good===false&&!exempt, ok=!!kl&&!klBad&&ho&&ho.good&&!tt;
+    R.kl.push({y,cc:canChi(y),age,kl,ho,tt,hp,exempt,ok,klBad});}
+  R.bcc=bcc;
+  // Xếp phòng cho thành viên
+  const rooms=beds.filter(b=>b.g.sectorAt(b.pt)).map(b=>({b,q:b.g.sectorAt(b.pt),name:markerName(p,b.fi,b.m)}));
+  const used=new Set(); const order=R.people.filter(x=>x.c&&!(x.rel==='Vợ/chồng'));
+  order.forEach(per=>{let best=null;rooms.forEach((r,i)=>{if(used.has(i))return;const s=STARS[rel(per.c.q,r.q)];if(!best||s.q>best.s.q)best={i,s,r};});const curRoom=rooms.find(r=>(r.b.m.occ||'owner')===per.id);
+    if(best){used.add(best.i);} R.assign.push({per,best,cur:curRoom?{r:curRoom,s:STARS[rel(per.c.q,curRoom.q)]}:null});});
+  const sp=R.people.find(z=>z.rel==='Vợ/chồng'&&z.c); if(sp){const a0=R.assign.find(a=>a.per.id==='owner');if(a0&&a0.best)R.assign.push({per:sp,best:{r:a0.best.r,s:STARS[rel(sp.c.q,a0.best.r.q)],i:a0.best.i},cur:null,shared:true});}
+  return R;
+}
+
+/* ================= Vẽ mặt bằng (SVG) ================= */
+const PAL_APP={paper:'var(--card)',ink:'var(--ink)',muted:'var(--muted)',line:'var(--line-strong)',son:'var(--son)',kiet:'var(--kiet)',hung:'var(--hung)',fix:'var(--kiet)',m:k=>`var(${k})`,font:'var(--f-body)'};
+const PAL_EXP={paper:'#fbf8f1',ink:'#1f1a15',muted:'#6f655a',line:'#b7a88f',son:'#9c2a21',kiet:'#24704f',hung:'#b1261d',fix:'#1f7a52',m:k=>LIT[k],font:'Arial, Helvetica, sans-serif'};
+function starFill(C,s){ if(!s) return ['none',0]; return s.good?[C.kiet,s.rank===1?.24:s.rank===2?.18:.12]:[C.hung,s.lv==='Đại hung'?.26:.15]; }
+function svgPlan(p,fi,opt={}){
+  const f=p.floors[fi]; if(!f) return ''; const C=opt.exp?PAL_EXP:PAL_APP; const W=f.w||1000,H=f.h||700; const g=geo(p,f); const R=opt.R;
+  const oc=cungPhi(p.owner.dob,p.owner.gender,p.owner.tob); const O=oc?.q;
+  const id='s'+uid(); const mode=opt.mode||'edit';
+  const mk=(f.markers||[]);
+  // phạm vi
+  let x0=0,y0=0,x1=W,y1=H; const show=g&&(mode!=='edit'||ui.showSec);
+  if(g){x0=g.bb.x0;y0=g.bb.y0;x1=g.bb.x1;y1=g.bb.y1;mk.forEach(m=>{x0=Math.min(x0,m.x);y0=Math.min(y0,m.y);x1=Math.max(x1,m.x);y1=Math.max(y1,m.y);});
+    if(R)R.fixes.filter(z=>z.fi===fi&&z.to).forEach(z=>{x0=Math.min(x0,z.to[0]);x1=Math.max(x1,z.to[0]);y0=Math.min(y0,z.to[1]);y1=Math.max(y1,z.to[1]);});}
+  const S=Math.max(x1-x0,y1-y0), fs=g?clamp(S/58,7,60):clamp(Math.max(W,H)/70,7,60);
+  const pad=g?fs*2.4:0, fr={x0:x0-pad,y0:y0-pad,x1:x1+pad,y1:y1+pad}; const mg=g?fs*2.3:0;
+  const vb=g?[fr.x0-mg,fr.y0-mg,fr.x1-fr.x0+2*mg,fr.y1-fr.y0+2*mg]:[0,0,W,H];
+  const halo=`paint-order:stroke;stroke:${C.paper};stroke-width:${fs*.38}px;stroke-linejoin:round`;
+  let s=`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="${vb.map(v=>v.toFixed(1)).join(' ')}" ${opt.exp?`width="${Math.round(vb[2])}" height="${Math.round(vb[3])}"`:''} role="img" aria-label="Mặt bằng ${esc(f.name||'')}" style="font-family:${C.font}">`;
+  s+=`<defs><marker id="${id}a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" style="fill:${C.fix}"/></marker><marker id="${id}b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0,0L10,5L0,10z" style="fill:${C.m('--m-fire')}"/></marker>${g?`<clipPath id="${id}c"><polygon points="${g.pts.map(a=>a.join(',')).join(' ')}"/></clipPath>`:''}</defs>`;
+  s+=`<rect x="${vb[0]}" y="${vb[1]}" width="${vb[2]}" height="${vb[3]}" style="fill:${C.paper}"/>`;
+  if(f.img) s+=`<image href="${opt.img||f.img}" xlink:href="${opt.img||f.img}" x="0" y="0" width="${W}" height="${H}" preserveAspectRatio="none"/>`;
+  else s+=`<text x="${W/2}" y="${H/2}" text-anchor="middle" style="fill:${C.muted};font-size:${fs*1.4}px">Chưa có ảnh mặt bằng</text>`;
+  if(g){
+    if(show){
+      s+=`<g clip-path="url(#${id}c)">`;
+      if(!g.grid){ const Rr=Math.hypot(W,H)*2;
+        SO.forEach((q,i)=>{const st=O?STARS[rel(O,q)]:null;const [col,op]=O?starFill(C,st):[i%2?C.line:C.paper,.18];const a1=g.imgOfB(i*45-22.5),a2=g.imgOfB(i*45+22.5);const p1=[g.c[0]+dirVec(a1)[0]*Rr,g.c[1]+dirVec(a1)[1]*Rr],p2=[g.c[0]+dirVec(a2)[0]*Rr,g.c[1]+dirVec(a2)[1]*Rr];
+          s+=`<path d="M${g.c[0]},${g.c[1]}L${p1[0]},${p1[1]}A${Rr},${Rr} 0 0 1 ${p2[0]},${p2[1]}Z" style="fill:${col};fill-opacity:${op}"/>`;});
+        SO.forEach((q,i)=>{const a=g.imgOfB(i*45+22.5),e=[g.c[0]+dirVec(a)[0]*Rr,g.c[1]+dirVec(a)[1]*Rr];s+=`<line x1="${g.c[0]}" y1="${g.c[1]}" x2="${e[0]}" y2="${e[1]}" style="stroke:${C.ink};stroke-opacity:.35;stroke-width:${fs*.07}px;stroke-dasharray:${fs*.5} ${fs*.35}"/>`;});
+      } else {
+        for(let a=0;a<3;a++)for(let b=0;b<3;b++){const x=g.bb.x0+a*g.bb.w/3,y=g.bb.y0+b*g.bb.h/3;const q=g.sectorAt([x+g.bb.w/6,y+g.bb.h/6]);const st=q&&O?STARS[rel(O,q)]:null;const[col,op]=q?(O?starFill(C,st):[C.line,.15]):[C.paper,0];s+=`<rect x="${x}" y="${y}" width="${g.bb.w/3}" height="${g.bb.h/3}" style="fill:${col};fill-opacity:${op};stroke:${C.ink};stroke-opacity:.3;stroke-width:${fs*.07}px;stroke-dasharray:${fs*.5} ${fs*.35}"/>`;}
+      }
+      s+=`</g>`;
+      s+=`<rect x="${g.bb.x0+g.bb.w/3}" y="${g.bb.y0+g.bb.h/3}" width="${g.bb.w/3}" height="${g.bb.h/3}" style="fill:none;stroke:${C.gold||C.muted};stroke-width:${fs*.08}px;stroke-dasharray:${fs*.25} ${fs*.25};stroke-opacity:.7"/>`;
+    }
+    s+=`<polygon points="${g.pts.map(a=>a.join(',')).join(' ')}" style="fill:none;stroke:${C.son};stroke-width:${fs*.2}px;stroke-linejoin:round"/>`;
+    // khung la bàn 24 sơn
+    s+=`<rect x="${fr.x0}" y="${fr.y0}" width="${fr.x1-fr.x0}" height="${fr.y1-fr.y0}" style="fill:none;stroke:${C.line};stroke-width:${fs*.08}px"/>`;
+    for(let k=0;k<24;k++){const b=k*15+7.5,a=g.imgOfB(b),pt=rayFrame(g.c,a,fr);const big=(k%3)===1;const d=dirVec(a);s+=`<line x1="${pt[0]}" y1="${pt[1]}" x2="${pt[0]-d[0]*fs*(big?1.1:.5)}" y2="${pt[1]-d[1]*fs*(big?1.1:.5)}" style="stroke:${C.ink};stroke-opacity:${big?.7:.4};stroke-width:${fs*(big?.12:.07)}px"/>`;
+      const am=g.imgOfB(k*15),pm=rayFrame(g.c,am,fr),dm=dirVec(am);const nm=SON24[k];s+=`<text x="${pm[0]+dm[0]*fs*1.1}" y="${pm[1]+dm[1]*fs*1.1+fs*.3}" text-anchor="middle" style="fill:${C.muted};font-size:${fs*.78}px;${halo}">${nm}</text>`;}
+    SO.forEach((q,i)=>{const a=g.imgOfB(i*45),pt=rayFrame(g.c,a,fr),d=dirVec(a);const ip=[pt[0]-d[0]*fs*1.9,pt[1]-d[1]*fs*1.9];s+=`<text x="${ip[0]}" y="${ip[1]+fs*.35}" text-anchor="middle" style="fill:${C.ink};font-size:${fs*.95}px;font-weight:700;${halo}">${QUAI[q].ab}</text>`;});
+    { const a=g.imgOfB(0),pt=rayFrame(g.c,a,fr),d=dirVec(a),n=[-d[1],d[0]];const tip=[pt[0]+d[0]*fs*2.2,pt[1]+d[1]*fs*2.2];
+      s+=`<path d="M${tip[0]},${tip[1]}L${pt[0]+n[0]*fs*.55},${pt[1]+n[1]*fs*.55}L${pt[0]-n[0]*fs*.55},${pt[1]-n[1]*fs*.55}Z" style="fill:${C.son}"/><text x="${pt[0]+n[0]*fs*1.9}" y="${pt[1]+n[1]*fs*1.9+fs*.3}" text-anchor="middle" style="fill:${C.son};font-size:${fs*.8}px;font-weight:700;${halo}">BẮC</text>`; }
+    // nhãn 8 cung
+    if(show) SO.forEach(q=>{const L=g.lab[q];if(!L)return;const st=O?STARS[rel(O,q)]:null;s+=`<text x="${L[0]}" y="${L[1]}" text-anchor="middle" style="fill:${st?(st.good?C.kiet:C.hung):C.ink};font-size:${fs*1.02}px;font-weight:700;${halo}">${QUAI[q].vi}</text>`;if(st)s+=`<text x="${L[0]}" y="${L[1]+fs*1.05}" text-anchor="middle" style="fill:${st.good?C.kiet:C.hung};font-size:${fs*.82}px;font-weight:600;${halo}">${st.vi}</text>`;});
+    // tâm nhà
+    s+=`<g ${mode==='edit'?'data-h="center" style="cursor:move"':''}><circle cx="${g.c[0]}" cy="${g.c[1]}" r="${fs*.62}" style="fill:${C.paper};stroke:${C.son};stroke-width:${fs*.16}px"/><circle cx="${g.c[0]}" cy="${g.c[1]}" r="${fs*.2}" style="fill:${C.son}"/></g>`;
+  }
+  // đường bao đang vẽ
+  if(mode==='edit'&&ui.poly&&ui.poly.fi===fi){const pp=ui.poly.pts;s+=`<polyline points="${pp.concat(ui.poly.hover?[ui.poly.hover]:[]).map(a=>a.join(',')).join(' ')}" style="fill:none;stroke:${C.son};stroke-width:${fs*.18}px;stroke-dasharray:${fs*.5} ${fs*.3}"/>`;pp.forEach((a,i)=>s+=`<circle cx="${a[0]}" cy="${a[1]}" r="${fs*(i===0?.7:.45)}" style="fill:${i===0?C.son:C.paper};stroke:${C.son};stroke-width:${fs*.12}px"/>`);}
+  if(mode==='edit'&&ui.rect&&ui.rect.fi===fi){const r=ui.rect;s+=`<rect x="${Math.min(r.a[0],r.b[0])}" y="${Math.min(r.a[1],r.b[1])}" width="${Math.abs(r.b[0]-r.a[0])}" height="${Math.abs(r.b[1]-r.a[1])}" style="fill:${C.son};fill-opacity:.08;stroke:${C.son};stroke-width:${fs*.18}px;stroke-dasharray:${fs*.5} ${fs*.3}"/>`;}
+  // gợi ý (fix)
+  if(R&&mode==='fix'){ R.fixes.filter(z=>z.fi===fi).forEach((z,i)=>{
+    if(z.to){s+=`<line x1="${z.from[0]}" y1="${z.from[1]}" x2="${z.to[0]}" y2="${z.to[1]}" style="stroke:${C.fix};stroke-width:${fs*.2}px;stroke-dasharray:${fs*.6} ${fs*.35}" marker-end="url(#${id}a)"/>`;const T=TYPES[z.type];s+=`<circle cx="${z.to[0]}" cy="${z.to[1]}" r="${fs*1.05}" style="fill:${C.paper};stroke:${C.fix};stroke-width:${fs*.16}px;stroke-dasharray:${fs*.35} ${fs*.2}"/><text x="${z.to[0]}" y="${z.to[1]+fs*.36}" text-anchor="middle" style="fill:${C.fix};font-size:${fs*.9}px;font-weight:700">${T?T.g:''}</text>`;}
+    if(z.at){const d=dirVec(z.dir);const e=[z.at[0]+d[0]*fs*4.2,z.at[1]+d[1]*fs*4.2];s+=`<line x1="${z.at[0]}" y1="${z.at[1]}" x2="${e[0]}" y2="${e[1]}" style="stroke:${C.fix};stroke-width:${fs*.24}px;stroke-dasharray:${fs*.5} ${fs*.3}" marker-end="url(#${id}a)"/>`;}
+  });}
+  // đánh dấu
+  mk.forEach(m=>{const T=TYPES[m.type];if(!T)return;const col=C.m(T.c);const sel=mode==='edit'&&ui.sel===m.id;const r=fs*1.05;
+    if(T.dir&&m.dir!=null){const d=dirVec(m.dir);const e=[m.x+d[0]*fs*3.2,m.y+d[1]*fs*3.2];s+=`<line x1="${m.x}" y1="${m.y}" x2="${e[0]}" y2="${e[1]}" style="stroke:${col};stroke-width:${fs*.2}px" marker-end="url(#${id}b)"/>`;if(sel)s+=`<circle data-h="dir" data-mid="${m.id}" cx="${e[0]}" cy="${e[1]}" r="${fs*.75}" style="fill:${C.paper};stroke:${col};stroke-width:${fs*.14}px;cursor:grab"/>`;}
+    s+=`<g data-mid="${m.id}" style="${mode==='edit'?'cursor:move':''}">${sel?`<circle cx="${m.x}" cy="${m.y}" r="${r*1.55}" style="fill:none;stroke:${C.ink};stroke-width:${fs*.12}px;stroke-dasharray:${fs*.3} ${fs*.2}"/>`:''}<circle cx="${m.x}" cy="${m.y}" r="${r}" style="fill:${col};stroke:${C.paper};stroke-width:${fs*.16}px"/><text x="${m.x}" y="${m.y+fs*.36}" text-anchor="middle" style="fill:#fff;font-size:${fs*(T.g.length>1?.78:.98)}px;font-weight:700;pointer-events:none">${T.g}</text>`;
+    if(mode==='edit'||opt.labels) s+=`<text x="${m.x+r*1.3}" y="${m.y-r*.6}" style="fill:${col};font-size:${fs*.78}px;font-weight:600;${halo};pointer-events:none">${esc(m.label||typeName(p,m.type))}</text>`;
+    s+=`</g>`;});
+  // ghim kết quả
+  if(R&&mode==='result'){ const list=R.F.concat(R.folk).filter(x=>x.fi===fi&&x.pt&&x.n); const seen={};
+    list.forEach(x=>{const k=Math.round(x.pt[0])+','+Math.round(x.pt[1]);const off=(seen[k]=(seen[k]||0)+1)-1;const ang=-40+off*38;const d=dirVec(ang);const px=x.pt[0]+d[0]*fs*2.3,py=x.pt[1]+d[1]*fs*2.3;const col=x.cat==='dangian'?'#6b5ca5':LV[x.level].col;const hl=ui.hl===x.n;
+      s+=`<g data-pin="${x.n}" style="cursor:pointer"><line x1="${x.pt[0]}" y1="${x.pt[1]}" x2="${px}" y2="${py}" style="stroke:${col};stroke-width:${fs*.1}px"/><circle cx="${px}" cy="${py}" r="${fs*(hl?1.05:.82)}" style="fill:${col};stroke:${hl?C.ink:C.paper};stroke-width:${fs*(hl?.22:.12)}px"/><text x="${px}" y="${py+fs*.3}" text-anchor="middle" style="fill:#fff;font-size:${fs*.82}px;font-weight:700;pointer-events:none">${x.n}</text></g>`;});}
+  // đỉnh đường bao khi sửa
+  if(mode==='edit'&&g&&ui.tool==='select') g.pts.forEach((a,i)=>s+=`<rect data-v="${i}" x="${a[0]-fs*.42}" y="${a[1]-fs*.42}" width="${fs*.84}" height="${fs*.84}" style="fill:${C.paper};stroke:${C.son};stroke-width:${fs*.12}px;cursor:move"/>`);
+  return s+'</svg>';
+}
+function trigram(q,size=30,col='currentColor'){const L=TRI[q];let s=`<svg width="${size}" height="${size}" viewBox="0 0 30 30" aria-hidden="true">`;[24,15,6].forEach((y,i)=>{s+=L[i]?`<rect x="3" y="${y-2}" width="24" height="4" rx="1" style="fill:${col}"/>`:`<rect x="3" y="${y-2}" width="10" height="4" rx="1" style="fill:${col}"/><rect x="17" y="${y-2}" width="10" height="4" rx="1" style="fill:${col}"/>`;});return s+'</svg>';}
+function baguaSVG(O,exp=false,size=300){const C=exp?PAL_EXP:PAL_APP;const c=150,ro=144,ri=50,lab=100;let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="${size}" height="${size}" role="img" aria-label="Bát quái 8 phương" style="font-family:${C.font}">`;
+  SO.forEach((q,i)=>{const st=O?STARS[rel(O,q)]:null;const[col,op]=st?starFill(C,st):[C.line,.1];const a1=i*45-22.5,a2=i*45+22.5;const P=(r,a)=>[c+dirVec(a)[0]*r,c+dirVec(a)[1]*r];const pts=[P(ri,a1),P(ro,a1),P(ro,a2),P(ri,a2)];s+=`<polygon points="${pts.map(a=>a.map(v=>v.toFixed(1)).join(',')).join(' ')}" style="fill:${col};fill-opacity:${Math.min(1,op*2.2)};stroke:${C.paper};stroke-width:2"/>`;
+    const L=P(lab,i*45);s+=`<text x="${L[0]}" y="${L[1]-9}" text-anchor="middle" style="fill:${C.ink};font-size:13px;font-weight:700">${QUAI[q].vi}</text><text x="${L[0]}" y="${L[1]+4}" text-anchor="middle" style="fill:${C.ink};font-size:10px">${QUAI[q].dir}</text>${st?`<text x="${L[0]}" y="${L[1]+17}" text-anchor="middle" style="fill:${st.good?C.kiet:C.hung};font-size:10.5px;font-weight:700">${st.vi}</text>`:''}`;});
+  s+=`<circle cx="${c}" cy="${c}" r="${ri-4}" style="fill:${C.paper};stroke:${C.son};stroke-width:2"/>`;
+  if(O){s+=`<g transform="translate(${c-17},${c-30}) scale(1.13)">${trigram(O,30,C.son).replace(/<svg[^>]*>|<\/svg>/g,'')}</g><text x="${c}" y="${c+24}" text-anchor="middle" style="fill:${C.ink};font-size:13px;font-weight:700">Cung ${QUAI[O].vi}</text>`;}
+  s+=`<text x="${c}" y="11" text-anchor="middle" style="fill:${C.son};font-size:11px;font-weight:700">BẮC</text>`;
+  return s+'</svg>';}
+
+/* ================= Giao diện chung ================= */
+const STEPS=[['Gia đình'],['Mặt bằng'],['Xung quanh'],['Kết quả'],['Báo cáo PDF']];
+function renderShell(){const p=P();const sel=$('#projSel');sel.innerHTML=store.projects.map(x=>`<option value="${x.id}" ${x.id===store.cur?'selected':''}>${esc(x.name)}</option>`).join('');$('#demoFlag').hidden=!p.demo;
+  $('#stepNav').innerHTML=STEPS.map((s,i)=>`<button data-step="${i+1}" ${store.step===i+1?'aria-current="step"':''}><span class="n">${i+1}</span>${s[0]}</button>`).join('');}
+function render(){renderShell();const v=$('#view');[null,renderS1,renderS2,renderS3,renderS4,renderS5][store.step](v);}
+function setPath(o,path,val){const k=path.split('.');let t=o;for(let i=0;i<k.length-1;i++){t[k[i]]=t[k[i]]??{};t=t[k[i]];}t[k[k.length-1]]=val;}
+function getPath(o,path){return path.split('.').reduce((a,k)=>a?.[k],o);}
+
+/* ---------- Bước 1 ---------- */
+function cungLine(c){if(!c)return '<span class="muted">Chưa có ngày sinh</span>';return `${trigram(c.q,18,'var(--son)')} <b>${QUAI[c.q].vi}</b> <span class="muted">· ${QUAI[c.q].group} tứ mạng</span>`;}
+function renderS1(v){const p=P();
+  v.innerHTML=`<div class="s1"><div>
+   <div class="panel"><h3>Gia trưởng (người định hướng nhà)</h3>
+    <div class="grid2">
+     <label class="f">Họ tên<input type="text" id="o_name" data-bind="owner.name" value="${esc(p.owner.name)}"></label>
+     <label class="f">Vai trò<select id="o_role" data-bind="owner.role">${['giatruong','truongtu','me'].map(r=>`<option value="${r}" ${p.owner.role===r?'selected':''}>${roleVi(r)}</option>`).join('')}</select></label>
+     <label class="f">Ngày sinh (dương lịch)<input type="date" id="o_dob" data-bind="owner.dob" value="${esc(p.owner.dob)}"></label>
+     <label class="f">Giờ sinh (chỉ cần nếu sinh đúng ngày Lập Xuân)<input type="time" id="o_tob" data-bind="owner.tob" value="${esc(p.owner.tob||'')}"></label>
+     <div class="f"><span class="f" style="font-size:.84rem;font-weight:500;color:var(--ink-2)">Giới tính</span><div class="seg" role="group" aria-label="Giới tính">${[['nam','Nam'],['nu','Nữ']].map(([k,t])=>`<button data-set="owner.gender" data-val="${k}" aria-pressed="${p.owner.gender===k}">${t}</button>`).join('')}</div></div>
+     <label class="f">Mong muốn ưu tiên<select id="o_goal" data-bind="goal">${Object.entries(GOALS).map(([k,g])=>`<option value="${k}" ${p.goal===k?'selected':''}>${g.vi}</option>`).join('')}</select></label>
+    </div>
+    <p class="tiny muted" style="margin-top:10px">Sách dạy: định hướng nhà theo tuổi gia trưởng; gia trưởng mất thì lấy trưởng tử; nhà chỉ có mẹ làm chủ thì lấy mẹ <span class="cite">tr. 138</span></p>
+   </div>
+   <div class="panel"><h3>Thành viên khác</h3><div id="members">${(p.members||[]).map(m=>memberRow(m)).join('')||'<p class="muted small">Chưa có thành viên. Thêm để app xếp phòng ngủ hợp tuổi từng người.</p>'}</div>
+    <div class="row" style="margin-top:10px"><button class="btn" data-act="add-member">+ Thêm thành viên</button></div></div>
+   <div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn primary" data-step="2">Tiếp: mặt bằng →</button></div>
+  </div><div id="s1res"></div></div>`;
+  renderS1Res();}
+function memberRow(m){const c=cungPhi(m.dob,m.gender,m.tob);return `<div class="mem-row" data-mem="${m.id}">
+  <label class="f">Họ tên<input type="text" id="m_${m.id}_n" data-mbind="name" value="${esc(m.name)}"></label>
+  <label class="f">Quan hệ<select id="m_${m.id}_r" data-mbind="rel">${RELS.map(r=>`<option ${m.rel===r?'selected':''}>${r}</option>`).join('')}</select></label>
+  <label class="f">Ngày sinh<input type="date" id="m_${m.id}_d" data-mbind="dob" value="${esc(m.dob)}"></label>
+  <label class="f">Giới tính<select id="m_${m.id}_g" data-mbind="gender"><option value="nam" ${m.gender==='nam'?'selected':''}>Nam</option><option value="nu" ${m.gender==='nu'?'selected':''}>Nữ</option></select></label>
+  <button class="btn ghost sm" data-act="del-member" data-id="${m.id}" aria-label="Xoá thành viên">✕</button>
+  <div class="mem-cung" style="grid-column:1/-1">${cungLine(c)}</div></div>`;}
+function renderS1Res(){const p=P(),el=$('#s1res');if(!el)return;const c=cungPhi(p.owner.dob,p.owner.gender,p.owner.tob);
+  if(!c){el.innerHTML=`<div class="panel"><h3>Cung phi của gia trưởng</h3><p class="muted">Nhập ngày sinh để tính cung.</p></div>`;return;}
+  const rows=STAR_ORDER.map(k=>{const q=qOfStar(c.q,k),s=STARS[k];return `<tr><td><b>${QUAI[q].dir}</b> <span class="muted">(${QUAI[q].vi})</span></td><td class="${s.good?'k':'h'}">${s.vi}</td><td>${s.lv}</td><td class="small">${s.good?'Cửa chính, phòng ngủ, bàn thờ, kho, miệng bếp':'Đặt bếp (lưng bếp), WC, chỗ giặt'}</td></tr>`;}).join('');
+  el.innerHTML=`<div class="panel"><h3>Cung phi của gia trưởng</h3>
+   <div class="cung-hero"><span class="tg">${trigram(c.q,56,'var(--son)')}</span><div><div class="eyebrow">Cung ${QUAI[c.q].num}${c.center?' (Ngũ Trung)':''} · ${QUAI[c.q].group} tứ mạng · hành ${QUAI[c.q].hanh}</div><div class="big">${QUAI[c.q].vi}</div><div class="small muted">${esc(p.owner.name||'')} · năm tính cung ${c.y} (${canChi(c.y)})</div></div></div>
+   <div class="note" style="margin-top:12px">Lập Xuân năm ${c.Y}: ${lxText(c.lx)}. ${c.shifted?`Sinh trước Lập Xuân nên <b>tính theo năm ${c.y}</b> như sách dạy ("nếu chưa Lập Xuân phải tính theo năm cũ").`:c.onDay?'<b>Sinh đúng ngày Lập Xuân</b>: hãy nhập giờ sinh để biết tính năm nào; tạm tính năm '+c.Y+'.':'Sinh sau Lập Xuân nên tính theo năm '+c.y+'.'} ${c.center?`Số ${c.n} rơi vào Ngũ Trung: ${c.gender==='nu'?'nữ tính là Cấn':'nam tính là Khôn'}.`:''} <span class="cite">tr. 69–74</span></div>
+   <div class="row" style="margin-top:12px;justify-content:center">${baguaSVG(c.q,false,280)}</div>
+   <div class="tbl"><table class="t" style="margin-top:8px"><thead><tr><th>Phương</th><th>Sao</th><th>Mức</th><th>Nên đặt</th></tr></thead><tbody>${rows}</tbody></table></div>
+   <p class="tiny muted" style="margin-top:8px">Bảng phương hướng kiết hung <span class="cite">tr. 94–101</span></p></div>`;}
+
+/* ---------- Bước 2 ---------- */
+const TOOLSET=[['select','Chọn','<svg viewBox="0 0 24 24"><path d="M5 3l14 8-6 2-3 6z" fill="currentColor"/></svg>'],['poly','Đường bao','<svg viewBox="0 0 24 24"><path d="M4 6l8-3 8 5-2 11-11 1z" fill="none" stroke="currentColor" stroke-width="2"/></svg>'],['rect','Khung','<svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" fill="none" stroke="currentColor" stroke-width="2"/></svg>']];
+function renderS2(v){const p=P();ui.floor=clamp(ui.floor,0,p.floors.length-1);const f=p.floors[ui.floor];
+  v.innerHTML=`<div class="floors">${p.floors.map((x,i)=>`<button class="btn sm" data-floor="${i}" aria-pressed="${i===ui.floor}">${esc(x.name||'Tầng '+(i+1))}</button>`).join('')}<button class="btn sm ghost" data-act="add-floor">+ Thêm tầng</button></div>
+  <div class="ed"><div class="tools" role="toolbar" aria-label="Công cụ">${TOOLSET.map(([k,t,ic])=>`<button class="tool" data-tool="${k}" aria-pressed="${ui.tool===k}" title="${t}">${ic}<span>${t}</span></button>`).join('')}<hr>${Object.entries(TYPES).map(([k,T])=>`<button class="tool" data-tool="m:${k}" aria-pressed="${ui.tool==='m:'+k}" title="Đặt ${T.vi}"><span class="g" style="background:var(${T.c})">${T.g}</span><span>${T.vi}</span></button>`).join('')}</div>
+   <div class="stage"><div id="canvasWrap">${f.img?`<div class="canvas ${ui.tool.startsWith('m:')||ui.tool!=='select'?'tool-add':''}" id="cv">${svgPlan(p,ui.floor,{mode:'edit'})}</div>`:dropZone()}</div><div class="hint" id="hint">${hintText()}</div></div>
+   <div class="side" id="side"></div></div>`;
+  renderSide();}
+function dropZone(){return `<div class="drop" id="drop"><svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0-12l-4 4m4-4l4 4M4 17v3h16v-3" fill="none" stroke="var(--son)" stroke-width="1.8"/></svg><b>Tải mặt bằng lên</b><span class="muted small">Ảnh JPG, PNG hoặc file PDF (mỗi trang PDF thành một tầng). Kéo thả vào đây hoặc bấm nút.</span><button class="btn primary" data-act="upload">Chọn file</button></div>`;}
+function hintText(){const t=ui.tool;if(t==='poly')return ui.poly?`Đang vẽ ${ui.poly.pts.length} điểm. Bấm vào điểm đầu hoặc nút Xong để khép. <button class="btn sm" data-act="poly-done">Xong</button> <button class="btn sm ghost" data-act="poly-cancel">Huỷ</button>`:(isCH(P())?'Bấm lần lượt các góc căn hộ theo tường (bỏ ban công, lô gia hở). ':'Bấm lần lượt các góc của phần nhà có mái (bỏ sân, ban công hở). ')+'Đường bao quyết định tâm nhà.';
+  if(t==='rect')return 'Kéo một khung chữ nhật bao phần nhà có mái.';
+  if(t.startsWith('m:'))return `Bấm lên mặt bằng để đặt <b>${TYPES[t.slice(2)].vi}</b>. Phòng ngủ: đặt ở giữa phòng. Bếp: đặt ngay chỗ bếp nấu.`;
+  return 'Kéo để di chuyển đánh dấu, đỉnh đường bao hoặc tâm nhà. Chọn một đánh dấu để sửa ở cột bên phải. Phím Delete để xoá.';}
+function renderSide(){const p=P(),f=p.floors[ui.floor],el=$('#side');if(!el)return;const o=p.orient;const g=geo(p,f);const m=(f.markers||[]).find(x=>x.id===ui.sel);
+  const northNow=mod(FRONT_ANG[f.front||o.front]-(+o.facing||0),360);
+  const dirBtns=[['B',0],['ĐB',45],['Đ',90],['ĐN',135],['N',180],['TN',225],['T',270],['TB',315]];
+  let selHtml='';
+  if(m){const T=TYPES[m.type];const R=evaluate(p);
+    selHtml=`<div class="panel"><h3><span class="chip" style="background:var(${T.c});color:#fff">${T.g}</span> ${esc(T.vi)}</h3><div class="stack">
+     <label class="f">Loại<select id="sel_type" data-msel="type">${Object.entries(TYPES).map(([k,t])=>`<option value="${k}" ${m.type===k?'selected':''}>${t.vi}</option>`).join('')}</select></label>
+     <label class="f">Tên hiển thị (tuỳ chọn)<input type="text" id="sel_label" data-msel="label" value="${esc(m.label||'')}" placeholder="${esc(T.vi)}"></label>
+     ${T.occ?`<label class="f">Người ngủ<select id="sel_occ" data-msel="occ">${(R.people.length?R.people:[{id:'owner',name:p.owner.name||'Gia trưởng'}]).map(x=>`<option value="${x.id}" ${(m.occ||'owner')===x.id?'selected':''}>${esc(x.name)}${x.rel?' – '+esc(x.rel):''}</option>`).join('')}</select></label>`:''}
+     ${T.dir?`<div class="f"><span>${m.type==='bep'?'Hướng lưng người đứng nấu':'Hướng bàn thờ nhìn ra'} (theo bản vẽ)</span><div class="dirs">${[['↑',0],['→',90],['↓',180],['←',270]].map(([t,a])=>`<button class="btn sm" data-mdir="${a}" aria-pressed="${m.dir===a}">${t}</button>`).join('')}</div>
+       <div class="row"><button class="btn sm" data-mrot="-15">↺ 15°</button><button class="btn sm" data-mrot="15">↻ 15°</button>${T.optDir?`<button class="btn sm ghost" data-mdir="none">Bỏ hướng</button>`:''}</div>
+       <span class="tiny muted">${m.dir!=null&&g?`Đang chỉ về ${fmt(g.bOfImg(m.dir),0)}° · ${QUAI[SO[secIdx(g.bOfImg(m.dir))]].dir}`:'Chưa đặt hướng'}. Có thể kéo núm tròn ở đầu mũi tên.</span></div>`:''}
+     ${g?`<p class="small">Nằm ở <b>${(()=>{const q=g.sectorAt([m.x,m.y]);return q?QUAI[q].dir+' ('+QUAI[q].vi+')':'ô trung cung';})()}</b>, sơn ${g.sonAt([m.x,m.y])}, góc ${fmt(g.bearing([m.x,m.y]),0)}°</p>`:''}
+     <button class="btn danger sm" data-act="del-marker">Xoá đánh dấu</button></div></div>`;}
+  el.innerHTML=`${selHtml}
+   <div class="panel"><h3>Hướng nhà</h3><div class="stack">
+    <div class="f"><span>Loại nhà</span><div class="seg"><button data-set="kind" data-val="dat" aria-pressed="${!isCH(p)}">Nhà đất</button><button data-set="kind" data-val="canho" aria-pressed="${isCH(p)}">Căn hộ chung cư</button></div></div>
+    <label class="f">${isCH(p)?'Cửa căn hộ nhìn ra':'Mặt tiền nhìn về'} (độ la bàn: 0 = Bắc, 90 = Đông)<input type="number" id="facing" min="0" max="359" step="1" value="${o.facing}" data-bind="orient.facing" data-type="num"></label>
+    <div class="dirs">${dirBtns.map(([t,a])=>`<button class="btn sm" data-face="${a}" aria-pressed="${+o.facing===a}">${t}</button>`).join('')}</div>
+    <p class="small">Mặt tiền: <b>${QUAI[SO[secIdx(o.facing)]].dir}</b> · sơn ${SON24[sonIdx(o.facing)]} · tọa ${QUAI[SO[secIdx(o.facing+180)]].vi}</p>
+    <div class="f"><span>${isCH(p)?'Cửa căn hộ':'Mặt tiền'} nằm ở cạnh nào của bản vẽ</span><div class="seg">${['top','right','bottom','left'].map(k=>`<button data-front="${k}" aria-pressed="${(f.front||o.front)===k}">${FRONT_VI[k]}</button>`).join('')}</div></div>
+    <div class="f"><span>Hoặc theo la bàn in trên bản vẽ: mũi tên Bắc chỉ về</span><div class="dirs">${[['↑',0],['↗',45],['→',90],['↘',135],['↓',180],['↙',225],['←',270],['↖',315]].map(([t,a])=>`<button class="btn sm" data-north="${a}" aria-pressed="${northNow===a}" aria-label="Bắc chỉ ${a} độ">${t}</button>`).join('')}</div>
+     <div class="row"><input type="number" id="northDeg" min="0" max="359" value="${northNow}" style="width:86px" aria-label="Góc mũi tên Bắc trên bản vẽ"><button class="btn sm" data-nrot="-5">↺ 5°</button><button class="btn sm" data-nrot="5">↻ 5°</button></div>
+     <span class="tiny muted">0° là thẳng lên trên bản vẽ, tăng theo chiều kim đồng hồ. Nhập ở đây thì hướng ${isCH(p)?'cửa':'mặt tiền'} tự tính lại.</span></div>
+    <button class="btn sm" data-act="compass">Đo bằng la bàn điện thoại</button>
+   </div></div>
+   <div class="panel"><h3>Cách tính</h3><div class="stack">
+    <div class="f"><span>Trạch của nhà tính theo</span><div class="seg"><button data-set="orient.trach" data-val="toa" aria-pressed="${o.trach!=='cua'}">Tọa sơn (lưng nhà)</button><button data-set="orient.trach" data-val="cua" aria-pressed="${o.trach==='cua'}">Hướng cửa</button></div></div>
+    <div class="f"><span>Chia 8 cung</span><div class="seg"><button data-set="orient.division" data-val="angle" aria-pressed="${o.division!=='grid'}">Theo góc 45°</button><button data-set="orient.division" data-val="grid" aria-pressed="${o.division==='grid'}">Lưới 3×3</button></div></div>
+    <label class="row small"><input type="checkbox" id="showSec" ${ui.showSec?'checked':''}> Hiện 8 cung tốt/xấu của gia trưởng</label>
+   </div></div>
+   <div class="panel"><h3>${esc(f.name||'Tầng')}</h3><div class="stack">
+    <label class="f">Tên tầng<input type="text" id="fname" data-fbind="name" value="${esc(f.name||'')}"></label>
+    <div class="f"><span>Kích thước thật của khung đường bao (m)</span><div class="row"><input type="number" id="mw" step="0.1" min="0" data-fbind="meters.w" data-type="num" value="${f.meters?.w??''}" style="width:90px" aria-label="Chiều ngang bản vẽ (m)"> × <input type="number" id="mh" step="0.1" min="0" data-fbind="meters.h" data-type="num" value="${f.meters?.h??''}" style="width:90px" aria-label="Chiều dọc bản vẽ (m)"></div><span class="tiny muted">Ngang × dọc theo bản vẽ. Dùng để tính khoảng cách dời đổi.</span></div>
+    <div class="row"><button class="btn sm" data-act="upload">${f.img?'Thay ảnh':'Tải ảnh'}</button><button class="btn sm" data-act="reset-center" ${f.center?'':'disabled'}>Tâm tự động</button><button class="btn sm ghost danger" data-act="del-floor" ${p.floors.length<2?'disabled':''}>Xoá tầng</button></div>
+   </div></div>
+   <div class="panel"><h3>AI nhận diện</h3><p class="small" style="margin-bottom:10px">AI đọc ảnh mặt bằng, tự khoanh đường bao và đặt cửa, bếp, WC, phòng ngủ… Bạn kiểm tra và kéo chỉnh lại.</p><button class="btn" data-act="ai" id="aiBtn" ${f.img?'':'disabled'}>Nhận diện tầng này</button><p class="tiny muted" id="aiNote" style="margin-top:8px">${aiNoteText()}</p></div>`;}
+function rerenderCanvas(){const p=P();const cv=$('#cv');if(cv)cv.innerHTML=svgPlan(p,ui.floor,{mode:'edit'});const h=$('#hint');if(h)h.innerHTML=hintText();}
+
+/* ---------- Bước 3 ---------- */
+function renderS3(v){const p=P();p.surr=p.surr||{};
+  v.innerHTML=`<div class="row" style="justify-content:space-between;margin-bottom:12px"><div><h2>Xung quanh nhà</h2><p class="muted small">Bản vẽ không cho thấy những điều này. Đánh dấu những gì đúng với ${isCH(p)?'căn hộ':'căn nhà'} của bạn.</p></div><label class="f" style="width:200px">Năm dự định xây hoặc sửa<input type="number" id="by" data-bind="buildYear" data-type="num" value="${p.buildYear||new Date().getFullYear()}"></label></div>
+  <div class="checks">${surrList(p).map(it=>`<label class="check ${it.good?'good':''} ${p.surr[it.k]?'on':''}"><input type="checkbox" id="sr_${it.k}" data-surr="${it.k}" ${p.surr[it.k]?'checked':''}><span><b>${it.t}</b><span class="small muted">${it.d}</span> <span class="cite">${it.c}</span></span></label>`).join('')}</div>
+  <div class="row" style="margin-top:16px;justify-content:flex-end"><button class="btn primary" data-step="4">Xem kết quả →</button></div>`;}
+
+/* ---------- Bước 4 ---------- */
+function ring(score,size=120){const r=50,c=2*Math.PI*r,col=score>=65?'var(--kiet)':score>=50?'var(--warn)':'var(--hung)';return `<svg class="ring" width="${size}" height="${size}" viewBox="0 0 120 120" role="img" aria-label="Điểm ${score} trên 100"><circle cx="60" cy="60" r="${r}" style="fill:none;stroke:var(--line);stroke-width:10"/><circle cx="60" cy="60" r="${r}" style="fill:none;stroke:${col};stroke-width:10;stroke-linecap:round" stroke-dasharray="${c*score/100} ${c}" transform="rotate(-90 60 60)"/><text x="60" y="66" text-anchor="middle" style="fill:var(--ink);font-family:var(--f-display);font-size:30px;font-weight:700">${score}</text><text x="60" y="84" text-anchor="middle" style="fill:var(--muted);font-size:10px">/ 100</text></svg>`;}
+function fItem(x,folk=false){const col=folk?'#6b5ca5':LV[x.level].col;return `<button class="fi ${ui.hl===x.n?'hl':''}" data-hl="${x.n||''}" data-fi="${x.fi??''}"><span class="pin" style="background:${x.n?col:'transparent'};${x.n?'':'border:1px dashed var(--line-strong);color:var(--muted)'}">${x.n||'·'}</span><span><span class="tt">${esc(x.title)}</span><span class="meta"><span class="chip ${folk?'lv-in':LV[x.level].c}">${folk?'Dân gian':LV[x.level].vi}</span><span class="tiny muted">${esc(x.area||'')}</span>${x.cite?`<span class="cite">Kim Oanh Ký ${x.cite}</span>`:''}</span><span class="dt">${esc(x.detail)}</span>${x.fix?`<span class="fx" style="display:block"><b>Gợi ý:</b> ${esc(x.fix)}</span>`:''}</span></button>`;}
+function renderS4(v){const p=P();const R=evaluate(p);
+  if(R.error){v.innerHTML=`<div class="panel"><h3>Chưa đủ dữ liệu</h3><p>${R.error}</p><button class="btn primary" data-step="${R.errStep||1}" style="margin-top:10px">Về bước ${R.errStep||1}</button></div>`;return;}
+  ui.resFloor=clamp(ui.resFloor,0,p.floors.length-1);
+  const bad=R.F.filter(x=>x.level==='dai-hung'||x.level==='thu-hung').length,good=R.F.filter(x=>x.level==='tot'||x.level==='rat-tot').length;
+  const O=R.O;const bepF=R.F.find(x=>x.area==='Bếp'&&x.title.startsWith('Hướng'));
+  const tabs=[['danh-gia','Đánh giá'],['de-xuat','Bố trí đề xuất'],['thanh-vien','Thành viên'],['nam-thang','Năm tháng & làm nhà']];
+  v.innerHTML=`<div class="panel" style="margin-bottom:14px"><div class="score">${ring(R.total)}<div style="flex:1;min-width:240px"><div class="eyebrow">${esc(p.name)}</div><h2>${R.grade}</h2><p class="muted small">${bad} điểm hung cần chú ý · ${good} điểm tốt · chấm theo Bát Trạch trong Kim Oanh Ký</p></div><div class="row"><button class="btn" data-step="2">Sửa mặt bằng</button><button class="btn primary" data-step="5">Xuất báo cáo PDF</button></div></div>
+   <div class="facts">
+    <div class="fact"><div class="tiny muted">Gia trưởng</div><div class="v">${esc(p.owner.name||'')} · cung ${QUAI[O].vi}</div><div class="tiny muted">${QUAI[O].group} tứ mạng</div></div>
+    <div class="fact ${R.ts.good?'good':'bad'}"><div class="tiny muted">${isCH(p)?'Căn hộ':'Nhà'}</div><div class="v">${QUAI[R.tq].vi} trạch · ${R.ts.vi}</div><div class="tiny muted">${isCH(p)?'cửa căn hộ':'mặt tiền'} ${QUAI[SO[secIdx(p.orient.facing)]].dir} ${p.orient.facing}°</div></div>
+    <div class="fact ${R.dstar?(R.dstar.good?'good':'bad'):''}"><div class="tiny muted">${DN(p)}</div><div class="v">${R.dstar?R.dstar.vi:'Chưa có'}</div><div class="tiny muted">${R.doorQ?QUAI[R.doorQ].dir:''}</div></div>
+    <div class="fact ${bepF?(bepF.level.includes('tot')?'good':'bad'):''}"><div class="tiny muted">Hướng bếp</div><div class="v">${bepF?bepF.title.split(': ').pop():'Chưa có'}</div><div class="tiny muted">nên: ${STARS[R.recStar].vi}</div></div>
+    ${R.balcony?`<div class="fact"><div class="tiny muted">Hướng ban công (tham khảo)</div><div class="v">${QUAI[R.balcony.q].dir}</div><div class="tiny muted">${STARS[rel(O,R.balcony.q)].vi} với gia trưởng</div></div>`:''}
+   </div></div>
+  <div class="tabs" role="tablist">${tabs.map(([k,t])=>`<button role="tab" data-rtab="${k}" aria-selected="${ui.resTab===k}">${t}</button>`).join('')}</div>
+  <div id="rtab"></div>`;
+  renderRTab(R);}
+function floorTabs(p){return p.floors.length>1?`<div class="floors">${p.floors.map((x,i)=>`<button class="btn sm" data-rfloor="${i}" aria-pressed="${i===ui.resFloor}">${esc(x.name||'Tầng '+(i+1))}</button>`).join('')}</div>`:'';}
+function renderRTab(R){const p=P(),el=$('#rtab');R=R||evaluate(p);
+  if(ui.resTab==='danh-gia'){const grp=(t,list)=>list.length?`<div class="grp"><h3>${t}</h3><span class="muted small">${list.length}</span></div><div class="flist">${list.map(x=>fItem(x)).join('')}</div>`:'';
+    el.innerHTML=`<div class="res"><div>${floorTabs(p)}<div class="canvas" id="rcv">${svgPlan(p,ui.resFloor,{mode:'result',R})}</div><p class="tiny muted" style="margin-top:6px">Số trên mặt bằng khớp với danh sách. Màu xanh là phương kiết, đỏ là phương hung của gia trưởng.</p>
+      <div class="note" style="margin-top:12px"><b>Cách app tính.</b> Tâm nhà là trọng tâm đường bao (kéo được ở bước 2). ${p.orient.division==='grid'?'Mặt bằng chia lưới 3×3, ô giữa là trung cung.':'Từ tâm chia 8 cung, mỗi cung 45°, mỗi sơn 15°; ô giữa của lưới 3×3 được coi là "giữa nhà".'} Trạch tính theo ${p.orient.trach==='cua'?'hướng cửa':'tọa sơn'}. Hướng bếp là hướng lưng người đứng nấu. Mỗi tầng có tâm riêng; cửa chính và nền nhà xét ở tầng trệt.</div></div>
+      <div>${grp('Cần xử lý',R.F.filter(x=>['dai-hung','thu-hung'].includes(x.level)))}${grp('Lưu ý',R.F.filter(x=>['luu-y','info'].includes(x.level)))}${grp('Điểm tốt',R.F.filter(x=>['tot','rat-tot'].includes(x.level)))}
+      ${R.folk.length?`<div class="grp"><h3>Kinh nghiệm dân gian (ngoài sách)</h3></div><p class="tiny muted" style="margin-bottom:6px">Không có trong Kim Oanh Ký, không tính vào điểm.</p><div class="flist">${R.folk.map(x=>fItem(x,true)).join('')}</div>`:''}</div></div>`;}
+  else if(ui.resTab==='de-xuat'){const fx=R.F.filter(x=>x.fix&&['dai-hung','thu-hung','luu-y'].includes(x.level));
+    el.innerHTML=`<div class="res"><div>${floorTabs(p)}<div class="canvas">${svgPlan(p,ui.resFloor,{mode:'fix',R})}</div><p class="tiny muted" style="margin-top:6px">Mũi tên nét đứt xanh: vị trí hoặc hướng nên chuyển tới. Vòng tròn nét đứt: chỗ đặt mới.</p></div>
+     <div><h3 style="margin-bottom:8px">Việc nên làm, theo thứ tự ưu tiên</h3>${fx.length?`<div class="flist">${fx.map(x=>fItem(x)).join('')}</div>`:'<p class="muted">Không có điểm nào cần dời đổi.</p>'}
+     <div class="note" style="margin-top:12px">Khi không đổi được cửa (nhà phố mở ra đường), sách cho phép <b>chế phục</b> bằng hướng bếp: Sanh Khí giáng Ngũ Quỷ, Thiên Y chế Tuyệt Mạng, Diên Niên yểm Lục Sát <span class="cite">tr. 101</span>. Bốn phương hung nên dành cho WC, chỗ giặt, bếp (lưng bếp) để "lấy hung trấn hung".</div></div></div>`;}
+  else if(ui.resTab==='thanh-vien'){
+    el.innerHTML=`<div class="panel"><h3>Cung phi từng người</h3><div class="tbl"><table class="t"><thead><tr><th>Người</th><th>Quan hệ</th><th>Năm tính</th><th>Cung</th><th>Hướng tốt nhất</th></tr></thead><tbody>${R.people.map(x=>`<tr><td><b>${esc(x.name)}</b></td><td>${esc(x.rel||'')}</td><td class="num">${x.c?x.c.y:'–'}</td><td>${x.c?QUAI[x.c.q].vi+' · '+QUAI[x.c.q].group:'–'}</td><td>${x.c?['sinh','thieny','dien'].map(k=>QUAI[qOfStar(x.c.q,k)].dir).join(', '):'–'}</td></tr>`).join('')}</tbody></table></div></div>
+    <div class="panel"><h3>Gợi ý xếp phòng ngủ</h3>${R.assign.length?`<div class="tbl"><table class="t"><thead><tr><th>Người</th><th>Đang ngủ</th><th>Nên ngủ</th></tr></thead><tbody>${R.assign.map(a=>`<tr><td><b>${esc(a.per.name)}</b><div class="tiny muted">cung ${QUAI[a.per.c.q].vi}</div></td><td>${a.cur?`${esc(a.cur.r.name)} <span class="${a.cur.s.good?'k':'h'}">${a.cur.s.vi}</span>`:'<span class="muted">–</span>'}</td><td>${a.best?`${esc(a.best.r.name)} <span class="${a.best.s.good?'k':'h'}">${a.best.s.vi}</span>${a.shared?' <span class="tiny muted">(chung phòng gia trưởng)</span>':''}`:'<span class="muted">Hết phòng</span>'}</td></tr>`).join('')}</tbody></table></div><p class="tiny muted" style="margin-top:8px">Ưu tiên gia trưởng chọn trước, sau đó lần lượt theo danh sách thành viên. Vợ/chồng ngủ chung phòng gia trưởng. <span class="cite">tr. 137</span></p>`:'<p class="muted">Đánh dấu phòng ngủ ở bước 2 để xếp phòng.</p>'}</div>`;}
+  else {const fy=p.buildYear||new Date().getFullYear();
+    el.innerHTML=`<div class="panel"><h3>${isCH(p)?'Tuổi sửa chữa, cải tạo của gia trưởng':'Tuổi làm nhà của gia trưởng'} (sinh ${R.oc.y}, ${R.bcc})</h3>${isCH(p)?'<p class="small muted" style="margin-bottom:8px">Sách xét Kim Lâu, Hoang Ốc khi làm nhà. Với căn hộ, dùng để tham khảo khi sửa chữa lớn.</p>':''}<div class="tbl"><table class="t"><thead><tr><th>Năm</th><th>Tuổi</th><th>Kim Lâu</th><th>Hoang Ốc</th><th>Tam Tai</th><th>Hạp mạng</th><th>Kết luận</th></tr></thead><tbody>${R.kl.map(k=>`<tr ${k.y===fy?'style="background:var(--paper-2)"':''}><td class="num"><b>${k.y}</b><div class="tiny muted">${k.cc}</div></td><td class="num">${k.age}</td><td class="${k.kl?(k.klBad?'h':'k'):''}">${k.kl?k.kl.txt:'–'}${k.exempt&&k.kl&&k.kl.good===false?'<div class="tiny muted">tuổi được miễn Kim Lâu</div>':''}</td><td class="${k.ho?(k.ho.good?'k':'h'):''}">${k.ho?k.ho.name:'–'}</td><td class="${k.tt?'h':''}">${k.tt?'Phạm':'Không'}</td><td>${k.hp?'<span class="k">Hạp</span>':'<span class="muted">Thường</span>'}</td><td>${k.ok?'<span class="chip lv-t">Làm được</span>':'<span class="chip lv-th">Nên tránh</span>'}</td></tr>`).join('')}</tbody></table></div>
+      <p class="tiny muted" style="margin-top:8px">Tuổi tính theo năm đã điều chỉnh Lập Xuân, cộng 1 (tuổi mụ). Kim Lâu khởi 10 tại Khôn, gặp Khảm, Ly, Chấn, Đoài là kiết; Hoang Ốc khởi 10 tại Nhất Kiết <span class="cite">tr. 405–407</span>. Chọn ngày động thổ, nhập trạch sẽ có ở giai đoạn sau.</p></div>
+    <div class="panel"><h3>Năm ứng tốt, xấu (12 năm tới)</h3><div class="tbl"><table class="t yr"><thead><tr><th>Năm</th><th>Ứng tốt</th><th>Ứng xấu</th></tr></thead><tbody>${R.years.map(y=>`<tr><td class="num"><b>${y.y}</b> <span class="tiny muted">${y.cc}</span></td><td class="g">${y.good.join(', ')||'<span class="muted">–</span>'}</td><td class="b">${y.bad.join(', ')||'<span class="muted">–</span>'}</td></tr>`).join('')}</tbody></table></div><p class="tiny muted" style="margin-top:8px">Mỗi sao ứng vào năm và tháng mang địa chi riêng: Sanh Khí ứng Hợi, Mão, Mùi; Ngũ Quỷ ứng Dần, Ngọ, Tuất… <span class="cite">tr. 98</span></p></div>`;}
+}
+
+/* ---------- Bước 5: báo cáo ---------- */
+function renderS5(v){v.innerHTML=`<div class="panel" style="margin-bottom:14px"><div class="row" style="justify-content:space-between"><div><h2>Báo cáo PDF</h2><p class="muted small">Khổ A4, gồm bìa, hồ sơ cung phi, mặt bằng có đánh giá, đề xuất bố trí, xếp phòng, năm tháng và tuổi làm nhà.</p></div><div class="row"><button class="btn" data-act="build-report">Làm mới bản xem</button><button class="btn primary" data-act="pdf" id="pdfBtn">Tải PDF</button></div></div><p class="tiny muted" id="pdfNote" style="margin-top:6px"></p></div><div class="rp-preview" id="rpPrev"><p class="muted"><span class="spin"></span> Đang dựng báo cáo…</p></div>`;buildReport().catch(e=>{console.error(e);$('#rpPrev').innerHTML='<p class="h">Không dựng được báo cáo: '+esc(e.message)+'</p>';});}
+async function toDataURL(src){if(!src||src.startsWith('data:'))return src;const r=await fetch(src);const b=await r.blob();return await new Promise(res=>{const fr=new FileReader();fr.onload=()=>res(fr.result);fr.readAsDataURL(b);});}
+function svgToPng(svg,maxW=1500){return new Promise((res,rej)=>{const img=new Image();img.onload=()=>{const w=img.naturalWidth||img.width||1000,h=img.naturalHeight||img.height||700;const k=Math.min(1,maxW/w)*(w<900?1600/w:1);const cv=document.createElement('canvas');cv.width=Math.round(w*k);cv.height=Math.round(h*k);const cx=cv.getContext('2d');cx.fillStyle='#fbf8f1';cx.fillRect(0,0,cv.width,cv.height);cx.drawImage(img,0,0,cv.width,cv.height);try{res(cv.toDataURL('image/jpeg',.9));}catch(e){rej(e);}};img.onerror=()=>rej(new Error('Không vẽ được ảnh mặt bằng'));img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);});}
+const lvTag=l=>`<span class="tag" style="background:${LV[l].col};color:#fff">${LV[l].vi}</span>`;
+async function buildReport(){
+  const p=P(),R=evaluate(p),stage=$('#reportStage');stage.innerHTML='';
+  if(R.error){$('#rpPrev').innerHTML=`<p>${R.error}</p>`;return;}
+  if(document.fonts&&document.fonts.ready) await document.fonts.ready;
+  const O=R.O, today=new Date().toLocaleDateString('vi-VN');
+  const plans=[],fixes=[];
+  for(let fi=0;fi<p.floors.length;fi++){const f=p.floors[fi];if(!f.img||!geo(p,f)){plans.push(null);fixes.push(null);continue;}const d=await toDataURL(f.img);plans.push(await svgToPng(svgPlan(p,fi,{mode:'result',R,exp:true,img:d,labels:false})));fixes.push(R.fixes.some(z=>z.fi===fi)?await svgToPng(svgPlan(p,fi,{mode:'fix',R,exp:true,img:d})):null);}
+  const bagua=await svgToPng(baguaSVG(O,true,300),600);
+  const pages=[]; const head=sec=>`<div class="rp-head"><b>Bát Trạch cho chủ nhà</b><span>${esc(sec)}</span></div>`;
+  const newPage=(sec)=>{const el=document.createElement('div');el.className='rp';el.innerHTML=head(sec)+'<div class="rp-body"></div><div class="rp-foot"><span>'+esc(p.name)+' · '+today+'</span><span class="pg"></span></div>';stage.appendChild(el);pages.push(el);return el.querySelector('.rp-body');};
+  const flow=async(sec,blocks)=>{let body=newPage(sec);for(const b of blocks){const t=document.createElement('div');t.innerHTML=b;const el=t.firstElementChild||t;body.appendChild(el);for(const im of (el.tagName==='IMG'?[el]:el.querySelectorAll('img'))){try{await im.decode();}catch(e){}}if((el.getBoundingClientRect().bottom-body.getBoundingClientRect().top)>body.clientHeight-24&&body.children.length>1){body.removeChild(el);body=newPage(sec);body.appendChild(el);}}};
+  // Bìa
+  const cov=document.createElement('div');cov.className='rp cover';const top3=R.F.filter(x=>['dai-hung','thu-hung'].includes(x.level)).slice(0,4);
+  cov.innerHTML=`<div class="band"><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.85">Báo cáo phong thủy mặt bằng · Bát Trạch</div><div style="font-family:var(--f-display);font-size:34px;font-weight:700;line-height:1.15;margin-top:10px">${esc(p.name)}</div><div style="margin-top:8px;font-size:14px">Gia trưởng ${esc(p.owner.name||'')} · cung ${QUAI[O].vi} (${QUAI[O].group} tứ mạng)</div></div>
+   <div class="inner"><div style="display:flex;gap:28px;align-items:center"><div style="width:150px;height:150px;border-radius:50%;border:10px solid ${R.total>=65?'#24704f':R.total>=50?'#b5651b':'#b1261d'};display:grid;place-items:center;flex:none"><div style="text-align:center"><div style="font-family:var(--f-display);font-size:46px;font-weight:700;line-height:1">${R.total}</div><div style="font-size:11px;color:var(--rp-muted)">/ 100 điểm</div></div></div>
+    <div><div style="font-family:var(--f-display);font-size:26px;font-weight:700;color:var(--rp-son)">${R.grade}</div><table style="margin-top:8px;font-size:12.5px"><tr><td>${isCH(p)?'Căn hộ':'Nhà'}</td><td><b>${QUAI[R.tq].vi} trạch</b> (${isCH(p)?'cửa căn hộ':'mặt tiền'} ${QUAI[SO[secIdx(p.orient.facing)]].dir}, ${p.orient.facing}°) · ${R.ts.vi}</td></tr><tr><td>${DN(p)}</td><td><b>${R.dstar?R.dstar.vi:'chưa đánh dấu'}</b>${R.doorQ?' · '+QUAI[R.doorQ].dir:''}</td></tr><tr><td>Bếp nên quay</td><td><b>${QUAI[qOfStar(O,R.recStar)].dir}</b> (${STARS[R.recStar].vi})</td></tr><tr><td>Số tầng</td><td>${p.floors.length}</td></tr></table></div></div>
+    <div><h3 style="margin-bottom:6px">Những điểm cần xử lý trước</h3>${top3.length?top3.map(x=>`<div class="item"><span class="pn" style="background:${LV[x.level].col}">${x.n||'•'}</span><div><div class="tt">${esc(x.title)}</div>${x.fix?`<div class="fx">→ ${esc(x.fix)}</div>`:''}</div></div>`).join(''):'<p>Không có điểm hung lớn.</p>'}</div>
+    <div class="box" style="margin-top:auto;font-size:11px;color:#4a4036">Đánh giá dựa trên phần Bát Trạch Minh Cảnh và Bát Lãm Quần Thơ trong sách <i>Kim Oanh Ký</i> (Thái Kim Oanh, NXB Lao Động, 2008); số trang ghi kèm từng mục. Nội dung mang tính tham khảo văn hóa, không thay thế tư vấn kiến trúc, kết cấu. Lập ngày ${today}.</div></div>
+   <div class="rp-foot" style="padding:8px 52px 30px;margin:0"><span>Bát Trạch cho chủ nhà · by Nguyễn Mạnh Hùng</span><span class="pg"></span></div>`;
+  stage.appendChild(cov);pages.push(cov);
+  // Hồ sơ
+  const c=R.oc;
+  await flow('Hồ sơ gia đình',[
+   `<div><h2>Hồ sơ gia đình và cung phi</h2></div>`,
+   `<div style="display:flex;gap:18px;align-items:flex-start"><img src="${bagua}" style="width:230px;flex:none"><div class="box" style="flex:1"><b>Cách tính cung của gia trưởng.</b> Sinh ngày ${p.owner.dob.split('-').reverse().join('/')}${p.owner.gender==='nu'?', nữ':', nam'}. Lập Xuân năm ${c.Y} là ${lxText(c.lx)}; ${c.shifted?'sinh trước Lập Xuân nên tính theo năm '+c.y:'tính theo năm '+c.y} (${canChi(c.y)}). ${c.gender==='nu'?'Nữ khởi ngũ Trung đếm nghịch':'Nam khởi Khảm đếm thuận'} ra số ${c.n}${c.center?' (Ngũ Trung, '+(c.gender==='nu'?'nữ tính Cấn':'nam tính Khôn')+')':''}: <b>cung ${QUAI[c.q].vi}</b>, ${QUAI[c.q].group} tứ mạng. <span style="color:var(--rp-muted)">(tr. 69–75)</span></div></div>`,
+   `<table><thead><tr><th>Phương</th><th>Cung</th><th>Sao</th><th>Mức</th><th>Ứng năm</th></tr></thead><tbody>${STAR_ORDER.map(k=>{const q=qOfStar(O,k),s=STARS[k];return `<tr><td><b>${QUAI[q].dir}</b></td><td>${QUAI[q].vi}</td><td class="${s.good?'rk':'rh'}">${s.vi}</td><td>${s.lv}</td><td>${s.ung.join(', ')}</td></tr>`;}).join('')}</tbody></table>`,
+   `<div><h3>Thành viên</h3><table><thead><tr><th>Họ tên</th><th>Quan hệ</th><th>Năm tính</th><th>Cung</th></tr></thead><tbody>${R.people.map(x=>`<tr><td>${esc(x.name)}</td><td>${esc(x.rel||'')}</td><td>${x.c?x.c.y:'–'}</td><td>${x.c?QUAI[x.c.q].vi+' ('+QUAI[x.c.q].group+')':'–'}</td></tr>`).join('')}</tbody></table></div>`]);
+  // Mặt bằng
+  for(let fi=0;fi<p.floors.length;fi++){const f=p.floors[fi];if(!plans[fi])continue;const list=R.F.concat(R.folk).filter(x=>x.fi===fi&&x.n);
+    await flow('Mặt bằng',[`<div><h2>${esc(f.name||'Tầng '+(fi+1))}: đánh giá trên mặt bằng</h2><p style="color:var(--rp-muted)">Xanh là phương kiết, đỏ là phương hung của gia trưởng cung ${QUAI[O].vi}. Số trên hình khớp với danh sách.</p></div>`,`<img class="plan" src="${plans[fi]}">`,...list.map(x=>`<div class="item"><span class="pn" style="background:${x.cat==='dangian'?'#6b5ca5':LV[x.level].col}">${x.n}</span><div><div class="tt">${x.cat==='dangian'?'<span class="tag" style="background:#6b5ca5;color:#fff">Dân gian</span>':lvTag(x.level)}${esc(x.title)}</div><div class="dt">${esc(x.detail)}${x.cite?' <span style="color:var(--rp-muted)">('+x.cite+')</span>':''}</div>${x.fix?`<div class="fx">→ ${esc(x.fix)}</div>`:''}</div></div>`)]);}
+  // Đánh giá chung (không gắn tầng)
+  const gen=R.F.filter(x=>!x.n);
+  if(gen.length) await flow('Đánh giá chung',[`<div><h2>Đánh giá chung</h2></div>`,...gen.map(x=>`<div class="item"><span class="pn" style="background:${LV[x.level].col}">•</span><div><div class="tt">${lvTag(x.level)}${esc(x.title)}</div><div class="dt">${esc(x.detail)}${x.cite?' <span style="color:var(--rp-muted)">('+x.cite+')</span>':''}</div>${x.fix?`<div class="fx">→ ${esc(x.fix)}</div>`:''}</div></div>`)]);
+  // Đề xuất
+  const fxb=[];p.floors.forEach((f,fi)=>{if(fixes[fi]){fxb.push(`<div><h3>${esc(f.name||'Tầng '+(fi+1))}</h3></div>`,`<img class="plan" src="${fixes[fi]}">`,...R.fixes.filter(z=>z.fi===fi).map((z,i)=>`<div class="item"><span class="pn" style="background:#1f7a52">${i+1}</span><div class="dt">${esc(z.text)}</div></div>`));}});
+  if(fxb.length) await flow('Bố trí đề xuất',[`<div><h2>Bố trí đề xuất</h2><p style="color:var(--rp-muted)">Mũi tên nét đứt chỉ vị trí hoặc hướng nên chuyển tới. Khi không dời được cửa, dùng phép chế phục bằng hướng bếp (tr. 101).</p></div>`,...fxb]);
+  // Thành viên, năm tháng
+  await flow('Phòng ngủ & năm tháng',[`<div><h2>Xếp phòng ngủ theo tuổi</h2></div>`,R.assign.length?`<table><thead><tr><th>Người</th><th>Đang ngủ</th><th>Nên ngủ</th></tr></thead><tbody>${R.assign.map(a=>`<tr><td><b>${esc(a.per.name)}</b> (${QUAI[a.per.c.q].vi})</td><td>${a.cur?esc(a.cur.r.name)+' – <span class="'+(a.cur.s.good?'rk':'rh')+'">'+a.cur.s.vi+'</span>':'–'}</td><td>${a.best?esc(a.best.r.name)+' – <span class="'+(a.best.s.good?'rk':'rh')+'">'+a.best.s.vi+'</span>':'–'}</td></tr>`).join('')}</tbody></table>`:'<p>Chưa đánh dấu phòng ngủ.</p>',
+   `<div><h2>${isCH(p)?'Tuổi sửa chữa, cải tạo của gia trưởng':'Tuổi làm nhà của gia trưởng'}</h2><p style="color:var(--rp-muted)">Kim Lâu, Hoang Ốc, Tam Tai theo tr. 405–407.</p></div>`,
+   `<table><thead><tr><th>Năm</th><th>Tuổi</th><th>Kim Lâu</th><th>Hoang Ốc</th><th>Tam Tai</th><th>Kết luận</th></tr></thead><tbody>${R.kl.map(k=>`<tr><td><b>${k.y}</b> ${k.cc}</td><td>${k.age}</td><td class="${k.klBad?'rh':'rk'}">${k.kl?k.kl.txt:'–'}</td><td class="${k.ho&&k.ho.good?'rk':'rh'}">${k.ho?k.ho.name:'–'}</td><td class="${k.tt?'rh':''}">${k.tt?'Phạm':'Không'}</td><td class="${k.ok?'rk':'rh'}">${k.ok?'Làm được':'Nên tránh'}</td></tr>`).join('')}</tbody></table>`,
+   `<div><h2>Năm ứng tốt, xấu</h2></div>`,
+   `<table><thead><tr><th>Năm</th><th>Ứng tốt</th><th>Ứng xấu</th></tr></thead><tbody>${R.years.map(y=>`<tr><td><b>${y.y}</b> ${y.cc}</td><td class="rk">${y.good.join(', ')||'–'}</td><td class="rh">${y.bad.join(', ')||'–'}</td></tr>`).join('')}</tbody></table>`]);
+  // Phương pháp
+  await flow('Phương pháp',[`<div><h2>Phương pháp và giới hạn</h2></div>`,`<div class="box"><b>Nguồn.</b> Quy tắc lấy từ sách <i>Kim Oanh Ký</i> (Thái Kim Oanh), chủ yếu phần Bát Trạch Minh Cảnh (tr. 61–225) và Bát Lãm Quần Thơ (tr. 391–558). Lời giải trong báo cáo được viết lại bằng lời của app, có ghi số trang để đối chiếu.</div>`,
+   `<div class="box"><b>Cách tính.</b> Cung phi tính theo năm sinh đã điều chỉnh Lập Xuân. Tâm nhà là trọng tâm đường bao phần có mái của từng tầng. ${p.orient.division==='grid'?'Mặt bằng chia lưới 3×3 theo khung nhà.':'Từ tâm chia 8 cung, mỗi cung 45°, và 24 sơn, mỗi sơn 15°.'} Trạch tính theo ${p.orient.trach==='cua'?'hướng cửa (tr. 121)':'tọa sơn (tr. 139)'}. Hướng bếp tính theo lưng người đứng nấu, tương ứng "miệng lò" trong sách. ${isCH(p)?'Với căn hộ, cửa căn hộ được coi là đại môn, ban công chỉ để tham khảo; đường bao lấy theo tường căn hộ, bỏ ban công và lô gia hở.':'Cửa chính và khuyết góc xét ở tầng trệt.'}</div>`,
+   `<div class="box"><b>Kinh nghiệm dân gian.</b> Các mục gắn nhãn "Dân gian" (WC đè bàn thờ, bếp gần WC, cầu thang giữa nhà…) không có trong Kim Oanh Ký, chỉ để tham khảo và không tính vào điểm.</div>`,
+   `<div class="box"><b>Giới hạn.</b> Kết quả phụ thuộc độ chính xác của hướng nhà và các đánh dấu trên bản vẽ. Đây là tư liệu tham khảo theo sách cổ, không phải kết luận kỹ thuật; mọi thay đổi kết cấu, điện nước cần kiến trúc sư hoặc kỹ sư.</div>`]);
+  pages.forEach((pg,i)=>{const s=pg.querySelector('.pg');if(s)s.textContent=`Trang ${i+1}/${pages.length}`;});
+  // sắp lại: bìa lên đầu
+  const order=[cov,...pages.filter(x=>x!==cov)];order.forEach((pg,i)=>{const s=pg.querySelector('.pg');if(s)s.textContent=`Trang ${i+1}/${order.length}`;stage.appendChild(pg);});
+  stage._pages=order;
+  const prev=$('#rpPrev');if(prev){prev.innerHTML='';order.forEach(pg=>{const w=document.createElement('div');w.className='rp-thumb';w.appendChild(pg.cloneNode(true));prev.appendChild(w);});}
+  return order;
+}
+function loadScript(src){return new Promise((res,rej)=>{if($(`script[src="${src}"]`))return res();const s=document.createElement('script');s.src=src;s.onload=res;s.onerror=()=>rej(new Error('Không tải được thư viện'));document.head.appendChild(s);});}
+async function exportPdf(){const btn=$('#pdfBtn'),note=$('#pdfNote');btn.disabled=true;btn.innerHTML='<span class="spin"></span> Đang tạo PDF…';
+  try{await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
+    const pages=$('#reportStage')._pages&&$('#reportStage')._pages.length?$('#reportStage')._pages:await buildReport();
+    const {jsPDF}=window.jspdf;const pdf=new jsPDF({unit:'pt',format:'a4',compress:true});
+    for(let i=0;i<pages.length;i++){note.textContent=`Đang dựng trang ${i+1}/${pages.length}…`;const cv=await html2canvas(pages[i],{scale:2,backgroundColor:'#fbf8f1',useCORS:true,logging:false});if(i)pdf.addPage();pdf.addImage(cv.toDataURL('image/jpeg',.9),'JPEG',0,0,595.28,841.89);}
+    const name='BatTrach_'+P().name.normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').replace(/[^a-zA-Z0-9]+/g,'_').replace(/^_|_$/g,'')+'.pdf';
+    const blob=pdf.output('blob');const dl=await capP.downloads;
+    if(dl){try{await dl.save({filename:name,data:blob});note.textContent='Đã gửi file '+name+'.';}catch(e){note.textContent=e&&e.code==='declined'?'Bạn đã huỷ lưu file.':'Không lưu được file ('+(e&&e.code||'lỗi')+').';}}
+    else{pdf.save(name);note.textContent='Đã tạo '+name+'.';}
+  }catch(e){console.error(e);note.textContent='Không tạo được PDF: '+e.message;}
+  btn.disabled=false;btn.textContent='Tải PDF';}
+
+/* ================= Năng lực Claude (tải file, AI) ================= */
+const capP={downloads:Promise.resolve(null),sample:Promise.resolve(null)}; const capState={sample:undefined};
+try{ if(window.claude&&typeof window.claude.use==='function'){capP.downloads=window.claude.use('downloads').catch(()=>null);capP.sample=window.claude.use('sample').catch(()=>null);} }catch(e){}
+const IN_CLAUDE=!!(window.claude&&typeof window.claude.use==='function');
+function aiNoteText(){ if(IN_CLAUDE) return capState.sample===null?'Bản xem trước chỉ chạy AI khi mở trong Claude. Bản trên web riêng sẽ dùng Gemini.':''; return 'Ảnh bản vẽ (đã thu nhỏ) được gửi tới Gemini của Google để nhận diện; không gửi tên hay ngày sinh. Xem <a href="chinh-sach.html" target="_blank" rel="noopener">chính sách riêng tư</a>.'; }
+capP.sample.then(s=>{capState.sample=s||null;const n=$('#aiNote');if(n)n.innerHTML=aiNoteText();});
+function blobToB64(b){return new Promise((res,rej)=>{const fr=new FileReader();fr.onload=()=>res(String(fr.result).split(',')[1]);fr.onerror=rej;fr.readAsDataURL(b);});}
+async function apiDetect(blob){const r=await fetch('api/nhan-dien',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({image:await blobToB64(blob)})});let j={};try{j=await r.json();}catch(e){}if(!r.ok||!j.result)throw {code:j.code||('http_'+r.status)};return j.result;}
+async function aiDetect(){const p=P(),f=p.floors[ui.floor];const sample=await capP.sample;const note=$('#aiNote'),btn=$('#aiBtn');
+  if(IN_CLAUDE){ if(!sample){note.textContent='AI chưa sẵn sàng ở chế độ xem này. Bản trên web riêng sẽ dùng Gemini.';return;}
+    try{const lim=await sample.limits().catch(()=>null);if(!lim||!lim.images){note.textContent='Chế độ xem này không gửi được ảnh cho AI.';return;}}catch(e){} }
+  btn.disabled=true;btn.innerHTML='<span class="spin"></span> AI đang đọc bản vẽ…';note.textContent='Thường mất 20–60 giây.';
+  try{const src=await toDataURL(f.img);const im=await new Promise((r,j)=>{const i=new Image();i.onload=()=>r(i);i.onerror=j;i.src=src;});const k=Math.min(1,1568/Math.max(im.width,im.height));const cv=document.createElement('canvas');cv.width=Math.round(im.width*k);cv.height=Math.round(im.height*k);const cx=cv.getContext('2d');cx.fillStyle='#fff';cx.fillRect(0,0,cv.width,cv.height);cx.drawImage(im,0,0,cv.width,cv.height);const blob=await new Promise(r=>cv.toBlob(r,'image/jpeg',.88));
+    const prompt=`You are reading an architectural floor plan image with Vietnamese labels. Return ONLY one JSON object:
+{"kind":"nha_dat|can_ho","front":"left|right|top|bottom","north":null,"outline":[[x,y],...],"items":[{"type":"...","label":"...","x":0,"y":0,"dir":"up|down|left|right|null"}]}
+All coordinates are integers 0-1000: x relative to image width, y relative to image height.
+- outline: polygon (4-10 points, clockwise) of the ROOFED building footprint of this floor. Exclude open yards, gardens, open balconies/terraces, car parking outside walls, dimension lines and grid axes.
+- kind: can_ho if this is an apartment unit in a building (has a unit entrance from a corridor/lobby), else nha_dat.
+- front: side of the drawing where the main entrance door of the house / apartment is.
+- north: if the drawing shows a compass or north arrow, the direction it points as degrees clockwise from straight up on the image (0-359); otherwise null.
+- items types: cua_chinh (main entrance door of the house or apartment), cong (gate), cua_sau (back door), ban_cong (balcony or loggia: point at its middle), bep (cooking hob: put the point on the burners), ban_tho (altar, "bàn thờ"), phong_ngu (bedroom: point at the room centre), wc (toilet/bathroom), kho (storage), giat (laundry/washing machine), cau_thang (stairs), be_phot (septic tank), gieng (well/water tank).
+- For bep, dir = the drawing direction the cook's BACK faces while cooking (away from the wall the hob stands against). For ban_tho, dir = direction the altar faces. Otherwise null.
+- label: short Vietnamese room name as written on the plan, if any.`;
+    const res=IN_CLAUDE?await sample.json(prompt,{images:[blob],modelTier:'default'}):await apiDetect(blob);
+    if(!res||!Array.isArray(res.items)) throw {code:'invalid_json'};
+    const W=f.w,H=f.h,sx=v=>clamp(+v||0,0,1000)/1000*W,sy=v=>clamp(+v||0,0,1000)/1000*H;const DIR={up:0,right:90,down:180,left:270};
+    const outline=Array.isArray(res.outline)&&res.outline.length>=3?res.outline.map(a=>[sx(a[0]),sy(a[1])]):null;
+    const items=res.items.filter(i=>TYPES[i.type]).map(i=>({id:uid(),type:i.type,x:sx(i.x),y:sy(i.y),label:i.label&&i.label!==TYPES[i.type].vi?String(i.label).slice(0,40):'',dir:DIR[i.dir]??(i.type==='bep'?180:null),occ:i.type==='phong_ngu'?'owner':undefined}));
+    openModal(`<h3>AI tìm thấy ${items.length} đối tượng</h3><p class="small">${outline?'Có đường bao '+outline.length+' điểm. ':''}${res.front&&FRONT_VI[res.front]?'Cửa chính ở cạnh '+FRONT_VI[res.front]+' bản vẽ. ':''}${(res.north!==null&&res.north!==undefined&&Number.isFinite(+res.north))?'Có la bàn: mũi tên Bắc chỉ '+Math.round(+res.north)+'°. ':''}${res.kind==='can_ho'?'Nhận là căn hộ chung cư. ':''}${items.map(i=>TYPES[i.type].vi).join(', ')}.</p><p class="small muted">Thay toàn bộ đánh dấu hiện có của tầng này bằng kết quả AI? Bạn vẫn kéo chỉnh được sau đó.</p><div class="row" style="justify-content:flex-end"><button class="btn" data-act="modal-close">Huỷ</button><button class="btn primary" data-act="ai-apply">Dùng kết quả AI</button></div>`);
+    ui._ai={outline,items,front:FRONT_VI[res.front]?res.front:null,north:(res.north!==null&&res.north!==undefined&&Number.isFinite(+res.north))?mod(+res.north,360):null,kind:res.kind==='can_ho'?'canho':res.kind==='nha_dat'?'dat':null};
+    note.textContent='';
+  }catch(e){note.textContent=e&&e.code==='not_granted'?'Bạn chưa cho phép AI. Có thể đánh dấu thủ công.':e&&e.code==='rate_limited'?'Bạn đã dùng hết lượt AI trong ít phút qua, thử lại sau nhé.':e&&e.code==='no_key'?'Máy chủ chưa cấu hình GEMINI_API_KEY.':e&&e.code==='quota'?'AI hết hạn mức hôm nay, hãy đánh dấu thủ công.':'AI chưa đọc được bản vẽ này ('+(e&&e.code||'lỗi')+'). Hãy đánh dấu thủ công.';}
+  btn.disabled=false;btn.textContent='Nhận diện tầng này';}
+
+/* ================= Tải ảnh ================= */
+async function handleFile(file){if(!file)return;const p=P();
+  try{ if(file.type==='application/pdf'||/\.pdf$/i.test(file.name)){
+      toast('Đang đọc PDF…');await loadScript('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js');await loadScript('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js');
+      const lib=window.pdfjsLib;lib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      const doc=await lib.getDocument({data:new Uint8Array(await file.arrayBuffer())}).promise;const n=Math.min(doc.numPages,6);
+      for(let i=1;i<=n;i++){const pg=await doc.getPage(i);const vp0=pg.getViewport({scale:1});const vp=pg.getViewport({scale:Math.min(4,1800/Math.max(vp0.width,vp0.height))});const cv=document.createElement('canvas');cv.width=vp.width;cv.height=vp.height;const cx=cv.getContext('2d');cx.fillStyle='#fff';cx.fillRect(0,0,cv.width,cv.height);await pg.render({canvasContext:cx,viewport:vp}).promise;
+        const data=cv.toDataURL('image/jpeg',.82);let f=p.floors[ui.floor+i-1];if(!f){f=newFloor(p.floors.length);p.floors.push(f);}setImg(f,data,cv.width,cv.height);}
+      toast(n>1?`Đã thêm ${n} trang thành ${n} tầng.`:'Đã tải mặt bằng.');
+    } else {
+      const url=await new Promise((r,j)=>{const fr=new FileReader();fr.onload=()=>r(fr.result);fr.onerror=j;fr.readAsDataURL(file);});
+      const im=await new Promise((r,j)=>{const i=new Image();i.onload=()=>r(i);i.onerror=()=>j(new Error('Ảnh không đọc được'));i.src=url;});
+      const k=Math.min(1,1800/Math.max(im.width,im.height));const cv=document.createElement('canvas');cv.width=Math.round(im.width*k);cv.height=Math.round(im.height*k);const cx=cv.getContext('2d');cx.fillStyle='#fff';cx.fillRect(0,0,cv.width,cv.height);cx.drawImage(im,0,0,cv.width,cv.height);
+      setImg(p.floors[ui.floor],cv.toDataURL('image/jpeg',.82),cv.width,cv.height);toast('Đã tải mặt bằng. Giờ hãy vẽ đường bao phần nhà có mái.');
+    }
+    ui.tool='rect';save();render();
+  }catch(e){console.error(e);toast('Không đọc được file: '+e.message);}}
+function setImg(f,data,w,h){f.img=data;f.w=w;f.h=h;f.outline=null;f.center=null;f.markers=[];}
+function newFloor(i){return {id:uid(),name:i===0?'Tầng trệt':'Tầng '+(i+1),img:null,w:1000,h:700,outline:null,center:null,markers:[],meters:{w:null,h:null}};}
+
+/* ================= Sự kiện ================= */
+function svgPt(e,svg){const pt=svg.createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;const m=svg.getScreenCTM();if(!m)return[0,0];const q=pt.matrixTransform(m.inverse());return[q.x,q.y];}
+document.addEventListener('pointerdown',e=>{const cv=e.target.closest('#cv');if(!cv)return;const svg=cv.querySelector('svg');if(!svg)return;const p=P(),f=p.floors[ui.floor];const pt=svgPt(e,svg);
+  if(ui.tool==='poly'){e.preventDefault();if(!ui.poly)ui.poly={fi:ui.floor,pts:[]};const pp=ui.poly.pts;const g0=Math.max(f.w,f.h)/58;if(pp.length>=3&&dist(pt,pp[0])<g0*1.3){finishPoly();return;}pp.push(pt);rerenderCanvas();return;}
+  if(ui.tool==='rect'){e.preventDefault();ui.rect={fi:ui.floor,a:pt,b:pt};svg.setPointerCapture?.(e.pointerId);return;}
+  if(ui.tool.startsWith('m:')){e.preventDefault();const type=ui.tool.slice(2);const m={id:uid(),type,x:pt[0],y:pt[1]};if(type==='bep')m.dir=180;if(type==='phong_ngu')m.occ='owner';f.markers=f.markers||[];f.markers.push(m);ui.sel=m.id;ui.tool='select';save();renderS2($('#view'));return;}
+  const h=e.target.closest('[data-h],[data-mid],[data-v]');if(!h){if(ui.sel){ui.sel=null;rerenderCanvas();renderSide();}return;}
+  e.preventDefault();
+  if(h.dataset.h==='center'){ui.drag={k:'center'};}
+  else if(h.dataset.h==='dir'){ui.drag={k:'dir',id:h.dataset.mid};}
+  else if(h.dataset.v!=null){ui.drag={k:'v',i:+h.dataset.v};}
+  else if(h.dataset.mid){const m=f.markers.find(x=>x.id===h.dataset.mid);if(m){ui.drag={k:'m',id:m.id,dx:pt[0]-m.x,dy:pt[1]-m.y};if(ui.sel!==m.id){ui.sel=m.id;renderSide();}}}
+  svg.setPointerCapture?.(e.pointerId);rerenderCanvas();});
+document.addEventListener('pointermove',e=>{const cv=$('#cv');if(!cv)return;const svg=cv.querySelector('svg');if(!svg)return;const p=P(),f=p.floors[ui.floor];
+  if(ui.poly&&ui.tool==='poly'&&e.target.closest('#cv')){ui.poly.hover=svgPt(e,svg);rerenderCanvas();return;}
+  if(ui.rect){ui.rect.b=svgPt(e,svg);rerenderCanvas();return;}
+  if(!ui.drag)return;const pt=svgPt(e,svg);const d=ui.drag;
+  if(d.k==='center')f.center=pt; else if(d.k==='v'){f.outline[d.i]=pt;} else if(d.k==='m'){const m=f.markers.find(x=>x.id===d.id);if(m){m.x=pt[0]-d.dx;m.y=pt[1]-d.dy;}} else if(d.k==='dir'){const m=f.markers.find(x=>x.id===d.id);if(m)m.dir=Math.round(imgAng(pt[0]-m.x,pt[1]-m.y)/5)*5%360;}
+  d.moved=true;rerenderCanvas();});
+document.addEventListener('pointerup',()=>{if(ui.rect){const r=ui.rect;ui.rect=null;const f=P().floors[r.fi];if(Math.abs(r.b[0]-r.a[0])>10&&Math.abs(r.b[1]-r.a[1])>10){const x0=Math.min(r.a[0],r.b[0]),x1=Math.max(r.a[0],r.b[0]),y0=Math.min(r.a[1],r.b[1]),y1=Math.max(r.a[1],r.b[1]);f.outline=[[x0,y0],[x1,y0],[x1,y1],[x0,y1]];f.center=null;ui.tool='select';save();toast('Đã có đường bao. Kiểm tra hướng nhà rồi đặt cửa, bếp, phòng…');renderS2($('#view'));}else rerenderCanvas();return;}
+  if(ui.drag){const mv=ui.drag.moved;ui.drag=null;if(mv){save();renderSide();}}});
+function finishPoly(){const p=P(),f=p.floors[ui.poly.fi];if(ui.poly.pts.length>=3){f.outline=ui.poly.pts.map(a=>[a[0],a[1]]);f.center=null;}ui.poly=null;ui.tool='select';save();renderS2($('#view'));}
+document.addEventListener('keydown',e=>{if(store.step!==2||/INPUT|SELECT|TEXTAREA/.test(document.activeElement?.tagName||''))return;
+  if((e.key==='Delete'||e.key==='Backspace')&&ui.sel){const f=P().floors[ui.floor];f.markers=f.markers.filter(m=>m.id!==ui.sel);ui.sel=null;save();renderS2($('#view'));}
+  if(e.key==='Escape'){ui.poly=null;ui.rect=null;ui.tool='select';renderS2($('#view'));}
+  if(e.key==='Enter'&&ui.poly)finishPoly();});
+document.addEventListener('click',async e=>{const t=e.target.closest('button,[data-hl],[data-pin]');
+  if(!e.target.closest('.proj'))$('#menu').hidden=true;
+  if(!t)return;const p=P();const d=t.dataset;
+  if(d.step){store.step=+d.step;save();render();window.scrollTo({top:0});return;}
+  if(d.tool){ui.tool=d.tool;ui.poly=null;if(d.tool==='poly')ui.poly={fi:ui.floor,pts:[]};renderS2($('#view'));return;}
+  if(d.floor!=null){ui.floor=+d.floor;ui.sel=null;ui.poly=null;renderS2($('#view'));return;}
+  if(d.rfloor!=null){ui.resFloor=+d.rfloor;renderRTab();return;}
+  if(d.rtab){ui.resTab=d.rtab;$$('[data-rtab]').forEach(b=>b.setAttribute('aria-selected',b.dataset.rtab===d.rtab));renderRTab();return;}
+  if(d.pin){ui.hl=+d.pin;renderRTab();const it=$(`.fi[data-hl="${d.pin}"]`);it&&it.scrollIntoView({block:'nearest',behavior:'smooth'});return;}
+  if(d.hl!==undefined&&t.classList.contains('fi')){if(!d.hl)return;ui.hl=+d.hl;if(d.fi!==''&&+d.fi!==ui.resFloor)ui.resFloor=+d.fi;renderRTab();const c=$('#rcv');c&&c.scrollIntoView({block:'nearest',behavior:'smooth'});return;}
+  if(d.set){setPath(p,d.set,d.val);save();if(store.step===1){renderS1($('#view'));}else render();return;}
+  if(d.face!=null){p.orient.facing=+d.face;save();renderSide();rerenderCanvas();return;}
+  if(d.front){p.floors[ui.floor].front=d.front;if(ui.floor===0)p.orient.front=d.front;save();renderSide();rerenderCanvas();return;}
+  if(d.north!=null||d.nrot){const f=p.floors[ui.floor];const fa=FRONT_ANG[f.front||p.orient.front];const cur=mod(fa-(+p.orient.facing||0),360);const N=d.north!=null?+d.north:mod(cur+ +d.nrot,360);p.orient.facing=mod(fa-N,360);save();renderSide();rerenderCanvas();return;}
+  if(d.mdir!=null){const m=p.floors[ui.floor].markers.find(x=>x.id===ui.sel);if(m){m.dir=d.mdir==='none'?null:+d.mdir;save();renderSide();rerenderCanvas();}return;}
+  if(d.mrot){const m=p.floors[ui.floor].markers.find(x=>x.id===ui.sel);if(m){m.dir=mod((m.dir??0)+ +d.mrot,360);save();renderSide();rerenderCanvas();}return;}
+  switch(d.act){
+    case 'menu':$('#menu').hidden=!$('#menu').hidden;break;
+    case 'new-project':{const np=blankProject();store.projects.push(np);store.cur=np.id;store.step=1;ui.floor=0;ui.sel=null;save();render();toast('Đã tạo dự án mới.');break;}
+    case 'rename':openModal(`<h3>Đổi tên dự án</h3><label class="f">Tên<input type="text" id="rn" value="${esc(p.name)}"></label><div class="row" style="justify-content:flex-end"><button class="btn" data-act="modal-close">Huỷ</button><button class="btn primary" data-act="rename-ok">Lưu</button></div>`);break;
+    case 'rename-ok':p.name=$('#rn').value.trim()||p.name;closeModal();save();render();break;
+    case 'duplicate':{const c=JSON.parse(JSON.stringify(p));c.id=uid();c.name=p.name+' (bản sao)';c.demo=false;store.projects.push(c);store.cur=c.id;save();render();toast('Đã nhân bản.');break;}
+    case 'delete-project':openModal(`<h3>Xoá "${esc(p.name)}"?</h3><p class="small">Dự án và ảnh mặt bằng sẽ mất khỏi trình duyệt này.</p><div class="row" style="justify-content:flex-end"><button class="btn" data-act="modal-close">Giữ lại</button><button class="btn danger" data-act="delete-ok">Xoá dự án</button></div>`);break;
+    case 'delete-ok':store.projects=store.projects.filter(x=>x.id!==p.id);if(!store.projects.length)store.projects=demoProjects();store.cur=store.projects[0].id;closeModal();save();render();toast('Đã xoá dự án.');break;
+    case 'restore-demos':{const ds=demoProjects();store.projects=store.projects.filter(x=>!x.demo).concat(ds);store.cur=ds[0].id;store.step=4;save();render();toast('Đã khôi phục dự án mẫu.');break;}
+    case 'add-member':p.members=p.members||[];p.members.push({id:uid(),name:'',rel:'Con trai',dob:'',gender:'nam'});save();renderS1($('#view'));break;
+    case 'del-member':p.members=p.members.filter(m=>m.id!==d.id);save();renderS1($('#view'));break;
+    case 'add-floor':p.floors.push(newFloor(p.floors.length));ui.floor=p.floors.length-1;ui.sel=null;save();renderS2($('#view'));break;
+    case 'del-floor':if(p.floors.length>1){p.floors.splice(ui.floor,1);ui.floor=0;save();renderS2($('#view'));}break;
+    case 'upload':$('#fileIn').click();break;
+    case 'reset-center':p.floors[ui.floor].center=null;save();renderS2($('#view'));break;
+    case 'del-marker':{const f=p.floors[ui.floor];f.markers=f.markers.filter(m=>m.id!==ui.sel);ui.sel=null;save();renderS2($('#view'));break;}
+    case 'poly-done':finishPoly();break;
+    case 'poly-cancel':ui.poly=null;ui.tool='select';renderS2($('#view'));break;
+    case 'compass':phoneCompass();break;
+    case 'ai':aiDetect();break;
+    case 'ai-apply':{const a=ui._ai,f=p.floors[ui.floor];if(a){if(a.outline){f.outline=a.outline;f.center=null;}f.markers=a.items;if(a.front){f.front=a.front;if(ui.floor===0)p.orient.front=a.front;}if(a.kind)p.kind=a.kind;if(a.north!=null){p.orient.facing=mod(FRONT_ANG[f.front||p.orient.front]-a.north,360);}}closeModal();save();renderS2($('#view'));toast('Đã áp dụng. Kiểm tra lại từng đánh dấu.');break;}
+    case 'modal-close':closeModal();break;
+    case 'build-report':$('#rpPrev').innerHTML='<p class="muted"><span class="spin"></span> Đang dựng báo cáo…</p>';buildReport();break;
+    case 'pdf':exportPdf();break;
+    case 'use-heading':if(ui._hd!=null){p.orient.facing=Math.round(ui._hd);save();closeModal();render();}break;
+  }});
+document.addEventListener('input',e=>{const t=e.target,p=P();
+  if(t.dataset.bind){let v=t.value;if(t.dataset.type==='num'){v=t.value===''?0:+t.value;if(t.id==='facing')v=mod(Math.round(v),360);}setPath(p,t.dataset.bind,v);save();
+    if(store.step===1)renderS1Res(); if(store.step===2){rerenderCanvas();if(t.id!=='facing')renderSide();else{const s=$('#side');const pp=s&&s.querySelector('p.small');if(pp)pp.innerHTML=`Mặt tiền: <b>${QUAI[SO[secIdx(v)]].dir}</b> · sơn ${SON24[sonIdx(v)]} · tọa ${QUAI[SO[secIdx(v+180)]].vi}`;$$('[data-face]').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.face===v));}}return;}
+  if(t.dataset.mbind){const row=t.closest('[data-mem]');const m=p.members.find(x=>x.id===row.dataset.mem);if(m){m[t.dataset.mbind]=t.value;save();const c=cungPhi(m.dob,m.gender,m.tob);row.querySelector('.mem-cung').innerHTML=cungLine(c);}return;}
+  if(t.dataset.fbind){const f=p.floors[ui.floor];setPath(f,t.dataset.fbind,t.dataset.type==='num'?(t.value===''?null:+t.value):t.value);save();if(t.dataset.fbind==='name'){$$('[data-floor]').forEach(b=>{if(+b.dataset.floor===ui.floor)b.textContent=t.value||'Tầng';});}return;}
+  if(t.dataset.msel){const m=p.floors[ui.floor].markers.find(x=>x.id===ui.sel);if(m){m[t.dataset.msel]=t.value;if(t.dataset.msel==='type'){if(TYPES[m.type].dir&&m.dir==null&&m.type==='bep')m.dir=180;}save();rerenderCanvas();if(t.tagName==='SELECT')renderSide();}return;}
+  if(t.dataset.surr){p.surr=p.surr||{};p.surr[t.dataset.surr]=t.checked;t.closest('.check').classList.toggle('on',t.checked);save();return;}
+  if(t.id==='northDeg'){const f=p.floors[ui.floor];const fa=FRONT_ANG[f.front||p.orient.front];p.orient.facing=mod(fa-mod(Math.round(+t.value||0),360),360);const fc=$('#facing');if(fc)fc.value=p.orient.facing;save();rerenderCanvas();return;}
+  if(t.id==='showSec'){ui.showSec=t.checked;rerenderCanvas();return;}
+  if(t.id==='projSel'){store.cur=t.value;ui.floor=0;ui.sel=null;ui.resFloor=0;ui.hl=null;save();render();}});
+document.addEventListener('change',e=>{if(e.target.id==='projSel'){store.cur=e.target.value;ui.floor=0;ui.sel=null;ui.resFloor=0;ui.hl=null;save();render();}});
+$('#fileIn').addEventListener('change',e=>{handleFile(e.target.files[0]);e.target.value='';});
+document.addEventListener('dragover',e=>{const d=e.target.closest('#drop');if(d){e.preventDefault();d.classList.add('over');}});
+document.addEventListener('dragleave',e=>{const d=e.target.closest('#drop');if(d)d.classList.remove('over');});
+document.addEventListener('drop',e=>{const d=e.target.closest('#drop');if(d){e.preventDefault();handleFile(e.dataTransfer.files[0]);}});
+document.addEventListener('dblclick',e=>{if(ui.poly&&e.target.closest('#cv'))finishPoly();});
+function openModal(html){$('#modalRoot').innerHTML=`<div class="modal-bg" data-bg="1"><div class="modal" role="dialog" aria-modal="true">${html}</div></div>`;}
+function closeModal(){$('#modalRoot').innerHTML='';}
+$('#modalRoot').addEventListener('click',e=>{if(e.target.dataset.bg)closeModal();});
+function phoneCompass(){ui._hd=null;openModal(`<h3>Đo hướng bằng la bàn điện thoại</h3><p class="small">Đứng trong nhà, quay lưng vào nhà, nhìn thẳng ra cửa chính. Cầm điện thoại nằm ngang, đầu máy chỉ ra đường.</p><div class="row" style="justify-content:center"><div id="hdVal" style="font-family:var(--f-display);font-size:2.4rem;font-weight:700">–</div></div><p class="tiny muted" id="hdNote">Đang chờ cảm biến…</p><div class="row" style="justify-content:flex-end"><button class="btn" data-act="modal-close">Đóng</button><button class="btn primary" data-act="use-heading" id="hdUse" disabled>Dùng số này</button></div>`);
+  const on=ev=>{let h=ev.webkitCompassHeading!=null?ev.webkitCompassHeading:(ev.absolute&&ev.alpha!=null?mod(360-ev.alpha,360):null);if(h==null)return;ui._hd=h;const v=$('#hdVal');if(v){v.textContent=Math.round(h)+'° '+QUAI[SO[secIdx(h)]].dir;$('#hdUse').disabled=false;$('#hdNote').textContent='Giữ máy yên vài giây rồi bấm "Dùng số này". Tránh để gần vật kim loại.';}};
+  const start=()=>{window.addEventListener('deviceorientationabsolute',on);window.addEventListener('deviceorientation',on);setTimeout(()=>{if(ui._hd==null){const n=$('#hdNote');if(n)n.textContent='Không đọc được la bàn ở chế độ xem này. Tính năng chạy trên trình duyệt điện thoại khi mở trang web riêng của app.';}},3500);};
+  try{if(typeof DeviceOrientationEvent!=='undefined'&&typeof DeviceOrientationEvent.requestPermission==='function'){DeviceOrientationEvent.requestPermission().then(r=>{if(r==='granted')start();else $('#hdNote').textContent='Bạn chưa cho phép dùng cảm biến hướng.';}).catch(()=>start());}else start();}catch(e){start();}}
+
+/* ================= Dự án mẫu ================= */
+function blankProject(){return {id:uid(),name:'Nhà mới',demo:false,owner:{name:'',role:'giatruong',dob:'',gender:'nam',tob:''},members:[],goal:'tai',orient:{facing:180,front:'bottom',trach:'toa',division:'angle'},floors:[newFloor(0)],surr:{},buildYear:new Date().getFullYear()};}
+function demoProjects(){const Y=new Date().getFullYear();const s=.8;
+  const M=(type,x,y,o={})=>Object.assign({id:uid(),type,x:x*o.k,y:y*o.k},o.dir!=null?{dir:o.dir}:{},o.occ?{occ:o.occ}:{},o.label?{label:o.label}:{});
+  const r=(x0,y0,x1,y1,k)=>[[x0*k,y0*k],[x1*k,y0*k],[x1*k,y1*k],[x0*k,y1*k]];
+  const poly=(a,k)=>a.map(([x,y])=>[x*k,y*k]);
+  const fl=(name,img,w,h,outline,meters,markers,front)=>Object.assign({id:uid(),name,img,w,h,outline,center:null,meters,markers},front?{front}:{});
+  // Nhà A
+  const a={wife:uid(),son:uid(),mom:uid()};
+  const A={id:uid(),demo:true,name:'Mẫu A · Nhà phố 5×13,2 m',owner:{name:'Nguyễn Văn An',role:'giatruong',dob:'1985-01-15',gender:'nam',tob:''},
+    members:[{id:a.wife,name:'Trần Thị Bình',rel:'Vợ/chồng',dob:'1987-06-20',gender:'nu'},{id:a.son,name:'Nguyễn Minh Khang',rel:'Con trai',dob:'2015-09-03',gender:'nam'},{id:a.mom,name:'Lê Thị Hoa',rel:'Mẹ',dob:'1958-03-12',gender:'nu'}],
+    goal:'tai',orient:{facing:135,front:'left',trach:'toa',division:'angle'},surr:{goc_nha:true},buildYear:Y+1,
+    floors:[fl('Tầng 1','demo/a1.jpg',1600,856,r(487,137,1822,643,s),{w:13.2,h:5},[M('cua_chinh',487,390,{k:s}),M('ban_tho',838,522,{k:s,dir:270}),M('cau_thang',990,560,{k:s}),M('bep',1262,190,{k:s,dir:180}),M('phong_ngu',1600,300,{k:s,occ:a.mom}),M('wc',1700,560,{k:s}),M('giat',1425,590,{k:s})]),
+      fl('Tầng 2','demo/a2.jpg',1600,876,poly([[477,135],[1866,135],[1866,660],[320,660],[320,325],[477,325]],s),{w:14.7,h:5},[M('ban_tho',512,445,{k:s,dir:270,label:'Phòng thờ'}),M('phong_ngu',700,380,{k:s,occ:a.son}),M('wc',1000,265,{k:s}),M('cau_thang',1210,585,{k:s}),M('phong_ngu',1680,320,{k:s,occ:'owner',label:'P. ngủ master'}),M('wc',1800,560,{k:s,label:'WC master'})])]};
+  // Nhà B
+  const b={son:uid(),dau:uid()};
+  const B={id:uid(),demo:true,name:'Mẫu B · Nhà phố 5×20 m',owner:{name:'Phạm Thị Thu',role:'me',dob:'1972-08-10',gender:'nu',tob:''},
+    members:[{id:b.son,name:'Phạm Quốc Huy',rel:'Con trai',dob:'1998-05-02',gender:'nam'},{id:b.dau,name:'Phạm Ngọc Lan',rel:'Con gái',dob:'2001-11-21',gender:'nu'}],
+    goal:'suckhoe',orient:{facing:180,front:'left',trach:'toa',division:'angle'},surr:{},buildYear:Y,
+    floors:[fl('Tầng 1','demo/b1.jpg',1600,661,r(403,121,1888,492,s),{w:20,h:5},[M('cong',178,305,{k:s}),M('cua_chinh',598,310,{k:s}),M('cau_thang',1110,205,{k:s}),M('bep',1745,388,{k:s,dir:270}),M('wc',1800,175,{k:s}),M('cua_sau',1782,318,{k:s})]),
+      fl('Tầng 2','demo/b2.jpg',1600,692,r(355,161,1888,540,s),{w:20,h:5},[M('phong_ngu',520,330,{k:s,occ:'owner',label:'P. ngủ master'}),M('phong_ngu',1600,385,{k:s,occ:b.son}),M('wc',1730,250,{k:s}),M('cau_thang',1190,230,{k:s})])]};
+  // Nhà C
+  const c={wife:uid(),dau:uid(),mom:uid()};
+  const Cp={id:uid(),demo:true,name:'Mẫu C · Nhà phố 6×19 m, sân trước',owner:{name:'Võ Thành Đạt',role:'giatruong',dob:'1990-11-05',gender:'nam',tob:''},
+    members:[{id:c.wife,name:'Lý Thanh Mai',rel:'Vợ/chồng',dob:'1992-02-02',gender:'nu'},{id:c.dau,name:'Võ Bảo Na',rel:'Con gái',dob:'2020-07-07',gender:'nu'},{id:c.mom,name:'Ngô Thị Hạnh',rel:'Mẹ',dob:'1965-09-15',gender:'nu'}],
+    goal:'con',orient:{facing:180,front:'right',trach:'toa',division:'angle'},surr:{truoc_thap:true},buildYear:Y+1,
+    floors:[fl('Tầng 1','demo/c1.jpg',1600,738,r(100,213,1332,600,s),{w:19,h:6},[M('cong',1850,410,{k:s}),M('cua_chinh',1332,505,{k:s}),M('bep',812,252,{k:s,dir:180}),M('cau_thang',650,530,{k:s}),M('wc',505,555,{k:s,label:'WC1'}),M('wc',330,555,{k:s,label:'WC2'}),M('phong_ngu',290,330,{k:s,occ:'owner',label:'P. ngủ master'})]),
+      fl('Tầng 2','demo/c2.jpg',1600,694,r(203,185,1446,577,s),{w:19,h:6},[M('phong_ngu',350,330,{k:s,occ:c.dau,label:'P. ngủ 3'}),M('giat',360,520,{k:s}),M('cau_thang',690,510,{k:s}),M('wc',930,520,{k:s,label:'WC3'}),M('phong_ngu',1160,420,{k:s,occ:c.mom,label:'P. ngủ 2'}),M('ban_tho',1345,300,{k:s,label:'Phòng thờ'})])]};
+  // Biệt thự L
+  const v={wife:uid(),son:uid(),dad:uid()};
+  const V1={id:uid(),demo:true,name:'Mẫu D · Biệt thự 15×17,6 m',owner:{name:'Đỗ Minh Quân',role:'giatruong',dob:'1979-09-09',gender:'nam',tob:''},
+    members:[{id:v.wife,name:'Hồ Ngọc Thảo',rel:'Vợ/chồng',dob:'1981-04-18',gender:'nu'},{id:v.son,name:'Đỗ Minh Khôi',rel:'Con trai',dob:'2008-12-01',gender:'nam'},{id:v.dad,name:'Đỗ Văn Tư',rel:'Cha',dob:'1950-06-30',gender:'nam'}],
+    goal:'hoathuan',orient:{facing:90,front:'bottom',trach:'toa',division:'angle'},surr:{},buildYear:Y,
+    floors:[fl('Tầng trệt','demo/v1.jpg',736,920,poly([[165,187],[437,187],[437,295],[615,295],[615,640],[165,640]],1),{w:15,h:15.1},[M('cua_chinh',375,640,{k:1}),M('bep',172,245,{k:1,dir:90}),M('wc',345,240,{k:1}),M('wc',405,240,{k:1}),M('wc',478,318,{k:1,label:'WC master'}),M('phong_ngu',560,355,{k:1,occ:'owner',label:'P. ngủ master'}),M('phong_ngu',375,360,{k:1,occ:v.dad}),M('phong_ngu',520,470,{k:1,occ:v.son}),M('cau_thang',188,560,{k:1})])]};
+  // Biệt thự 120 m²
+  const w2={wife:uid(),son:uid()};
+  const V2={id:uid(),demo:true,name:'Mẫu E · Nhà vườn 1 tầng 120 m²',owner:{name:'Hoàng Gia Bảo',role:'giatruong',dob:'1976-04-22',gender:'nam',tob:''},
+    members:[{id:w2.wife,name:'Phan Thị Nhi',rel:'Vợ/chồng',dob:'1978-10-10',gender:'nu'},{id:w2.son,name:'Hoàng Gia Huy',rel:'Con trai',dob:'2006-03-03',gender:'nam'}],
+    goal:'tai',orient:{facing:45,front:'left',trach:'toa',division:'angle'},surr:{},buildYear:Y,
+    floors:[fl('Tầng trệt','demo/v2.jpg',680,481,poly([[172,98],[517,98],[517,370],[398,370],[398,330],[145,330],[145,205],[172,205]],1),{w:10.6,h:7.8},[M('cua_chinh',145,268,{k:1}),M('bep',505,262,{k:1,dir:270}),M('wc',455,352,{k:1}),M('phong_ngu',235,150,{k:1,occ:'owner'}),M('phong_ngu',468,150,{k:1,occ:w2.son}),M('cau_thang',352,150,{k:1})])]};
+  // Căn hộ F (không có la bàn: giả định cửa căn hộ nhìn Tây Bắc)
+  const f1={kid:uid()};
+  const F1={id:uid(),demo:true,kind:'canho',name:'Mẫu F · Căn hộ 2PN 9,1×7,4 m',owner:{name:'Trương Mỹ Linh',role:'giatruong',dob:'1988-07-19',gender:'nu',tob:''},
+    members:[{id:f1.kid,name:'Trương Gia Bảo',rel:'Con trai',dob:'2016-01-28',gender:'nam'}],
+    goal:'suckhoe',orient:{facing:315,front:'top',trach:'toa',division:'angle'},surr:{ch_cua_doi:true},buildYear:Y,
+    floors:[fl('Căn hộ','demo/h1.jpg',1280,905,poly([[241,160],[920,160],[920,700],[480,700],[480,620],[241,620]],1),{w:9.4,h:7.5},[M('cua_chinh',415,163,{k:1}),M('bep',342,192,{k:1,dir:180}),M('wc',520,305,{k:1,label:'W.C1'}),M('wc',625,305,{k:1,label:'W.C2'}),M('phong_ngu',850,288,{k:1,occ:'owner',label:'Ngủ 1'}),M('phong_ngu',800,590,{k:1,occ:f1.kid,label:'Ngủ 2'}),M('ban_cong',370,655,{k:1,label:'Lô gia'})])]};
+  // Căn hộ G (T3-3A, có la bàn: Bắc chỉ khoảng 12° trên bản vẽ)
+  const g1={wife:uid(),son:uid()}, kg=1600/1758;
+  const G1={id:uid(),demo:true,kind:'canho',name:'Mẫu G · Căn hộ T3-3A 2PN 69,9 m²',owner:{name:'Lâm Quốc Việt',role:'giatruong',dob:'1993-03-10',gender:'nam',tob:''},
+    members:[{id:g1.wife,name:'Đặng Thu Hà',rel:'Vợ/chồng',dob:'1995-09-25',gender:'nu'},{id:g1.son,name:'Lâm Gia Phúc',rel:'Con trai',dob:'2022-05-14',gender:'nam'}],
+    goal:'con',orient:{facing:168,front:'bottom',trach:'toa',division:'angle'},surr:{},buildYear:Y,
+    floors:[fl('Căn hộ','demo/h3.jpg',1600,1213,poly([[500,100],[870,100],[870,215],[1190,215],[1190,100],[1555,100],[1555,465],[1700,465],[1700,945],[835,945],[835,790],[500,790]],kg),{w:10.8,h:7.6},[M('cua_chinh',1188,940,{k:kg}),M('bep',1600,885,{k:kg,dir:0}),M('wc',650,690,{k:kg,label:'WC1'}),M('wc',1450,620,{k:kg,label:'WC2'}),M('phong_ngu',680,300,{k:kg,occ:'owner',label:'Phòng ngủ 1'}),M('phong_ngu',1380,300,{k:kg,occ:g1.son,label:'Phòng ngủ 2'}),M('ban_cong',1030,160,{k:kg}),M('giat',1620,560,{k:kg,label:'Sân phơi'})])]};
+  // Căn hộ H (ảnh nhỏ, chưa đánh dấu: để thử AI hoặc đánh dấu tay)
+  const H1={id:uid(),demo:true,kind:'canho',name:'Mẫu H · Căn hộ 3PN (chưa đánh dấu)',owner:{name:'Mai Văn Toàn',role:'giatruong',dob:'1980-05-05',gender:'nam',tob:''},members:[],
+    goal:'tai',orient:{facing:180,front:'bottom',trach:'toa',division:'angle'},surr:{},buildYear:Y,
+    floors:[fl('Căn hộ','demo/h2.jpg',236,247,null,{w:null,h:null},[])]};
+  return [A,B,Cp,V1,V2,F1,G1,H1];}
+
+/* ================= Khởi động ================= */
+if(!IN_CLAUDE){const ft=$('footer.foot .wrap span');if(ft)ft.insertAdjacentHTML('beforeend',' · <a href="chinh-sach.html" style="color:inherit">Chính sách riêng tư</a>');}
+loadStore(); render();
+</script>
+
+</body>
+</html>

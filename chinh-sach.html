@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chính sách riêng tư · Bát Trạch cho chủ nhà</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=Noto+Serif:wght@600;700&display=swap">
+<style>
+:root{--paper:#f5f0e5;--card:#fffcf6;--ink:#1f1a15;--muted:#7b7064;--line:#ddd1bc;--son:#9c2a21}
+@media (prefers-color-scheme:dark){:root{--paper:#15120f;--card:#201b17;--ink:#efe6d7;--muted:#9d907f;--line:#3a322a;--son:#e2715f;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 "Be Vietnam Pro",system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-left,0px)) 64px}
+h1,h2{font-family:"Noto Serif",Georgia,serif;line-height:1.25}
+h1{font-size:1.9rem;margin:0 0 6px} h2{font-size:1.2rem;margin:28px 0 8px;color:var(--son)}
+p,li{color:var(--ink)} .muted{color:var(--muted);font-size:.9rem}
+a{color:var(--son)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+</style>
+</head>
+<body>
+<main>
+  <p><a href="./">← Về ứng dụng</a></p>
+  <h1>Chính sách riêng tư</h1>
+  <p class="muted">Bát Trạch cho chủ nhà · cập nhật ngày 08/11/2026</p>
+
+  <div class="box"><b>Tóm tắt:</b> dự án của bạn chỉ nằm trên trình duyệt của bạn. Ứng dụng không có tài khoản, không có cơ sở dữ liệu. Chỉ khi bạn bấm "AI nhận diện", ảnh bản vẽ (đã thu nhỏ) mới được gửi tới Gemini của Google.</div>
+
+  <h2>1. Dữ liệu lưu ở đâu</h2>
+  <p>Họ tên, ngày sinh, giới tính các thành viên, ảnh mặt bằng và các đánh dấu bạn tạo được lưu trong bộ nhớ trình duyệt (localStorage) trên máy của bạn. Chúng không được gửi lên máy chủ của ứng dụng. Xoá dữ liệu trình duyệt hoặc xoá dự án trong ứng dụng là xoá hẳn.</p>
+
+  <h2>2. Khi dùng tính năng AI nhận diện</h2>
+  <ul>
+    <li>Ứng dụng gửi <b>chỉ ảnh mặt bằng</b> (thu nhỏ còn tối đa khoảng 1.600 điểm ảnh) tới máy chủ của ứng dụng, rồi chuyển tới Gemini API của Google để đọc vị trí cửa, bếp, phòng…</li>
+    <li>Không gửi họ tên, ngày sinh hay thông tin gia đình.</li>
+    <li>Máy chủ của ứng dụng không lưu ảnh. Địa chỉ IP chỉ được dùng tạm thời để giới hạn số lượt AI.</li>
+    <li><b>Trong giai đoạn thử nghiệm</b>, ứng dụng dùng gói miễn phí của Gemini API. Theo điều khoản của Google, nội dung gửi qua gói miễn phí có thể được Google dùng để cải thiện sản phẩm và có thể được người kiểm duyệt xem (đã tách khỏi tài khoản). Vì vậy, đừng tải lên bản vẽ có thông tin nhạy cảm như tên chủ nhà, số điện thoại, địa chỉ. Hãy cắt bỏ khung tên bản vẽ trước khi dùng AI, hoặc đánh dấu thủ công.</li>
+    <li>Điều khoản của Google: <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Additional Terms of Service</a>.</li>
+  </ul>
+
+  <h2>3. Độ tuổi</h2>
+  <p>Tính năng AI dành cho người từ 18 tuổi trở lên, theo điều khoản của Gemini API.</p>
+
+  <h2>4. Báo cáo PDF</h2>
+  <p>File PDF được tạo ngay trên trình duyệt của bạn và tải thẳng về máy, không đi qua máy chủ.</p>
+
+  <h2>5. Giới hạn của kết quả</h2>
+  <p>Kết quả dựa trên các quy tắc Bát Trạch trong sách <i>Kim Oanh Ký</i> (Thái Kim Oanh, NXB Lao Động), mang tính tham khảo văn hóa. Đây không phải tư vấn kiến trúc, kết cấu hay pháp lý. Mọi thay đổi kết cấu, điện nước cần kiến trúc sư hoặc kỹ sư.</p>
+
+  <h2>6. Thay đổi chính sách</h2>
+  <p>Khi ứng dụng thêm tài khoản, lưu dự án trên mây hoặc thanh toán, chính sách này sẽ được cập nhật trước khi các tính năng đó hoạt động.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "battrachchochunha",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bát Trạch cho chủ nhà: đối chiếu mặt bằng nhà theo sách Kim Oanh Ký",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}
